@@ -40,6 +40,8 @@ library(palmerpenguins) # for data
 library(openintro)      # for data
 library(knitr)          # for tables
 library(broom)          # for model summary
+library(xfun)
+library(remotes)
 ```
 
 # Hello, Quarto

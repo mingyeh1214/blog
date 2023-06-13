@@ -1,0 +1,24 @@
+"0","install.packages(""remotes"")
+"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/remotes_2.4.2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 397889 bytes (388 KB)
+"
+"2","downloaded 388 KB
+
+"
+"1","程式套件 ‘remotes’ 開啟成功，MD5 和檢查也透過
+"
+"1","
+"
+"1",""
+"1","下載的二進位程式套件在
+	C:\Users\USER\AppData\Local\Temp\RtmpGKXQqU\downloaded_packages 裡"
+"1",""
+"1","
+"

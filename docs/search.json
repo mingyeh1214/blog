@@ -18,7 +18,7 @@
     "href": "posts/hello-quarto/index.html",
     "title": "Hello, Quarto",
     "section": "",
-    "text": "Code```{r}\n#| label: load-packages\n\nlibrary(tidyverse)      # for data wrangling and visualization\nlibrary(palmerpenguins) # for data\nlibrary(openintro)      # for data\nlibrary(knitr)          # for tables\nlibrary(broom)          # for model summary\n```"
+    "text": "Code```{r}\n#| label: load-packages\n\nlibrary(tidyverse)      # for data wrangling and visualization\nlibrary(palmerpenguins) # for data\nlibrary(openintro)      # for data\nlibrary(knitr)          # for tables\nlibrary(broom)          # for model summary\nlibrary(xfun)\nlibrary(remotes)\n```"
   },
   {
     "objectID": "posts/hello-quarto/index.html#meet-quarto",
