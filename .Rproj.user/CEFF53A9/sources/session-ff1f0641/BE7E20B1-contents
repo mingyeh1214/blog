@@ -10,7 +10,7 @@ website:
   site-url: https://mingyeh.shinyapps.io/PROFOLIO/
   navbar:
     search: true
-    logo: images/shinylogo.png
+    # logo: images/shiny_logo.png
     background: primary
     left:
       - about.qmd
