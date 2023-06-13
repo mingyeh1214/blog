@@ -1,12 +1,12 @@
 {
-    "id": "E8DEE199",
+    "id": "6744B697",
     "path": "~/GitHub/blog/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1686642612034.0,
+    "created": 1686653433043.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
@@ -16,7 +16,7 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "30:0"
+        "rmdVisualModeLocation": "2:0"
     },
     "folds": "",
     "lastKnownWriteTime": 1686642136,

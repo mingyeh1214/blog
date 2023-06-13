@@ -116,7 +116,7 @@
     "href": "posts/hello-quarto/index.html#margin-content",
     "title": "Hello, Quarto",
     "section": "Margin Content",
-    "text": "Margin Content\n::: {.column-margin}\nWe know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:\n\n$$\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).$$\n:::\n\n\n\n\n\n\nWe know from the first fundamental theorem of calculus that for x in [a, b]:\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x)."
+    "text": "Margin Content\n::: {.column-margin}\nWe know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:\n\n$$\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).$$\n:::\n\n\nWe know from the first fundamental theorem of calculus that for x in [a, b]:\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x)."
   },
   {
     "objectID": "about.html#education",
@@ -145,5 +145,12 @@
     "title": "ABOUT",
     "section": "Experience",
     "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#footnotes",
+    "href": "posts/hello-quarto/index.html#footnotes",
+    "title": "Hello, Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nthis is footnote↩︎"
   }
 ]
