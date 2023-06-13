@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Bennie's BLOG",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Python\n\n\nPython基礎\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Python\n\n\nPython基礎\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -18,7 +18,7 @@
     "href": "posts/hello-quarto/index.html",
     "title": "Hello, Quarto",
     "section": "",
-    "text": "Code```{r}\n#| label: load-packages\n\nlibrary(tidyverse)      # for data wrangling and visualization\nlibrary(palmerpenguins) # for data\nlibrary(openintro)      # for data\nlibrary(knitr)          # for tables\nlibrary(broom)          # for model summary\nlibrary(xfun)\nlibrary(remotes)\n```"
+    "text": "Code\n```{r}\n#| label: load-packages\n\nlibrary(tidyverse)      # for data wrangling and visualization\nlibrary(palmerpenguins) # for data\nlibrary(openintro)      # for data\nlibrary(knitr)          # for tables\nlibrary(broom)          # for model summary\nlibrary(xfun)\nlibrary(remotes)\n```"
   },
   {
     "objectID": "posts/hello-quarto/index.html#meet-quarto",
@@ -46,14 +46,14 @@
     "href": "posts/hello-quarto/index.html#sec-eda",
     "title": "Hello, Quarto",
     "section": "Exploratory data analysis",
-    "text": "Exploratory data analysis\nThe data contains 98 houses. As part of the exploratory analysis let’s visualize and summarize the relationship between areas and prices of these houses.\nData visualization\nFigure 3 shows two histograms displaying the distributions of price and area individually.\n\nCodeggplot(duke_forest, aes(x = price)) +\n  geom_histogram(binwidth = 50000) +\n  labs(title = \"Histogram of prices\")\n\nggplot(duke_forest, aes(x = area)) +\n  geom_histogram(binwidth = 250) +\n  labs(title = \"Histogram of areas\")\n\n\n\n\n\n(a) Histogram of prices\n\n\n\n\n\n(b) Histogram of areas\n\n\n\nFigure 3: Histograms of individual variables\n\n\n\nFigure 4 displays the relationship between these two variables in a scatterplot.\n\nCodeggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point() +\n  labs(title = \"Price and area of houses in Duke Forest\")\n\n\n\nFigure 4: Scatterplot of price vs. area of houses in Duke Forest\n\n\n\nSummary statistics\nTable 1 displays basic summary statistics for these two variables.\n\nCodeduke_forest %&gt;%\n  summarise(\n    `Median price` = median(price),\n    `IQR price` = IQR(price),\n    `Median area` = median(area),\n    `IQR area` = IQR(area),\n    `Correlation, r` = cor(price, area)\n    ) %&gt;%\n  kable(digits = c(0, 0, 0, 0, 2))\n\n\n\nTable 1: Summary statistics for price and area of houses in Duke Forest\n\nMedian price\nIQR price\nMedian area\nIQR area\nCorrelation, r\n\n\n540000\n193125\n2623\n1121\n0.67"
+    "text": "Exploratory data analysis\nThe data contains 98 houses. As part of the exploratory analysis let’s visualize and summarize the relationship between areas and prices of these houses.\n\nData visualization\nFigure 3 shows two histograms displaying the distributions of price and area individually.\n\n\nCode\nggplot(duke_forest, aes(x = price)) +\n  geom_histogram(binwidth = 50000) +\n  labs(title = \"Histogram of prices\")\n\nggplot(duke_forest, aes(x = area)) +\n  geom_histogram(binwidth = 250) +\n  labs(title = \"Histogram of areas\")\n\n\n\n\n\n\n\n\n(a) Histogram of prices\n\n\n\n\n\n\n\n(b) Histogram of areas\n\n\n\n\nFigure 3: Histograms of individual variables\n\n\n\nFigure 4 displays the relationship between these two variables in a scatterplot.\n\n\nCode\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point() +\n  labs(title = \"Price and area of houses in Duke Forest\")\n\n\n\n\n\nFigure 4: Scatterplot of price vs. area of houses in Duke Forest\n\n\n\n\n\n\nSummary statistics\nTable 1 displays basic summary statistics for these two variables.\n\n\nCode\nduke_forest %&gt;%\n  summarise(\n    `Median price` = median(price),\n    `IQR price` = IQR(price),\n    `Median area` = median(area),\n    `IQR area` = IQR(area),\n    `Correlation, r` = cor(price, area)\n    ) %&gt;%\n  kable(digits = c(0, 0, 0, 0, 2))\n\n\n\n\nTable 1: Summary statistics for price and area of houses in Duke Forest\n\n\nMedian price\nIQR price\nMedian area\nIQR area\nCorrelation, r\n\n\n\n\n540000\n193125\n2623\n1121\n0.67"
   },
   {
     "objectID": "posts/hello-quarto/index.html#sec-model",
     "href": "posts/hello-quarto/index.html#sec-model",
     "title": "Hello, Quarto",
     "section": "Modeling",
-    "text": "Modeling\nWe can fit a simple linear regression model of the form shown in Equation 1.\n\nprice = \\hat{\\beta}_0 + \\hat{\\beta}_1 \\times area + \\epsilon\n\\tag{1}\nTable 2 shows the regression output for this model.\n\nCodeprice_fit &lt;- lm(price ~ area, data = duke_forest)\n  \nprice_fit %&gt;%\n  tidy() %&gt;%\n  kable(digits = c(0, 0, 2, 2, 2))\n\n\n\nTable 2: Linear regression model for predicting price from area\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n(Intercept)\n116652\n53302.46\n2.19\n0.03\n\n\narea\n159\n18.17\n8.78\n0.00\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis is a pretty incomplete analysis, but hopefully the document provides a good overview of some of the authoring features of Quarto!"
+    "text": "Modeling\nWe can fit a simple linear regression model of the form shown in Equation 1.\n\nprice = \\hat{\\beta}_0 + \\hat{\\beta}_1 \\times area + \\epsilon\n\\tag{1}\nTable 2 shows the regression output for this model.\n\n\nCode\nprice_fit &lt;- lm(price ~ area, data = duke_forest)\n  \nprice_fit %&gt;%\n  tidy() %&gt;%\n  kable(digits = c(0, 0, 2, 2, 2))\n\n\n\n\nTable 2: Linear regression model for predicting price from area\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n116652\n53302.46\n2.19\n0.03\n\n\narea\n159\n18.17\n8.78\n0.00\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis is a pretty incomplete analysis, but hopefully the document provides a good overview of some of the authoring features of Quarto!"
   },
   {
     "objectID": "posts/hello-quarto/index.html#references",
@@ -95,21 +95,21 @@
     "href": "posts/hello-quarto/index.html#mermaid",
     "title": "Hello, Quarto",
     "section": "Mermaid",
-    "text": "Mermaid\n\nCodeflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\nFigure 5: a flowchart created using Mermaid"
+    "text": "Mermaid\n\n\nCode\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\nFigure 5: a flowchart created using Mermaid"
   },
   {
     "objectID": "posts/hello-quarto/index.html#graphviz",
     "href": "posts/hello-quarto/index.html#graphviz",
     "title": "Hello, Quarto",
     "section": "Graphviz",
-    "text": "Graphviz\n\nCodegraph G {\n  layout=neato\n  run -- intr;\n  intr -- runbl;\n  runbl -- run;\n  run -- kernel;\n  kernel -- zombie;\n  kernel -- sleep;\n  kernel -- runmem;\n  sleep -- swap;\n  swap -- runswap;\n  runswap -- new;\n  runswap -- runmem;\n  new -- runmem;\n  sleep -- runmem;\n}\n\n\n\n\nG\n\n\nrun\n\nrun\nintr\n\nintr\nrun–intr\n\n\nkernel\n\nkernel\nrun–kernel\n\n\nrunbl\n\nrunbl\nintr–runbl\n\n\nrunbl–run\n\n\nzombie\n\nzombie\nkernel–zombie\n\n\nsleep\n\nsleep\nkernel–sleep\n\n\nrunmem\n\nrunmem\nkernel–runmem\n\n\nsleep–runmem\n\n\nswap\n\nswap\nsleep–swap\n\n\nrunswap\n\nrunswap\nswap–runswap\n\n\nrunswap–runmem\n\n\nnew\n\nnew\nrunswap–new\n\n\nnew–runmem\n\n\n\nFigure 6: This is a simple graphviz graph."
+    "text": "Graphviz\n\n\nCode\ngraph G {\n  layout=neato\n  run -- intr;\n  intr -- runbl;\n  runbl -- run;\n  run -- kernel;\n  kernel -- zombie;\n  kernel -- sleep;\n  kernel -- runmem;\n  sleep -- swap;\n  swap -- runswap;\n  runswap -- new;\n  runswap -- runmem;\n  new -- runmem;\n  sleep -- runmem;\n}\n\n\n\n\n\n\n\n\nG\n\n  \n\nrun\n\n run   \n\nintr\n\n intr   \n\nrun–intr\n\n   \n\nkernel\n\n kernel   \n\nrun–kernel\n\n   \n\nrunbl\n\n runbl   \n\nintr–runbl\n\n   \n\nrunbl–run\n\n   \n\nzombie\n\n zombie   \n\nkernel–zombie\n\n   \n\nsleep\n\n sleep   \n\nkernel–sleep\n\n   \n\nrunmem\n\n runmem   \n\nkernel–runmem\n\n   \n\nsleep–runmem\n\n   \n\nswap\n\n swap   \n\nsleep–swap\n\n   \n\nrunswap\n\n runswap   \n\nswap–runswap\n\n   \n\nrunswap–runmem\n\n   \n\nnew\n\n new   \n\nrunswap–new\n\n   \n\nnew–runmem\n\n  \n\n\nFigure 6: This is a simple graphviz graph."
   },
   {
     "objectID": "posts/hello-quarto/index.html#screen-column",
     "href": "posts/hello-quarto/index.html#screen-column",
     "title": "Hello, Quarto",
     "section": "Screen Column",
-    "text": "Screen Column\n\nCode# library(leaflet)\n# leaflet() %&gt;%\n#   addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n#   addMarkers(lng=174.768, lat=-36.852, popup=\"The birthplace of R\")"
+    "text": "Screen Column\n\n\nCode\n# library(leaflet)\n# leaflet() %&gt;%\n#   addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n#   addMarkers(lng=174.768, lat=-36.852, popup=\"The birthplace of R\")"
   },
   {
     "objectID": "posts/hello-quarto/index.html#margin-content",
