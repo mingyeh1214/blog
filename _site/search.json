@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BLOG",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html",
+    "href": "posts/hello-quarto/index.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Code```{r}\n#| label: load-packages\n\nlibrary(tidyverse)      # for data wrangling and visualization\nlibrary(palmerpenguins) # for data\nlibrary(openintro)      # for data\nlibrary(knitr)          # for tables\nlibrary(broom)          # for model summary\n```"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#meet-quarto",
+    "href": "posts/hello-quarto/index.html#meet-quarto",
+    "title": "Hello, Quarto",
+    "section": "Meet Quarto",
+    "text": "Meet Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#meet-the-penguins",
+    "href": "posts/hello-quarto/index.html#meet-the-penguins",
+    "title": "Hello, Quarto",
+    "section": "Meet the penguins",
+    "text": "Meet the penguins\npenguins 資料集\n\n\n\n\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#introduction",
+    "href": "posts/hello-quarto/index.html#introduction",
+    "title": "Hello, Quarto",
+    "section": "Introduction",
+    "text": "Introduction\nIn this analysis, we build a model predicting sale prices of houses based on data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020. Let’s start by loading the packages we’ll use for the analysis.\nWe present the results of exploratory data analysis in Section 4.2 and the regression model in Section 4.3.\nWe’re going to do this analysis using literate programming [@knuth1984]."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#sec-eda",
+    "href": "posts/hello-quarto/index.html#sec-eda",
+    "title": "Hello, Quarto",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\nThe data contains 98 houses. As part of the exploratory analysis let’s visualize and summarize the relationship between areas and prices of these houses.\nData visualization\nFigure 3 shows two histograms displaying the distributions of price and area individually.\n\nCodeggplot(duke_forest, aes(x = price)) +\n  geom_histogram(binwidth = 50000) +\n  labs(title = \"Histogram of prices\")\n\nggplot(duke_forest, aes(x = area)) +\n  geom_histogram(binwidth = 250) +\n  labs(title = \"Histogram of areas\")\n\n\n\n\n\n(a) Histogram of prices\n\n\n\n\n\n(b) Histogram of areas\n\n\n\nFigure 3: Histograms of individual variables\n\n\n\nFigure 4 displays the relationship between these two variables in a scatterplot.\n\nCodeggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point() +\n  labs(title = \"Price and area of houses in Duke Forest\")\n\n\n\nFigure 4: Scatterplot of price vs. area of houses in Duke Forest\n\n\n\nSummary statistics\nTable 1 displays basic summary statistics for these two variables.\n\nCodeduke_forest %&gt;%\n  summarise(\n    `Median price` = median(price),\n    `IQR price` = IQR(price),\n    `Median area` = median(area),\n    `IQR area` = IQR(area),\n    `Correlation, r` = cor(price, area)\n    ) %&gt;%\n  kable(digits = c(0, 0, 0, 0, 2))\n\n\n\nTable 1: Summary statistics for price and area of houses in Duke Forest\n\nMedian price\nIQR price\nMedian area\nIQR area\nCorrelation, r\n\n\n540000\n193125\n2623\n1121\n0.67"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#sec-model",
+    "href": "posts/hello-quarto/index.html#sec-model",
+    "title": "Hello, Quarto",
+    "section": "Modeling",
+    "text": "Modeling\nWe can fit a simple linear regression model of the form shown in Equation 1.\n\nprice = \\hat{\\beta}_0 + \\hat{\\beta}_1 \\times area + \\epsilon\n\\tag{1}\nTable 2 shows the regression output for this model.\n\nCodeprice_fit &lt;- lm(price ~ area, data = duke_forest)\n  \nprice_fit %&gt;%\n  tidy() %&gt;%\n  kable(digits = c(0, 0, 2, 2, 2))\n\n\n\nTable 2: Linear regression model for predicting price from area\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n(Intercept)\n116652\n53302.46\n2.19\n0.03\n\n\narea\n159\n18.17\n8.78\n0.00\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis is a pretty incomplete analysis, but hopefully the document provides a good overview of some of the authoring features of Quarto!"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#references",
+    "href": "posts/hello-quarto/index.html#references",
+    "title": "Hello, Quarto",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#行內方程式",
+    "href": "posts/hello-quarto/index.html#行內方程式",
+    "title": "Hello, Quarto",
+    "section": "行內方程式",
+    "text": "行內方程式\n常態分佈機率密度函數：f(x)=\\dfrac{1}{\\sigma\\sqrt{2\\pi}}e\\^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#單行方程式",
+    "href": "posts/hello-quarto/index.html#單行方程式",
+    "title": "Hello, Quarto",
+    "section": "單行方程式",
+    "text": "單行方程式\n\nf(x)=\\dfrac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\n\\tag{2}"
+  }
+]
