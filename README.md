@@ -1,0 +1,2 @@
+# blog
+My Quarto Blog
