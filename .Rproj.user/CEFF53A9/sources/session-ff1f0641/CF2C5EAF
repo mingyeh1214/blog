@@ -1,12 +1,12 @@
 {
-    "id": "275B925C",
-    "path": "~/GitHub/blog/posts/hello-quarto/index.qmd",
-    "project_path": "posts/hello-quarto/index.qmd",
+    "id": "CF2C5EAF",
+    "path": "~/GitHub/blog/posts/python/index.qmd",
+    "project_path": "posts/python/index.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1686653430317.0,
+    "created": 1686654442432.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "8290:6583",
-        "cursorPosition": "333,6",
-        "scrollLine": "322"
+        "cursorPosition": "17,19",
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "2:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1686654273,
+    "lastKnownWriteTime": 1686654678,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1686654273014,
+    "last_content_update": 1686654678064,
     "read_only": false,
     "read_only_alternatives": []
 }

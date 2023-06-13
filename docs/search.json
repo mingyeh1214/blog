@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Bennie's BLOG",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Python\n\n\nPython基礎\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -152,5 +152,12 @@
     "title": "Hello, Quarto",
     "section": "Footnotes",
     "text": "Footnotes\n\nthis is footnote↩︎"
+  },
+  {
+    "objectID": "posts/python/index.html",
+    "href": "posts/python/index.html",
+    "title": "Hello, Python",
+    "section": "",
+    "text": "1+1\n\n2"
   }
 ]

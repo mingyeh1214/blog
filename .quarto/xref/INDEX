@@ -14,5 +14,8 @@
   "posts/hello-quarto/index.qmd": {
     "index.html": "eeb66d9e",
     "index.tex": "2b312584"
+  },
+  "posts/python/index.qmd": {
+    "index.html": "142fd354"
   }
 }
