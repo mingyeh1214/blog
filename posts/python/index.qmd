@@ -29,6 +29,10 @@ execute:
 editor: visual
 ---
 
+Python資料型態
+
+
+
 ```{python}
 1+1
 ```
