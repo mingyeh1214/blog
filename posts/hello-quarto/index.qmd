@@ -262,3 +262,94 @@ caution
 ::: callout-warning
 warning
 :::
+
+::: {.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+# Diagrams
+
+## Mermaid
+
+```{mermaid}
+%%| label: fig-Mermaid-simple
+%%| fig-cap: a flowchart created using Mermaid
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+## Graphviz
+
+```{dot}
+//| label: fig-Graphviz-simple
+//| fig-cap: "This is a simple graphviz graph."
+graph G {
+  layout=neato
+  run -- intr;
+  intr -- runbl;
+  runbl -- run;
+  run -- kernel;
+  kernel -- zombie;
+  kernel -- sleep;
+  kernel -- runmem;
+  sleep -- swap;
+  swap -- runswap;
+  runswap -- new;
+  runswap -- runmem;
+  new -- runmem;
+  sleep -- runmem;
+}
+```
+
+# Video
+
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+
+# Code Annotation
+
+``` r
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  )                                              # <2>
+```
+
+1.  Take `penguins`, and then,
+2.  add new columns for the bill ratio and bill area.
+
+# Article Layout
+
+## Screen Column
+
+```{r}
+#| column: screen
+
+# library(leaflet)
+# leaflet() %>%
+#   addTiles() %>%  # Add default OpenStreetMap map tiles
+#   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+```
+
+## Margin Content
+
+``` markdown
+::: {.column-margin}
+We know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:
+
+$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
+:::
+```
+
+::: column-margin
+We know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:
+
+$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
+:::

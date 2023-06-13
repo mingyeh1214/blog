@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/posts/hello-quarto/index.html</loc>
+    <lastmod>2023-06-13T09:06:14.942Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/index.html</loc>
+    <lastmod>2023-06-13T09:06:17.574Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mingyeh.shinyapps.io/PROFOLIO/index.html</loc>
+    <lastmod>2023-06-13T09:18:59.998Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mingyeh.shinyapps.io/PROFOLIO/posts/hello-quarto/index.html</loc>
+    <lastmod>2023-06-13T09:08:33.730Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mingyeh.shinyapps.io/PROFOLIO/about.html</loc>
+    <lastmod>2023-06-13T09:33:48.246Z</lastmod>
+  </url>
+</urlset>

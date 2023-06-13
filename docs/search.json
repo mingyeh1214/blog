@@ -2,16 +2,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "BLOG",
+    "title": "Bennie's BLOG",
     "section": "",
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "ABOUT",
     "section": "",
-    "text": "About this blog"
+    "text": "about"
   },
   {
     "objectID": "posts/hello-quarto/index.html",
@@ -89,5 +89,61 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#mermaid",
+    "href": "posts/hello-quarto/index.html#mermaid",
+    "title": "Hello, Quarto",
+    "section": "Mermaid",
+    "text": "Mermaid\n\nCodeflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\nFigure 5: a flowchart created using Mermaid"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#graphviz",
+    "href": "posts/hello-quarto/index.html#graphviz",
+    "title": "Hello, Quarto",
+    "section": "Graphviz",
+    "text": "Graphviz\n\nCodegraph G {\n  layout=neato\n  run -- intr;\n  intr -- runbl;\n  runbl -- run;\n  run -- kernel;\n  kernel -- zombie;\n  kernel -- sleep;\n  kernel -- runmem;\n  sleep -- swap;\n  swap -- runswap;\n  runswap -- new;\n  runswap -- runmem;\n  new -- runmem;\n  sleep -- runmem;\n}\n\n\n\n\nG\n\n\nrun\n\nrun\nintr\n\nintr\nrun–intr\n\n\nkernel\n\nkernel\nrun–kernel\n\n\nrunbl\n\nrunbl\nintr–runbl\n\n\nrunbl–run\n\n\nzombie\n\nzombie\nkernel–zombie\n\n\nsleep\n\nsleep\nkernel–sleep\n\n\nrunmem\n\nrunmem\nkernel–runmem\n\n\nsleep–runmem\n\n\nswap\n\nswap\nsleep–swap\n\n\nrunswap\n\nrunswap\nswap–runswap\n\n\nrunswap–runmem\n\n\nnew\n\nnew\nrunswap–new\n\n\nnew–runmem\n\n\n\nFigure 6: This is a simple graphviz graph."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#screen-column",
+    "href": "posts/hello-quarto/index.html#screen-column",
+    "title": "Hello, Quarto",
+    "section": "Screen Column",
+    "text": "Screen Column\n\nCode# library(leaflet)\n# leaflet() %&gt;%\n#   addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n#   addMarkers(lng=174.768, lat=-36.852, popup=\"The birthplace of R\")"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#margin-content",
+    "href": "posts/hello-quarto/index.html#margin-content",
+    "title": "Hello, Quarto",
+    "section": "Margin Content",
+    "text": "Margin Content\n::: {.column-margin}\nWe know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:\n\n$$\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).$$\n:::\n\n\n\n\n\n\nWe know from the first fundamental theorem of calculus that for x in [a, b]:\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x)."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "ABOUT",
+    "section": "Education",
+    "text": "Education\nEducation"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "ABOUT",
+    "section": "Experience",
+    "text": "Experience\nExperience"
+  },
+  {
+    "objectID": "about.html#education-1",
+    "href": "about.html#education-1",
+    "title": "ABOUT",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "about.html#experience-1",
+    "href": "about.html#experience-1",
+    "title": "ABOUT",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
   }
 ]

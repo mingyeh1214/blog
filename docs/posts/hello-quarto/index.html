@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Bennie Liu">
 <meta name="dcterms.date" content="2023-06-13">
-<title>BLOG - Hello, Quarto</title>
+<title>Bennie’s BLOG - Hello, Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,15 +62,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -88,7 +91,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+}</script><script src="../../site_libs/quarto-diagram/mermaid.min.js"></script><script src="../../site_libs/quarto-diagram/mermaid-init.js"></script><link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script><script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -104,6 +108,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }}});
   </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bennie’s BLOG - Hello, Quarto">
+<meta property="og:description" content="以官網範例檔案為基礎，介紹如何使用R Quarto">
+<meta property="og:image" content="https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png">
+<meta property="og:site-name" content="Bennie's BLOG">
 </head>
 <body class="nav-fixed">
 
@@ -111,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">BLOG</span>
+    <span class="navbar-title">Bennie’s BLOG</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -119,7 +127,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="https://mingyeh.shinyapps.io/PROFOLIO/" rel="" target="">
+ <span class="menu-text">PROFOLIO</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
     <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
@@ -136,6 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
 <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -218,6 +233,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </li>
   <li><a href="#callout%E6%A8%A3%E5%BC%8F" id="toc-callout樣式" class="nav-link" data-scroll-target="#callout%E6%A8%A3%E5%BC%8F">Callout樣式</a></li>
+  <li>
+<a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams">Diagrams</a>
+  <ul class="collapse">
+<li><a href="#mermaid" id="toc-mermaid" class="nav-link" data-scroll-target="#mermaid">Mermaid</a></li>
+  <li><a href="#graphviz" id="toc-graphviz" class="nav-link" data-scroll-target="#graphviz">Graphviz</a></li>
+  </ul>
+</li>
+  <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
+  <li><a href="#code-annotation" id="toc-code-annotation" class="nav-link" data-scroll-target="#code-annotation">Code Annotation</a></li>
+  <li>
+<a href="#article-layout" id="toc-article-layout" class="nav-link" data-scroll-target="#article-layout">Article Layout</a>
+  <ul class="collapse">
+<li><a href="#screen-column" id="toc-screen-column" class="nav-link" data-scroll-target="#screen-column">Screen Column</a></li>
+  <li><a href="#margin-content" id="toc-margin-content" class="nav-link" data-scroll-target="#margin-content">Margin Content</a></li>
+  </ul>
+</li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -522,11 +553,186 @@ Warning
 <p>warning</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expand To Learn About Collapse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This is an example of a ‘folded’ caution callout that can be expanded by the user. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
+</div>
+</div>
+</div>
+</section><section id="diagrams" class="level1"><h1>Diagrams</h1>
+<section id="mermaid" class="level2"><h2 class="anchored" data-anchor-id="mermaid">Mermaid</h2>
+<div class="cell">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1"></a>flowchart LR</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  A[Hard edge] --&gt; B(Round edge)</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  B --&gt; C{Decision}</span>
+<span id="cb8-4"><a href="#cb8-4"></a>  C --&gt; D[Result one]</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div id="fig-Mermaid-simple" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><div>
+<pre class="mermaid mermaid-js" data-label="fig-Mermaid-simple">flowchart LR
+  A[Hard edge] --&gt; B(Round edge)
+  B --&gt; C{Decision}
+  C --&gt; D[Result one]
+  C --&gt; E[Result two]
+</pre>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;5: a flowchart created using Mermaid</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="graphviz" class="level2"><h2 class="anchored" data-anchor-id="graphviz">Graphviz</h2>
+<div class="cell">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource dot number-lines code-with-copy"><code class="sourceCode dot"><span id="cb9-1"><a href="#cb9-1"></a><span class="va">graph</span> <span class="va">G</span> <span class="ot">{</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="co">  </span><span class="va">layout</span><span class="ot">=</span><span class="va">neato</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co">  </span><span class="va">run</span><span class="co"> -- </span><span class="va">intr</span><span class="ot">;</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">  </span><span class="va">intr</span><span class="co"> -- </span><span class="va">runbl</span><span class="ot">;</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">  </span><span class="va">runbl</span><span class="co"> -- </span><span class="va">run</span><span class="ot">;</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co">  </span><span class="va">run</span><span class="co"> -- </span><span class="va">kernel</span><span class="ot">;</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co">  </span><span class="va">kernel</span><span class="co"> -- </span><span class="va">zombie</span><span class="ot">;</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co">  </span><span class="va">kernel</span><span class="co"> -- </span><span class="va">sleep</span><span class="ot">;</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="co">  </span><span class="va">kernel</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="co">  </span><span class="va">sleep</span><span class="co"> -- </span><span class="va">swap</span><span class="ot">;</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="co">  </span><span class="va">swap</span><span class="co"> -- </span><span class="va">runswap</span><span class="ot">;</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="co">  </span><span class="va">runswap</span><span class="co"> -- </span><span class="va">new</span><span class="ot">;</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="co">  </span><span class="va">runswap</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a><span class="co">  </span><span class="va">new</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="co">  </span><span class="va">sleep</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="ot">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div id="fig-Graphviz-simple" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><div>
+<svg width="672" height="480" viewbox="0.00 0.00 370.99 246.71" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 242.71)"><title>
+G
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-242.71 366.99,-242.71 366.99,4 -4,4"></polygon><!-- run --><g id="node1" class="node"><title>
+run
+</title>
+<ellipse fill="none" stroke="black" cx="105.22" cy="-110.03" rx="27" ry="18"></ellipse><text text-anchor="middle" x="105.22" y="-105.83" font-family="Times,serif" font-size="14.00">run</text></g><!-- intr --><g id="node2" class="node"><title>
+intr
+</title>
+<ellipse fill="none" stroke="black" cx="48.11" cy="-59.71" rx="27" ry="18"></ellipse><text text-anchor="middle" x="48.11" y="-55.51" font-family="Times,serif" font-size="14.00">intr</text></g><!-- run&#45;&#45;intr --><g id="edge1" class="edge"><title>
+run–intr
+</title>
+<path fill="none" stroke="black" d="M88.7,-95.48C81.19,-88.86 72.32,-81.04 64.79,-74.4"></path></g><!-- kernel --><g id="node4" class="node"><title>
+kernel
+</title>
+<ellipse fill="none" stroke="black" cx="180.95" cy="-137.54" rx="35.33" ry="18"></ellipse><text text-anchor="middle" x="180.95" y="-133.34" font-family="Times,serif" font-size="14.00">kernel</text></g><!-- run&#45;&#45;kernel --><g id="edge4" class="edge"><title>
+run–kernel
+</title>
+<path fill="none" stroke="black" d="M129.18,-118.73C136.46,-121.38 144.54,-124.31 152.1,-127.06"></path></g><!-- runbl --><g id="node3" class="node"><title>
+runbl
+</title>
+<ellipse fill="none" stroke="black" cx="31.42" cy="-126.16" rx="31.34" ry="18"></ellipse><text text-anchor="middle" x="31.42" y="-121.96" font-family="Times,serif" font-size="14.00">runbl</text></g><!-- intr&#45;&#45;runbl --><g id="edge2" class="edge"><title>
+intr–runbl
+</title>
+<path fill="none" stroke="black" d="M43.64,-77.51C41.25,-87.05 38.3,-98.76 35.91,-108.3"></path></g><!-- runbl&#45;&#45;run --><g id="edge3" class="edge"><title>
+runbl–run
+</title>
+<path fill="none" stroke="black" d="M61.01,-119.7C67.11,-118.36 73.48,-116.97 79.43,-115.67"></path></g><!-- zombie --><g id="node5" class="node"><title>
+zombie
+</title>
+<ellipse fill="none" stroke="black" cx="168.31" cy="-220.71" rx="39.42" ry="18"></ellipse><text text-anchor="middle" x="168.31" y="-216.51" font-family="Times,serif" font-size="14.00">zombie</text></g><!-- kernel&#45;&#45;zombie --><g id="edge5" class="edge"><title>
+kernel–zombie
+</title>
+<path fill="none" stroke="black" d="M178.21,-155.58C176.09,-169.54 173.17,-188.76 171.05,-202.7"></path></g><!-- sleep --><g id="node6" class="node"><title>
+sleep
+</title>
+<ellipse fill="none" stroke="black" cx="253.25" cy="-154.97" rx="30.76" ry="18"></ellipse><text text-anchor="middle" x="253.25" y="-150.77" font-family="Times,serif" font-size="14.00">sleep</text></g><!-- kernel&#45;&#45;sleep --><g id="edge6" class="edge"><title>
+kernel–sleep
+</title>
+<path fill="none" stroke="black" d="M212.87,-145.23C216.81,-146.18 220.81,-147.15 224.69,-148.08"></path></g><!-- runmem --><g id="node7" class="node"><title>
+runmem
+</title>
+<ellipse fill="none" stroke="black" cx="240.17" cy="-83.36" rx="43.44" ry="18"></ellipse><text text-anchor="middle" x="240.17" y="-79.16" font-family="Times,serif" font-size="14.00">runmem</text></g><!-- kernel&#45;&#45;runmem --><g id="edge7" class="edge"><title>
+kernel–runmem
+</title>
+<path fill="none" stroke="black" d="M198.4,-121.57C205.9,-114.71 214.67,-106.69 222.23,-99.77"></path></g><!-- sleep&#45;&#45;runmem --><g id="edge13" class="edge"><title>
+sleep–runmem
+</title>
+<path fill="none" stroke="black" d="M249.95,-136.9C247.98,-126.13 245.49,-112.49 243.51,-101.67"></path></g><!-- swap --><g id="node8" class="node"><title>
+swap
+</title>
+<ellipse fill="none" stroke="black" cx="330.95" cy="-148.25" rx="30.77" ry="18"></ellipse><text text-anchor="middle" x="330.95" y="-144.05" font-family="Times,serif" font-size="14.00">swap</text></g><!-- sleep&#45;&#45;swap --><g id="edge8" class="edge"><title>
+sleep–swap
+</title>
+<path fill="none" stroke="black" d="M283.96,-152.31C289.3,-151.85 294.86,-151.37 300.21,-150.91"></path></g><!-- runswap --><g id="node9" class="node"><title>
+runswap
+</title>
+<ellipse fill="none" stroke="black" cx="319.23" cy="-73.46" rx="43.51" ry="18"></ellipse><text text-anchor="middle" x="319.23" y="-69.26" font-family="Times,serif" font-size="14.00">runswap</text></g><!-- swap&#45;&#45;runswap --><g id="edge9" class="edge"><title>
+swap–runswap
+</title>
+<path fill="none" stroke="black" d="M328.11,-130.15C326.28,-118.47 323.91,-103.35 322.08,-91.66"></path></g><!-- runswap&#45;&#45;runmem --><g id="edge11" class="edge"><title>
+runswap–runmem
+</title>
+<path fill="none" stroke="black" d="M276.92,-78.76C276.78,-78.77 276.63,-78.79 276.48,-78.81"></path></g><!-- new --><g id="node10" class="node"><title>
+new
+</title>
+<ellipse fill="none" stroke="black" cx="278.31" cy="-18" rx="27.25" ry="18"></ellipse><text text-anchor="middle" x="278.31" y="-13.8" font-family="Times,serif" font-size="14.00">new</text></g><!-- runswap&#45;&#45;new --><g id="edge10" class="edge"><title>
+runswap–new
+</title>
+<path fill="none" stroke="black" d="M306.51,-56.21C301.35,-49.22 295.42,-41.18 290.33,-34.29"></path></g><!-- new&#45;&#45;runmem --><g id="edge12" class="edge"><title>
+new–runmem
+</title>
+<path fill="none" stroke="black" d="M268.49,-34.83C263.01,-44.21 256.2,-55.89 250.62,-65.44"></path></g></g></svg>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;6: This is a simple graphviz graph.</figcaption></figure>
+</div>
+</div>
+</div>
+</section></section><section id="video" class="level1"><h1>Video</h1>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wo9vZccmqwc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section><section id="code-annotation" class="level1"><h1>Code Annotation</h1>
+<div class="sourceCode" id="annotated-cell-10"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-10-1"><a href="#annotated-cell-10-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="annotated-cell-10-2"><a href="#annotated-cell-10-2"></a><span class="fu">library</span>(palmerpenguins)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-10-3" class="code-annotation-target"><a href="#annotated-cell-10-3"></a>penguins <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-10-4" class="code-annotation-target"><a href="#annotated-cell-10-4"></a>  <span class="fu">mutate</span>(</span>
+<span id="annotated-cell-10-5"><a href="#annotated-cell-10-5"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm,</span>
+<span id="annotated-cell-10-6"><a href="#annotated-cell-10-6"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm</span>
+<span id="annotated-cell-10-7"><a href="#annotated-cell-10-7"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-10" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-10" data-code-lines="3" data-code-annotation="1">Take <code>penguins</code>, and then,</span>
+</dd>
+<dt data-target-cell="annotated-cell-10" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-10" data-code-lines="4,5,6,7" data-code-annotation="2">add new columns for the bill ratio and bill area.</span>
+</dd>
+</dl></section><section id="article-layout" class="level1 page-columns page-full"><h1>Article Layout</h1>
+<section id="screen-column" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="screen-column">Screen Column</h2>
+<div class="cell column-screen">
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># library(leaflet)</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co"># leaflet() %&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co">#   addTiles() %&gt;%  # Add default OpenStreetMap map tiles</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co">#   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section><section id="margin-content" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="margin-content">Margin Content</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1"></a>::: {.column-margin}</span>
+<span id="cb11-2"><a href="#cb11-2"></a>We know from *the first fundamental theorem of calculus* that for $x$ in $<span class="co">[</span><span class="ot">a, b</span><span class="co">]</span>$:</span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a>$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$</span>
+<span id="cb11-5"><a href="#cb11-5"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 
 
 <!-- -->
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<div class="no-row-height column-margin column-container"><div class="">
+<p>We know from <em>the first fundamental theorem of calculus</em> that for <span class="math inline">x</span> in <span class="math inline">[a, b]</span>:</p>
+<p><span class="math display">\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).</span></p>
+</div></div></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -546,6 +752,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -810,270 +1131,361 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> "Hello, Quarto"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="an">subtitle:</span><span class="co"> "Quarto 教學"</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="an">date:</span><span class="co"> "6/13/2023"</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="an">date-modified:</span><span class="co"> "6/13/2023"</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="an">date-format:</span><span class="co"> "YYYY-MM-DD"</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="an">author:</span><span class="co"> "Bennie Liu"</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="an">abstract:</span><span class="co"> "以官網範例檔案為基礎，介紹如何使用R Quarto"</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="an">highlight-style:</span><span class="co"> pygments</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a></span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="an">format:</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="co">  html:</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="co">    code-fold: true</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="co">    code-tools: true</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a><span class="co">    code-link: true</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a><span class="co">    code-line-numbers: true</span></span>
-<span id="cb8-17"><a href="#cb8-17"></a><span class="co">    toc: true</span></span>
-<span id="cb8-18"><a href="#cb8-18"></a><span class="co">    df-print: paged</span></span>
-<span id="cb8-19"><a href="#cb8-19"></a><span class="co">    html-math-method: katex</span></span>
-<span id="cb8-20"><a href="#cb8-20"></a><span class="co">  # pdf:</span></span>
-<span id="cb8-21"><a href="#cb8-21"></a><span class="co">  #   code-line-numbers: true</span></span>
-<span id="cb8-22"><a href="#cb8-22"></a><span class="co">  #   geometry: </span></span>
-<span id="cb8-23"><a href="#cb8-23"></a><span class="co">  #     - top=30mm</span></span>
-<span id="cb8-24"><a href="#cb8-24"></a><span class="co">  #     - left=30mm</span></span>
-<span id="cb8-25"><a href="#cb8-25"></a><span class="co">  # docx: default</span></span>
-<span id="cb8-26"><a href="#cb8-26"></a><span class="an">execute:</span></span>
-<span id="cb8-27"><a href="#cb8-27"></a><span class="co">  echo: true</span></span>
-<span id="cb8-28"><a href="#cb8-28"></a><span class="co">  warning: false</span></span>
-<span id="cb8-29"><a href="#cb8-29"></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb8-30"><a href="#cb8-30"></a><span class="co">---</span></span>
-<span id="cb8-31"><a href="#cb8-31"></a></span>
-<span id="cb8-32"><a href="#cb8-32"></a><span class="fu"># 載入套件</span></span>
-<span id="cb8-33"><a href="#cb8-33"></a></span>
-<span id="cb8-36"><a href="#cb8-36"></a><span class="in">```{r}</span></span>
-<span id="cb8-37"><a href="#cb8-37"></a><span class="co">#| label: load-packages</span></span>
-<span id="cb8-38"><a href="#cb8-38"></a><span class="co">#| echo: fenced</span></span>
-<span id="cb8-39"><a href="#cb8-39"></a></span>
-<span id="cb8-40"><a href="#cb8-40"></a><span class="fu">library</span>(tidyverse)      <span class="co"># for data wrangling and visualization</span></span>
-<span id="cb8-41"><a href="#cb8-41"></a><span class="fu">library</span>(palmerpenguins) <span class="co"># for data</span></span>
-<span id="cb8-42"><a href="#cb8-42"></a><span class="fu">library</span>(openintro)      <span class="co"># for data</span></span>
-<span id="cb8-43"><a href="#cb8-43"></a><span class="fu">library</span>(knitr)          <span class="co"># for tables</span></span>
-<span id="cb8-44"><a href="#cb8-44"></a><span class="fu">library</span>(broom)          <span class="co"># for model summary</span></span>
-<span id="cb8-45"><a href="#cb8-45"></a><span class="in">```</span></span>
-<span id="cb8-46"><a href="#cb8-46"></a></span>
-<span id="cb8-47"><a href="#cb8-47"></a><span class="fu"># Hello, Quarto</span></span>
-<span id="cb8-48"><a href="#cb8-48"></a></span>
-<span id="cb8-49"><a href="#cb8-49"></a><span class="fu">## Meet Quarto</span></span>
-<span id="cb8-50"><a href="#cb8-50"></a></span>
-<span id="cb8-51"><a href="#cb8-51"></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
-<span id="cb8-52"><a href="#cb8-52"></a></span>
-<span id="cb8-53"><a href="#cb8-53"></a><span class="fu">## Meet the penguins</span></span>
-<span id="cb8-54"><a href="#cb8-54"></a></span>
-<span id="cb8-55"><a href="#cb8-55"></a><span class="in">`penguins`</span> 資料集</span>
-<span id="cb8-56"><a href="#cb8-56"></a></span>
-<span id="cb8-57"><a href="#cb8-57"></a><span class="in">`r penguins`</span></span>
-<span id="cb8-58"><a href="#cb8-58"></a></span>
-<span id="cb8-59"><a href="#cb8-59"></a><span class="al">![](https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png)</span>{style="float:right;" fig-alt="Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst." width="401"}</span>
-<span id="cb8-60"><a href="#cb8-60"></a></span>
-<span id="cb8-61"><a href="#cb8-61"></a>The <span class="in">`penguins`</span> data from the <span class="co">[</span><span class="ot">**palmerpenguins**</span><span class="co">](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package")</span> package contains size measurements for <span class="in">`r nrow(penguins)`</span> penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.</span>
-<span id="cb8-62"><a href="#cb8-62"></a></span>
-<span id="cb8-63"><a href="#cb8-63"></a>The plot below shows the relationship between flipper and bill lengths of these penguins.</span>
-<span id="cb8-64"><a href="#cb8-64"></a></span>
-<span id="cb8-67"><a href="#cb8-67"></a><span class="in">```{r}</span></span>
-<span id="cb8-68"><a href="#cb8-68"></a><span class="co">#| label: plot-penguins</span></span>
-<span id="cb8-69"><a href="#cb8-69"></a><span class="co">#| echo: false</span></span>
-<span id="cb8-70"><a href="#cb8-70"></a></span>
-<span id="cb8-71"><a href="#cb8-71"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb8-72"><a href="#cb8-72"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb8-73"><a href="#cb8-73"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
-<span id="cb8-74"><a href="#cb8-74"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb8-75"><a href="#cb8-75"></a>  <span class="fu">labs</span>(</span>
-<span id="cb8-76"><a href="#cb8-76"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
-<span id="cb8-77"><a href="#cb8-77"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
-<span id="cb8-78"><a href="#cb8-78"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb8-79"><a href="#cb8-79"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
-<span id="cb8-80"><a href="#cb8-80"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-81"><a href="#cb8-81"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-82"><a href="#cb8-82"></a><span class="in">```</span></span>
-<span id="cb8-83"><a href="#cb8-83"></a></span>
-<span id="cb8-84"><a href="#cb8-84"></a><span class="fu"># Quarto Computations</span></span>
-<span id="cb8-85"><a href="#cb8-85"></a></span>
-<span id="cb8-86"><a href="#cb8-86"></a>This dataset contains a subset of the fuel economy data from the EPA. Specifically, we use the <span class="in">`mpg`</span> dataset from the **ggplot2** package.</span>
-<span id="cb8-87"><a href="#cb8-87"></a></span>
-<span id="cb8-88"><a href="#cb8-88"></a>@fig-scatterplot shows a positive, strong, and linear relationship between the city and highway mileage of these cars.</span>
-<span id="cb8-89"><a href="#cb8-89"></a></span>
-<span id="cb8-92"><a href="#cb8-92"></a><span class="in">```{r}</span></span>
-<span id="cb8-93"><a href="#cb8-93"></a><span class="co">#| label: fig-scatterplot</span></span>
-<span id="cb8-94"><a href="#cb8-94"></a><span class="co">#| fig-cap: "City and highway mileage for 38 popular models of cars."</span></span>
-<span id="cb8-95"><a href="#cb8-95"></a><span class="co">#| fig-alt: "Scatterplot of city vs. highway mileage for cars, where points are colored by the number of cylinders. The plot displays a positive, linear, and strong relationship between city and highway mileage, and mileage increases as the number of cylinders decreases."</span></span>
-<span id="cb8-96"><a href="#cb8-96"></a><span class="co">#| fig-width: 6</span></span>
-<span id="cb8-97"><a href="#cb8-97"></a><span class="co">#| fig-height: 3</span></span>
-<span id="cb8-98"><a href="#cb8-98"></a></span>
-<span id="cb8-99"><a href="#cb8-99"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
-<span id="cb8-100"><a href="#cb8-100"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb8-101"><a href="#cb8-101"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
-<span id="cb8-102"><a href="#cb8-102"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-103"><a href="#cb8-103"></a><span class="in">```</span></span>
-<span id="cb8-104"><a href="#cb8-104"></a></span>
-<span id="cb8-105"><a href="#cb8-105"></a>There are <span class="in">`r nrow(mpg)`</span> observations in our data.</span>
-<span id="cb8-106"><a href="#cb8-106"></a></span>
-<span id="cb8-109"><a href="#cb8-109"></a><span class="in">```{r}</span></span>
-<span id="cb8-110"><a href="#cb8-110"></a><span class="co">#| echo: false</span></span>
-<span id="cb8-111"><a href="#cb8-111"></a></span>
-<span id="cb8-112"><a href="#cb8-112"></a>mean_cty <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(mpg<span class="sc">$</span>cty), <span class="dv">2</span>)</span>
-<span id="cb8-113"><a href="#cb8-113"></a>mean_hwy <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(mpg<span class="sc">$</span>hwy), <span class="dv">2</span>)</span>
-<span id="cb8-114"><a href="#cb8-114"></a><span class="in">```</span></span>
-<span id="cb8-115"><a href="#cb8-115"></a></span>
-<span id="cb8-116"><a href="#cb8-116"></a>The average city mileage of the cars in our data is <span class="in">`r mean_cty`</span> and the average highway mileage is <span class="in">`r mean_hwy`</span>.</span>
-<span id="cb8-117"><a href="#cb8-117"></a></span>
-<span id="cb8-118"><a href="#cb8-118"></a>The plots in @fig-mpg show the relationship between city and highway mileage for 38 popular models of cars. In @fig-mpg-1 the points are colored by the number of cylinders while in @fig-mpg-2 the points are colored by engine displacement.</span>
-<span id="cb8-119"><a href="#cb8-119"></a></span>
-<span id="cb8-122"><a href="#cb8-122"></a><span class="in">```{r}</span></span>
-<span id="cb8-123"><a href="#cb8-123"></a><span class="co">#| label: fig-mpg</span></span>
-<span id="cb8-124"><a href="#cb8-124"></a><span class="co">#| fig-cap: "City and highway mileage for 38 popular models of cars."</span></span>
-<span id="cb8-125"><a href="#cb8-125"></a><span class="co">#| fig-subcap:</span></span>
-<span id="cb8-126"><a href="#cb8-126"></a><span class="co">#|   - "Color by number of cylinders"</span></span>
-<span id="cb8-127"><a href="#cb8-127"></a><span class="co">#|   - "Color by engine displacement, in liters"</span></span>
-<span id="cb8-128"><a href="#cb8-128"></a><span class="co">#| layout-ncol: 2</span></span>
-<span id="cb8-129"><a href="#cb8-129"></a><span class="co">#| column: page</span></span>
-<span id="cb8-130"><a href="#cb8-130"></a><span class="co">#| cache: true</span></span>
-<span id="cb8-131"><a href="#cb8-131"></a></span>
-<span id="cb8-132"><a href="#cb8-132"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
-<span id="cb8-133"><a href="#cb8-133"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb8-134"><a href="#cb8-134"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
-<span id="cb8-135"><a href="#cb8-135"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-136"><a href="#cb8-136"></a></span>
-<span id="cb8-137"><a href="#cb8-137"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> displ)) <span class="sc">+</span></span>
-<span id="cb8-138"><a href="#cb8-138"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb8-139"><a href="#cb8-139"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"E"</span>) <span class="sc">+</span></span>
-<span id="cb8-140"><a href="#cb8-140"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-141"><a href="#cb8-141"></a><span class="in">```</span></span>
-<span id="cb8-142"><a href="#cb8-142"></a></span>
-<span id="cb8-143"><a href="#cb8-143"></a><span class="fu"># Housing Prices</span></span>
-<span id="cb8-144"><a href="#cb8-144"></a></span>
-<span id="cb8-145"><a href="#cb8-145"></a><span class="fu">## Introduction</span></span>
-<span id="cb8-146"><a href="#cb8-146"></a></span>
-<span id="cb8-147"><a href="#cb8-147"></a>In this analysis, we build a model predicting sale prices of houses based on data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020. Let's start by loading the packages we'll use for the analysis.</span>
-<span id="cb8-148"><a href="#cb8-148"></a></span>
-<span id="cb8-149"><a href="#cb8-149"></a>We present the results of exploratory data analysis in @sec-eda and the regression model in @sec-model.</span>
-<span id="cb8-150"><a href="#cb8-150"></a></span>
-<span id="cb8-151"><a href="#cb8-151"></a>We're going to do this analysis using literate programming <span class="co">[</span><span class="ot">@knuth1984</span><span class="co">]</span>.</span>
-<span id="cb8-152"><a href="#cb8-152"></a></span>
-<span id="cb8-153"><a href="#cb8-153"></a><span class="fu">## Exploratory data analysis {#sec-eda}</span></span>
-<span id="cb8-154"><a href="#cb8-154"></a></span>
-<span id="cb8-155"><a href="#cb8-155"></a>The data contains <span class="in">`r nrow(duke_forest)`</span> houses. As part of the exploratory analysis let's visualize and summarize the relationship between areas and prices of these houses.</span>
-<span id="cb8-156"><a href="#cb8-156"></a></span>
-<span id="cb8-157"><a href="#cb8-157"></a><span class="fu">### Data visualization</span></span>
-<span id="cb8-158"><a href="#cb8-158"></a></span>
-<span id="cb8-159"><a href="#cb8-159"></a>@fig-histogram shows two histograms displaying the distributions of <span class="in">`price`</span> and <span class="in">`area`</span> individually.</span>
-<span id="cb8-160"><a href="#cb8-160"></a></span>
-<span id="cb8-163"><a href="#cb8-163"></a><span class="in">```{r}</span></span>
-<span id="cb8-164"><a href="#cb8-164"></a><span class="co">#| label: fig-histogram</span></span>
-<span id="cb8-165"><a href="#cb8-165"></a><span class="co">#| fig-cap: "Histograms of individual variables"</span></span>
-<span id="cb8-166"><a href="#cb8-166"></a><span class="co">#| fig-subcap:</span></span>
-<span id="cb8-167"><a href="#cb8-167"></a><span class="co">#|   - "Histogram of `price`s"</span></span>
-<span id="cb8-168"><a href="#cb8-168"></a><span class="co">#|   - "Histogram of `area`s" </span></span>
-<span id="cb8-169"><a href="#cb8-169"></a><span class="co">#| layout-ncol: 2</span></span>
-<span id="cb8-170"><a href="#cb8-170"></a><span class="co">#| column: page-right</span></span>
-<span id="cb8-171"><a href="#cb8-171"></a></span>
-<span id="cb8-172"><a href="#cb8-172"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
-<span id="cb8-173"><a href="#cb8-173"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">50000</span>) <span class="sc">+</span></span>
-<span id="cb8-174"><a href="#cb8-174"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of prices"</span>)</span>
-<span id="cb8-175"><a href="#cb8-175"></a></span>
-<span id="cb8-176"><a href="#cb8-176"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area)) <span class="sc">+</span></span>
-<span id="cb8-177"><a href="#cb8-177"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">250</span>) <span class="sc">+</span></span>
-<span id="cb8-178"><a href="#cb8-178"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of areas"</span>)</span>
-<span id="cb8-179"><a href="#cb8-179"></a><span class="in">```</span></span>
-<span id="cb8-180"><a href="#cb8-180"></a></span>
-<span id="cb8-181"><a href="#cb8-181"></a>@fig-scatterplot-HP displays the relationship between these two variables in a scatterplot.</span>
-<span id="cb8-182"><a href="#cb8-182"></a></span>
-<span id="cb8-185"><a href="#cb8-185"></a><span class="in">```{r}</span></span>
-<span id="cb8-186"><a href="#cb8-186"></a><span class="co">#| label: fig-scatterplot-HP</span></span>
-<span id="cb8-187"><a href="#cb8-187"></a><span class="co">#| fig-cap: "Scatterplot of price vs. area of houses in Duke Forest"</span></span>
-<span id="cb8-188"><a href="#cb8-188"></a></span>
-<span id="cb8-189"><a href="#cb8-189"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb8-190"><a href="#cb8-190"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb8-191"><a href="#cb8-191"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Price and area of houses in Duke Forest"</span>)</span>
-<span id="cb8-192"><a href="#cb8-192"></a><span class="in">```</span></span>
-<span id="cb8-193"><a href="#cb8-193"></a></span>
-<span id="cb8-194"><a href="#cb8-194"></a><span class="fu">### Summary statistics</span></span>
-<span id="cb8-195"><a href="#cb8-195"></a></span>
-<span id="cb8-196"><a href="#cb8-196"></a>@tbl-stats displays basic summary statistics for these two variables.</span>
-<span id="cb8-197"><a href="#cb8-197"></a></span>
-<span id="cb8-200"><a href="#cb8-200"></a><span class="in">```{r}</span></span>
-<span id="cb8-201"><a href="#cb8-201"></a><span class="co">#| label: tbl-stats</span></span>
-<span id="cb8-202"><a href="#cb8-202"></a><span class="co">#| tbl-cap: "Summary statistics for price and area of houses in Duke Forest"</span></span>
-<span id="cb8-203"><a href="#cb8-203"></a></span>
-<span id="cb8-204"><a href="#cb8-204"></a>duke_forest <span class="sc">%&gt;%</span></span>
-<span id="cb8-205"><a href="#cb8-205"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb8-206"><a href="#cb8-206"></a>    <span class="st">`</span><span class="at">Median price</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">median</span>(price),</span>
-<span id="cb8-207"><a href="#cb8-207"></a>    <span class="st">`</span><span class="at">IQR price</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">IQR</span>(price),</span>
-<span id="cb8-208"><a href="#cb8-208"></a>    <span class="st">`</span><span class="at">Median area</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">median</span>(area),</span>
-<span id="cb8-209"><a href="#cb8-209"></a>    <span class="st">`</span><span class="at">IQR area</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">IQR</span>(area),</span>
-<span id="cb8-210"><a href="#cb8-210"></a>    <span class="st">`</span><span class="at">Correlation, r</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">cor</span>(price, area)</span>
-<span id="cb8-211"><a href="#cb8-211"></a>    ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-212"><a href="#cb8-212"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>))</span>
-<span id="cb8-213"><a href="#cb8-213"></a><span class="in">```</span></span>
-<span id="cb8-214"><a href="#cb8-214"></a></span>
-<span id="cb8-215"><a href="#cb8-215"></a><span class="fu">## Modeling {#sec-model}</span></span>
-<span id="cb8-216"><a href="#cb8-216"></a></span>
-<span id="cb8-217"><a href="#cb8-217"></a>We can fit a simple linear regression model of the form shown in @eq-slr.</span>
-<span id="cb8-218"><a href="#cb8-218"></a></span>
-<span id="cb8-219"><a href="#cb8-219"></a>$$</span>
-<span id="cb8-220"><a href="#cb8-220"></a>price = \hat{\beta}_0 + \hat{\beta}_1 \times area + \epsilon</span>
-<span id="cb8-221"><a href="#cb8-221"></a>$$ {#eq-slr}</span>
-<span id="cb8-222"><a href="#cb8-222"></a></span>
-<span id="cb8-223"><a href="#cb8-223"></a>@tbl-lm shows the regression output for this model.</span>
-<span id="cb8-224"><a href="#cb8-224"></a></span>
-<span id="cb8-227"><a href="#cb8-227"></a><span class="in">```{r}</span></span>
-<span id="cb8-228"><a href="#cb8-228"></a><span class="co">#| label: tbl-lm</span></span>
-<span id="cb8-229"><a href="#cb8-229"></a><span class="co">#| tbl-cap: "Linear regression model for predicting price from area"</span></span>
-<span id="cb8-230"><a href="#cb8-230"></a></span>
-<span id="cb8-231"><a href="#cb8-231"></a>price_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> area, <span class="at">data =</span> duke_forest)</span>
-<span id="cb8-232"><a href="#cb8-232"></a>  </span>
-<span id="cb8-233"><a href="#cb8-233"></a>price_fit <span class="sc">%&gt;%</span></span>
-<span id="cb8-234"><a href="#cb8-234"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-235"><a href="#cb8-235"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb8-236"><a href="#cb8-236"></a><span class="in">```</span></span>
-<span id="cb8-237"><a href="#cb8-237"></a></span>
-<span id="cb8-238"><a href="#cb8-238"></a>::: callout-note</span>
-<span id="cb8-239"><a href="#cb8-239"></a>This is a pretty incomplete analysis, but hopefully the document provides a good overview of some of the authoring features of Quarto!</span>
-<span id="cb8-240"><a href="#cb8-240"></a>:::</span>
-<span id="cb8-241"><a href="#cb8-241"></a></span>
-<span id="cb8-242"><a href="#cb8-242"></a><span class="fu">## References {.unnumbered}</span></span>
-<span id="cb8-243"><a href="#cb8-243"></a></span>
-<span id="cb8-244"><a href="#cb8-244"></a><span class="fu"># Equations</span></span>
-<span id="cb8-245"><a href="#cb8-245"></a></span>
-<span id="cb8-246"><a href="#cb8-246"></a><span class="fu">## 行內方程式</span></span>
-<span id="cb8-247"><a href="#cb8-247"></a></span>
-<span id="cb8-248"><a href="#cb8-248"></a>常態分佈機率密度函數：$f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e\^{-\frac{(x-\mu)^2}{2\sigma^2}}$</span>
-<span id="cb8-249"><a href="#cb8-249"></a></span>
-<span id="cb8-250"><a href="#cb8-250"></a><span class="fu">## 單行方程式</span></span>
-<span id="cb8-251"><a href="#cb8-251"></a></span>
-<span id="cb8-252"><a href="#cb8-252"></a>$$</span>
-<span id="cb8-253"><a href="#cb8-253"></a>f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}</span>
-<span id="cb8-254"><a href="#cb8-254"></a>$$ {#eq-normaldistribution}</span>
-<span id="cb8-255"><a href="#cb8-255"></a></span>
-<span id="cb8-256"><a href="#cb8-256"></a><span class="fu"># Callout樣式</span></span>
-<span id="cb8-257"><a href="#cb8-257"></a></span>
-<span id="cb8-258"><a href="#cb8-258"></a>::: callout-note</span>
-<span id="cb8-259"><a href="#cb8-259"></a><span class="fu">## note</span></span>
-<span id="cb8-260"><a href="#cb8-260"></a></span>
-<span id="cb8-261"><a href="#cb8-261"></a>note</span>
-<span id="cb8-262"><a href="#cb8-262"></a>:::</span>
-<span id="cb8-263"><a href="#cb8-263"></a></span>
-<span id="cb8-264"><a href="#cb8-264"></a>::: {.callout-note appearance="simple" icon="true"}</span>
-<span id="cb8-265"><a href="#cb8-265"></a>note simple with icon</span>
-<span id="cb8-266"><a href="#cb8-266"></a>:::</span>
-<span id="cb8-267"><a href="#cb8-267"></a></span>
-<span id="cb8-268"><a href="#cb8-268"></a>::: callout-tip</span>
-<span id="cb8-269"><a href="#cb8-269"></a>tip</span>
-<span id="cb8-270"><a href="#cb8-270"></a>:::</span>
-<span id="cb8-271"><a href="#cb8-271"></a></span>
-<span id="cb8-272"><a href="#cb8-272"></a>::: callout-important</span>
-<span id="cb8-273"><a href="#cb8-273"></a>important</span>
-<span id="cb8-274"><a href="#cb8-274"></a>:::</span>
-<span id="cb8-275"><a href="#cb8-275"></a></span>
-<span id="cb8-276"><a href="#cb8-276"></a>::: callout-caution</span>
-<span id="cb8-277"><a href="#cb8-277"></a>caution</span>
-<span id="cb8-278"><a href="#cb8-278"></a>:::</span>
-<span id="cb8-279"><a href="#cb8-279"></a></span>
-<span id="cb8-280"><a href="#cb8-280"></a>::: callout-warning</span>
-<span id="cb8-281"><a href="#cb8-281"></a>warning</span>
-<span id="cb8-282"><a href="#cb8-282"></a>:::</span>
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> "Hello, Quarto"</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">subtitle:</span><span class="co"> "Quarto 教學"</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="an">date:</span><span class="co"> "6/13/2023"</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="an">date-modified:</span><span class="co"> "6/13/2023"</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="an">date-format:</span><span class="co"> "YYYY-MM-DD"</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="an">author:</span><span class="co"> "Bennie Liu"</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="an">abstract:</span><span class="co"> "以官網範例檔案為基礎，介紹如何使用R Quarto"</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="an">highlight-style:</span><span class="co"> pygments</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a></span>
+<span id="cb12-11"><a href="#cb12-11"></a><span class="an">format:</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a><span class="co">  html:</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a><span class="co">    code-fold: true</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a><span class="co">    code-tools: true</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a><span class="co">    code-link: true</span></span>
+<span id="cb12-16"><a href="#cb12-16"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb12-17"><a href="#cb12-17"></a><span class="co">    toc: true</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a><span class="co">    df-print: paged</span></span>
+<span id="cb12-19"><a href="#cb12-19"></a><span class="co">    html-math-method: katex</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="co">  # pdf:</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="co">  #   code-line-numbers: true</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a><span class="co">  #   geometry: </span></span>
+<span id="cb12-23"><a href="#cb12-23"></a><span class="co">  #     - top=30mm</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a><span class="co">  #     - left=30mm</span></span>
+<span id="cb12-25"><a href="#cb12-25"></a><span class="co">  # docx: default</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a><span class="an">execute:</span></span>
+<span id="cb12-27"><a href="#cb12-27"></a><span class="co">  echo: true</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a><span class="co">  warning: false</span></span>
+<span id="cb12-29"><a href="#cb12-29"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb12-30"><a href="#cb12-30"></a><span class="co">---</span></span>
+<span id="cb12-31"><a href="#cb12-31"></a></span>
+<span id="cb12-32"><a href="#cb12-32"></a><span class="fu"># 載入套件</span></span>
+<span id="cb12-33"><a href="#cb12-33"></a></span>
+<span id="cb12-36"><a href="#cb12-36"></a><span class="in">```{r}</span></span>
+<span id="cb12-37"><a href="#cb12-37"></a><span class="co">#| label: load-packages</span></span>
+<span id="cb12-38"><a href="#cb12-38"></a><span class="co">#| echo: fenced</span></span>
+<span id="cb12-39"><a href="#cb12-39"></a></span>
+<span id="cb12-40"><a href="#cb12-40"></a><span class="fu">library</span>(tidyverse)      <span class="co"># for data wrangling and visualization</span></span>
+<span id="cb12-41"><a href="#cb12-41"></a><span class="fu">library</span>(palmerpenguins) <span class="co"># for data</span></span>
+<span id="cb12-42"><a href="#cb12-42"></a><span class="fu">library</span>(openintro)      <span class="co"># for data</span></span>
+<span id="cb12-43"><a href="#cb12-43"></a><span class="fu">library</span>(knitr)          <span class="co"># for tables</span></span>
+<span id="cb12-44"><a href="#cb12-44"></a><span class="fu">library</span>(broom)          <span class="co"># for model summary</span></span>
+<span id="cb12-45"><a href="#cb12-45"></a><span class="in">```</span></span>
+<span id="cb12-46"><a href="#cb12-46"></a></span>
+<span id="cb12-47"><a href="#cb12-47"></a><span class="fu"># Hello, Quarto</span></span>
+<span id="cb12-48"><a href="#cb12-48"></a></span>
+<span id="cb12-49"><a href="#cb12-49"></a><span class="fu">## Meet Quarto</span></span>
+<span id="cb12-50"><a href="#cb12-50"></a></span>
+<span id="cb12-51"><a href="#cb12-51"></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
+<span id="cb12-52"><a href="#cb12-52"></a></span>
+<span id="cb12-53"><a href="#cb12-53"></a><span class="fu">## Meet the penguins</span></span>
+<span id="cb12-54"><a href="#cb12-54"></a></span>
+<span id="cb12-55"><a href="#cb12-55"></a><span class="in">`penguins`</span> 資料集</span>
+<span id="cb12-56"><a href="#cb12-56"></a></span>
+<span id="cb12-57"><a href="#cb12-57"></a><span class="in">`r penguins`</span></span>
+<span id="cb12-58"><a href="#cb12-58"></a></span>
+<span id="cb12-59"><a href="#cb12-59"></a><span class="al">![](https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png)</span>{style="float:right;" fig-alt="Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst." width="401"}</span>
+<span id="cb12-60"><a href="#cb12-60"></a></span>
+<span id="cb12-61"><a href="#cb12-61"></a>The <span class="in">`penguins`</span> data from the <span class="co">[</span><span class="ot">**palmerpenguins**</span><span class="co">](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package")</span> package contains size measurements for <span class="in">`r nrow(penguins)`</span> penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.</span>
+<span id="cb12-62"><a href="#cb12-62"></a></span>
+<span id="cb12-63"><a href="#cb12-63"></a>The plot below shows the relationship between flipper and bill lengths of these penguins.</span>
+<span id="cb12-64"><a href="#cb12-64"></a></span>
+<span id="cb12-67"><a href="#cb12-67"></a><span class="in">```{r}</span></span>
+<span id="cb12-68"><a href="#cb12-68"></a><span class="co">#| label: plot-penguins</span></span>
+<span id="cb12-69"><a href="#cb12-69"></a><span class="co">#| echo: false</span></span>
+<span id="cb12-70"><a href="#cb12-70"></a></span>
+<span id="cb12-71"><a href="#cb12-71"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb12-72"><a href="#cb12-72"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb12-73"><a href="#cb12-73"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb12-74"><a href="#cb12-74"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
+<span id="cb12-75"><a href="#cb12-75"></a>  <span class="fu">labs</span>(</span>
+<span id="cb12-76"><a href="#cb12-76"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
+<span id="cb12-77"><a href="#cb12-77"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
+<span id="cb12-78"><a href="#cb12-78"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb12-79"><a href="#cb12-79"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
+<span id="cb12-80"><a href="#cb12-80"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-81"><a href="#cb12-81"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb12-82"><a href="#cb12-82"></a><span class="in">```</span></span>
+<span id="cb12-83"><a href="#cb12-83"></a></span>
+<span id="cb12-84"><a href="#cb12-84"></a><span class="fu"># Quarto Computations</span></span>
+<span id="cb12-85"><a href="#cb12-85"></a></span>
+<span id="cb12-86"><a href="#cb12-86"></a>This dataset contains a subset of the fuel economy data from the EPA. Specifically, we use the <span class="in">`mpg`</span> dataset from the **ggplot2** package.</span>
+<span id="cb12-87"><a href="#cb12-87"></a></span>
+<span id="cb12-88"><a href="#cb12-88"></a>@fig-scatterplot shows a positive, strong, and linear relationship between the city and highway mileage of these cars.</span>
+<span id="cb12-89"><a href="#cb12-89"></a></span>
+<span id="cb12-92"><a href="#cb12-92"></a><span class="in">```{r}</span></span>
+<span id="cb12-93"><a href="#cb12-93"></a><span class="co">#| label: fig-scatterplot</span></span>
+<span id="cb12-94"><a href="#cb12-94"></a><span class="co">#| fig-cap: "City and highway mileage for 38 popular models of cars."</span></span>
+<span id="cb12-95"><a href="#cb12-95"></a><span class="co">#| fig-alt: "Scatterplot of city vs. highway mileage for cars, where points are colored by the number of cylinders. The plot displays a positive, linear, and strong relationship between city and highway mileage, and mileage increases as the number of cylinders decreases."</span></span>
+<span id="cb12-96"><a href="#cb12-96"></a><span class="co">#| fig-width: 6</span></span>
+<span id="cb12-97"><a href="#cb12-97"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb12-98"><a href="#cb12-98"></a></span>
+<span id="cb12-99"><a href="#cb12-99"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
+<span id="cb12-100"><a href="#cb12-100"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb12-101"><a href="#cb12-101"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
+<span id="cb12-102"><a href="#cb12-102"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb12-103"><a href="#cb12-103"></a><span class="in">```</span></span>
+<span id="cb12-104"><a href="#cb12-104"></a></span>
+<span id="cb12-105"><a href="#cb12-105"></a>There are <span class="in">`r nrow(mpg)`</span> observations in our data.</span>
+<span id="cb12-106"><a href="#cb12-106"></a></span>
+<span id="cb12-109"><a href="#cb12-109"></a><span class="in">```{r}</span></span>
+<span id="cb12-110"><a href="#cb12-110"></a><span class="co">#| echo: false</span></span>
+<span id="cb12-111"><a href="#cb12-111"></a></span>
+<span id="cb12-112"><a href="#cb12-112"></a>mean_cty <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(mpg<span class="sc">$</span>cty), <span class="dv">2</span>)</span>
+<span id="cb12-113"><a href="#cb12-113"></a>mean_hwy <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(mpg<span class="sc">$</span>hwy), <span class="dv">2</span>)</span>
+<span id="cb12-114"><a href="#cb12-114"></a><span class="in">```</span></span>
+<span id="cb12-115"><a href="#cb12-115"></a></span>
+<span id="cb12-116"><a href="#cb12-116"></a>The average city mileage of the cars in our data is <span class="in">`r mean_cty`</span> and the average highway mileage is <span class="in">`r mean_hwy`</span>.</span>
+<span id="cb12-117"><a href="#cb12-117"></a></span>
+<span id="cb12-118"><a href="#cb12-118"></a>The plots in @fig-mpg show the relationship between city and highway mileage for 38 popular models of cars. In @fig-mpg-1 the points are colored by the number of cylinders while in @fig-mpg-2 the points are colored by engine displacement.</span>
+<span id="cb12-119"><a href="#cb12-119"></a></span>
+<span id="cb12-122"><a href="#cb12-122"></a><span class="in">```{r}</span></span>
+<span id="cb12-123"><a href="#cb12-123"></a><span class="co">#| label: fig-mpg</span></span>
+<span id="cb12-124"><a href="#cb12-124"></a><span class="co">#| fig-cap: "City and highway mileage for 38 popular models of cars."</span></span>
+<span id="cb12-125"><a href="#cb12-125"></a><span class="co">#| fig-subcap:</span></span>
+<span id="cb12-126"><a href="#cb12-126"></a><span class="co">#|   - "Color by number of cylinders"</span></span>
+<span id="cb12-127"><a href="#cb12-127"></a><span class="co">#|   - "Color by engine displacement, in liters"</span></span>
+<span id="cb12-128"><a href="#cb12-128"></a><span class="co">#| layout-ncol: 2</span></span>
+<span id="cb12-129"><a href="#cb12-129"></a><span class="co">#| column: page</span></span>
+<span id="cb12-130"><a href="#cb12-130"></a><span class="co">#| cache: true</span></span>
+<span id="cb12-131"><a href="#cb12-131"></a></span>
+<span id="cb12-132"><a href="#cb12-132"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
+<span id="cb12-133"><a href="#cb12-133"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb12-134"><a href="#cb12-134"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
+<span id="cb12-135"><a href="#cb12-135"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb12-136"><a href="#cb12-136"></a></span>
+<span id="cb12-137"><a href="#cb12-137"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> displ)) <span class="sc">+</span></span>
+<span id="cb12-138"><a href="#cb12-138"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb12-139"><a href="#cb12-139"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"E"</span>) <span class="sc">+</span></span>
+<span id="cb12-140"><a href="#cb12-140"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb12-141"><a href="#cb12-141"></a><span class="in">```</span></span>
+<span id="cb12-142"><a href="#cb12-142"></a></span>
+<span id="cb12-143"><a href="#cb12-143"></a><span class="fu"># Housing Prices</span></span>
+<span id="cb12-144"><a href="#cb12-144"></a></span>
+<span id="cb12-145"><a href="#cb12-145"></a><span class="fu">## Introduction</span></span>
+<span id="cb12-146"><a href="#cb12-146"></a></span>
+<span id="cb12-147"><a href="#cb12-147"></a>In this analysis, we build a model predicting sale prices of houses based on data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020. Let's start by loading the packages we'll use for the analysis.</span>
+<span id="cb12-148"><a href="#cb12-148"></a></span>
+<span id="cb12-149"><a href="#cb12-149"></a>We present the results of exploratory data analysis in @sec-eda and the regression model in @sec-model.</span>
+<span id="cb12-150"><a href="#cb12-150"></a></span>
+<span id="cb12-151"><a href="#cb12-151"></a>We're going to do this analysis using literate programming <span class="co">[</span><span class="ot">@knuth1984</span><span class="co">]</span>.</span>
+<span id="cb12-152"><a href="#cb12-152"></a></span>
+<span id="cb12-153"><a href="#cb12-153"></a><span class="fu">## Exploratory data analysis {#sec-eda}</span></span>
+<span id="cb12-154"><a href="#cb12-154"></a></span>
+<span id="cb12-155"><a href="#cb12-155"></a>The data contains <span class="in">`r nrow(duke_forest)`</span> houses. As part of the exploratory analysis let's visualize and summarize the relationship between areas and prices of these houses.</span>
+<span id="cb12-156"><a href="#cb12-156"></a></span>
+<span id="cb12-157"><a href="#cb12-157"></a><span class="fu">### Data visualization</span></span>
+<span id="cb12-158"><a href="#cb12-158"></a></span>
+<span id="cb12-159"><a href="#cb12-159"></a>@fig-histogram shows two histograms displaying the distributions of <span class="in">`price`</span> and <span class="in">`area`</span> individually.</span>
+<span id="cb12-160"><a href="#cb12-160"></a></span>
+<span id="cb12-163"><a href="#cb12-163"></a><span class="in">```{r}</span></span>
+<span id="cb12-164"><a href="#cb12-164"></a><span class="co">#| label: fig-histogram</span></span>
+<span id="cb12-165"><a href="#cb12-165"></a><span class="co">#| fig-cap: "Histograms of individual variables"</span></span>
+<span id="cb12-166"><a href="#cb12-166"></a><span class="co">#| fig-subcap:</span></span>
+<span id="cb12-167"><a href="#cb12-167"></a><span class="co">#|   - "Histogram of `price`s"</span></span>
+<span id="cb12-168"><a href="#cb12-168"></a><span class="co">#|   - "Histogram of `area`s" </span></span>
+<span id="cb12-169"><a href="#cb12-169"></a><span class="co">#| layout-ncol: 2</span></span>
+<span id="cb12-170"><a href="#cb12-170"></a><span class="co">#| column: page-right</span></span>
+<span id="cb12-171"><a href="#cb12-171"></a></span>
+<span id="cb12-172"><a href="#cb12-172"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
+<span id="cb12-173"><a href="#cb12-173"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">50000</span>) <span class="sc">+</span></span>
+<span id="cb12-174"><a href="#cb12-174"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of prices"</span>)</span>
+<span id="cb12-175"><a href="#cb12-175"></a></span>
+<span id="cb12-176"><a href="#cb12-176"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area)) <span class="sc">+</span></span>
+<span id="cb12-177"><a href="#cb12-177"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">250</span>) <span class="sc">+</span></span>
+<span id="cb12-178"><a href="#cb12-178"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of areas"</span>)</span>
+<span id="cb12-179"><a href="#cb12-179"></a><span class="in">```</span></span>
+<span id="cb12-180"><a href="#cb12-180"></a></span>
+<span id="cb12-181"><a href="#cb12-181"></a>@fig-scatterplot-HP displays the relationship between these two variables in a scatterplot.</span>
+<span id="cb12-182"><a href="#cb12-182"></a></span>
+<span id="cb12-185"><a href="#cb12-185"></a><span class="in">```{r}</span></span>
+<span id="cb12-186"><a href="#cb12-186"></a><span class="co">#| label: fig-scatterplot-HP</span></span>
+<span id="cb12-187"><a href="#cb12-187"></a><span class="co">#| fig-cap: "Scatterplot of price vs. area of houses in Duke Forest"</span></span>
+<span id="cb12-188"><a href="#cb12-188"></a></span>
+<span id="cb12-189"><a href="#cb12-189"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb12-190"><a href="#cb12-190"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb12-191"><a href="#cb12-191"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Price and area of houses in Duke Forest"</span>)</span>
+<span id="cb12-192"><a href="#cb12-192"></a><span class="in">```</span></span>
+<span id="cb12-193"><a href="#cb12-193"></a></span>
+<span id="cb12-194"><a href="#cb12-194"></a><span class="fu">### Summary statistics</span></span>
+<span id="cb12-195"><a href="#cb12-195"></a></span>
+<span id="cb12-196"><a href="#cb12-196"></a>@tbl-stats displays basic summary statistics for these two variables.</span>
+<span id="cb12-197"><a href="#cb12-197"></a></span>
+<span id="cb12-200"><a href="#cb12-200"></a><span class="in">```{r}</span></span>
+<span id="cb12-201"><a href="#cb12-201"></a><span class="co">#| label: tbl-stats</span></span>
+<span id="cb12-202"><a href="#cb12-202"></a><span class="co">#| tbl-cap: "Summary statistics for price and area of houses in Duke Forest"</span></span>
+<span id="cb12-203"><a href="#cb12-203"></a></span>
+<span id="cb12-204"><a href="#cb12-204"></a>duke_forest <span class="sc">%&gt;%</span></span>
+<span id="cb12-205"><a href="#cb12-205"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb12-206"><a href="#cb12-206"></a>    <span class="st">`</span><span class="at">Median price</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">median</span>(price),</span>
+<span id="cb12-207"><a href="#cb12-207"></a>    <span class="st">`</span><span class="at">IQR price</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">IQR</span>(price),</span>
+<span id="cb12-208"><a href="#cb12-208"></a>    <span class="st">`</span><span class="at">Median area</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">median</span>(area),</span>
+<span id="cb12-209"><a href="#cb12-209"></a>    <span class="st">`</span><span class="at">IQR area</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">IQR</span>(area),</span>
+<span id="cb12-210"><a href="#cb12-210"></a>    <span class="st">`</span><span class="at">Correlation, r</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">cor</span>(price, area)</span>
+<span id="cb12-211"><a href="#cb12-211"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb12-212"><a href="#cb12-212"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>))</span>
+<span id="cb12-213"><a href="#cb12-213"></a><span class="in">```</span></span>
+<span id="cb12-214"><a href="#cb12-214"></a></span>
+<span id="cb12-215"><a href="#cb12-215"></a><span class="fu">## Modeling {#sec-model}</span></span>
+<span id="cb12-216"><a href="#cb12-216"></a></span>
+<span id="cb12-217"><a href="#cb12-217"></a>We can fit a simple linear regression model of the form shown in @eq-slr.</span>
+<span id="cb12-218"><a href="#cb12-218"></a></span>
+<span id="cb12-219"><a href="#cb12-219"></a>$$</span>
+<span id="cb12-220"><a href="#cb12-220"></a>price = \hat{\beta}_0 + \hat{\beta}_1 \times area + \epsilon</span>
+<span id="cb12-221"><a href="#cb12-221"></a>$$ {#eq-slr}</span>
+<span id="cb12-222"><a href="#cb12-222"></a></span>
+<span id="cb12-223"><a href="#cb12-223"></a>@tbl-lm shows the regression output for this model.</span>
+<span id="cb12-224"><a href="#cb12-224"></a></span>
+<span id="cb12-227"><a href="#cb12-227"></a><span class="in">```{r}</span></span>
+<span id="cb12-228"><a href="#cb12-228"></a><span class="co">#| label: tbl-lm</span></span>
+<span id="cb12-229"><a href="#cb12-229"></a><span class="co">#| tbl-cap: "Linear regression model for predicting price from area"</span></span>
+<span id="cb12-230"><a href="#cb12-230"></a></span>
+<span id="cb12-231"><a href="#cb12-231"></a>price_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> area, <span class="at">data =</span> duke_forest)</span>
+<span id="cb12-232"><a href="#cb12-232"></a>  </span>
+<span id="cb12-233"><a href="#cb12-233"></a>price_fit <span class="sc">%&gt;%</span></span>
+<span id="cb12-234"><a href="#cb12-234"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-235"><a href="#cb12-235"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb12-236"><a href="#cb12-236"></a><span class="in">```</span></span>
+<span id="cb12-237"><a href="#cb12-237"></a></span>
+<span id="cb12-238"><a href="#cb12-238"></a>::: callout-note</span>
+<span id="cb12-239"><a href="#cb12-239"></a>This is a pretty incomplete analysis, but hopefully the document provides a good overview of some of the authoring features of Quarto!</span>
+<span id="cb12-240"><a href="#cb12-240"></a>:::</span>
+<span id="cb12-241"><a href="#cb12-241"></a></span>
+<span id="cb12-242"><a href="#cb12-242"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb12-243"><a href="#cb12-243"></a></span>
+<span id="cb12-244"><a href="#cb12-244"></a><span class="fu"># Equations</span></span>
+<span id="cb12-245"><a href="#cb12-245"></a></span>
+<span id="cb12-246"><a href="#cb12-246"></a><span class="fu">## 行內方程式</span></span>
+<span id="cb12-247"><a href="#cb12-247"></a></span>
+<span id="cb12-248"><a href="#cb12-248"></a>常態分佈機率密度函數：$f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e\^{-\frac{(x-\mu)^2}{2\sigma^2}}$</span>
+<span id="cb12-249"><a href="#cb12-249"></a></span>
+<span id="cb12-250"><a href="#cb12-250"></a><span class="fu">## 單行方程式</span></span>
+<span id="cb12-251"><a href="#cb12-251"></a></span>
+<span id="cb12-252"><a href="#cb12-252"></a>$$</span>
+<span id="cb12-253"><a href="#cb12-253"></a>f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}</span>
+<span id="cb12-254"><a href="#cb12-254"></a>$$ {#eq-normaldistribution}</span>
+<span id="cb12-255"><a href="#cb12-255"></a></span>
+<span id="cb12-256"><a href="#cb12-256"></a><span class="fu"># Callout樣式</span></span>
+<span id="cb12-257"><a href="#cb12-257"></a></span>
+<span id="cb12-258"><a href="#cb12-258"></a>::: callout-note</span>
+<span id="cb12-259"><a href="#cb12-259"></a><span class="fu">## note</span></span>
+<span id="cb12-260"><a href="#cb12-260"></a></span>
+<span id="cb12-261"><a href="#cb12-261"></a>note</span>
+<span id="cb12-262"><a href="#cb12-262"></a>:::</span>
+<span id="cb12-263"><a href="#cb12-263"></a></span>
+<span id="cb12-264"><a href="#cb12-264"></a>::: {.callout-note appearance="simple" icon="true"}</span>
+<span id="cb12-265"><a href="#cb12-265"></a>note simple with icon</span>
+<span id="cb12-266"><a href="#cb12-266"></a>:::</span>
+<span id="cb12-267"><a href="#cb12-267"></a></span>
+<span id="cb12-268"><a href="#cb12-268"></a>::: callout-tip</span>
+<span id="cb12-269"><a href="#cb12-269"></a>tip</span>
+<span id="cb12-270"><a href="#cb12-270"></a>:::</span>
+<span id="cb12-271"><a href="#cb12-271"></a></span>
+<span id="cb12-272"><a href="#cb12-272"></a>::: callout-important</span>
+<span id="cb12-273"><a href="#cb12-273"></a>important</span>
+<span id="cb12-274"><a href="#cb12-274"></a>:::</span>
+<span id="cb12-275"><a href="#cb12-275"></a></span>
+<span id="cb12-276"><a href="#cb12-276"></a>::: callout-caution</span>
+<span id="cb12-277"><a href="#cb12-277"></a>caution</span>
+<span id="cb12-278"><a href="#cb12-278"></a>:::</span>
+<span id="cb12-279"><a href="#cb12-279"></a></span>
+<span id="cb12-280"><a href="#cb12-280"></a>::: callout-warning</span>
+<span id="cb12-281"><a href="#cb12-281"></a>warning</span>
+<span id="cb12-282"><a href="#cb12-282"></a>:::</span>
+<span id="cb12-283"><a href="#cb12-283"></a></span>
+<span id="cb12-284"><a href="#cb12-284"></a>::: {.callout-caution collapse="true"}</span>
+<span id="cb12-285"><a href="#cb12-285"></a><span class="fu">## Expand To Learn About Collapse</span></span>
+<span id="cb12-286"><a href="#cb12-286"></a></span>
+<span id="cb12-287"><a href="#cb12-287"></a>This is an example of a 'folded' caution callout that can be expanded by the user. You can use <span class="in">`collapse="true"`</span> to collapse it by default or <span class="in">`collapse="false"`</span> to make a collapsible callout that is expanded by default.</span>
+<span id="cb12-288"><a href="#cb12-288"></a>:::</span>
+<span id="cb12-289"><a href="#cb12-289"></a></span>
+<span id="cb12-290"><a href="#cb12-290"></a><span class="fu"># Diagrams</span></span>
+<span id="cb12-291"><a href="#cb12-291"></a></span>
+<span id="cb12-292"><a href="#cb12-292"></a><span class="fu">## Mermaid</span></span>
+<span id="cb12-293"><a href="#cb12-293"></a></span>
+<span id="cb12-296"><a href="#cb12-296"></a><span class="in">```{mermaid}</span></span>
+<span id="cb12-297"><a href="#cb12-297"></a>%%| label: fig<span class="ot">-M</span>ermaid<span class="ot">-s</span>imple</span>
+<span id="cb12-298"><a href="#cb12-298"></a>%%| fig<span class="ot">-c</span>ap: a flowchart created using Mermaid</span>
+<span id="cb12-299"><a href="#cb12-299"></a>flowchart LR</span>
+<span id="cb12-300"><a href="#cb12-300"></a>  A[Hard edge] --&gt; B(Round edge)</span>
+<span id="cb12-301"><a href="#cb12-301"></a>  B --&gt; C{Decision}</span>
+<span id="cb12-302"><a href="#cb12-302"></a>  C --&gt; D[Result one]</span>
+<span id="cb12-303"><a href="#cb12-303"></a>  C --&gt; E[Result two]</span>
+<span id="cb12-304"><a href="#cb12-304"></a><span class="in">```</span></span>
+<span id="cb12-305"><a href="#cb12-305"></a></span>
+<span id="cb12-306"><a href="#cb12-306"></a><span class="fu">## Graphviz</span></span>
+<span id="cb12-307"><a href="#cb12-307"></a></span>
+<span id="cb12-310"><a href="#cb12-310"></a><span class="in">```{dot}</span></span>
+<span id="cb12-311"><a href="#cb12-311"></a>//| label: fig-Graphviz<span class="ot">-s</span>imple</span>
+<span id="cb12-312"><a href="#cb12-312"></a>//| fig<span class="ot">-c</span>ap: <span class="ot">"</span><span class="st">This is a simple graphviz graph.</span><span class="ot">"</span></span>
+<span id="cb12-313"><a href="#cb12-313"></a>graph G {</span>
+<span id="cb12-314"><a href="#cb12-314"></a>  layout=neato</span>
+<span id="cb12-315"><a href="#cb12-315"></a>  run -- intr;</span>
+<span id="cb12-316"><a href="#cb12-316"></a>  intr -- runbl;</span>
+<span id="cb12-317"><a href="#cb12-317"></a>  runbl -- run;</span>
+<span id="cb12-318"><a href="#cb12-318"></a>  run -- kernel;</span>
+<span id="cb12-319"><a href="#cb12-319"></a>  kernel -- zombie;</span>
+<span id="cb12-320"><a href="#cb12-320"></a>  kernel -- <span class="fu">sleep</span>;</span>
+<span id="cb12-321"><a href="#cb12-321"></a>  kernel -- runmem;</span>
+<span id="cb12-322"><a href="#cb12-322"></a>  <span class="fu">sleep</span> -- swap;</span>
+<span id="cb12-323"><a href="#cb12-323"></a>  swap -- runswap;</span>
+<span id="cb12-324"><a href="#cb12-324"></a>  runswap -- new;</span>
+<span id="cb12-325"><a href="#cb12-325"></a>  runswap -- runmem;</span>
+<span id="cb12-326"><a href="#cb12-326"></a>  new -- runmem;</span>
+<span id="cb12-327"><a href="#cb12-327"></a>  <span class="fu">sleep</span> -- runmem;</span>
+<span id="cb12-328"><a href="#cb12-328"></a>}</span>
+<span id="cb12-329"><a href="#cb12-329"></a><span class="in">```</span></span>
+<span id="cb12-330"><a href="#cb12-330"></a></span>
+<span id="cb12-331"><a href="#cb12-331"></a><span class="fu"># Video</span></span>
+<span id="cb12-332"><a href="#cb12-332"></a></span>
+<span id="cb12-333"><a href="#cb12-333"></a>{{&lt; video https://www.youtube.com/embed/wo9vZccmqwc &gt;}}</span>
+<span id="cb12-334"><a href="#cb12-334"></a></span>
+<span id="cb12-335"><a href="#cb12-335"></a><span class="fu"># Code Annotation</span></span>
+<span id="cb12-336"><a href="#cb12-336"></a></span>
+<span id="cb12-337"><a href="#cb12-337"></a><span class="in">``` r</span></span>
+<span id="cb12-338"><a href="#cb12-338"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-339"><a href="#cb12-339"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb12-340"><a href="#cb12-340"></a>penguins <span class="sc">|&gt;</span>                                      <span class="co"># &lt;1&gt;</span></span>
+<span id="cb12-341"><a href="#cb12-341"></a>  <span class="fu">mutate</span>(                                        <span class="co"># &lt;2&gt;</span></span>
+<span id="cb12-342"><a href="#cb12-342"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm, <span class="co"># &lt;2&gt;</span></span>
+<span id="cb12-343"><a href="#cb12-343"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm  <span class="co"># &lt;2&gt;</span></span>
+<span id="cb12-344"><a href="#cb12-344"></a>  )                                              <span class="co"># &lt;2&gt;</span></span>
+<span id="cb12-345"><a href="#cb12-345"></a><span class="in">```</span></span>
+<span id="cb12-346"><a href="#cb12-346"></a></span>
+<span id="cb12-347"><a href="#cb12-347"></a><span class="ss">1.  </span>Take <span class="in">`penguins`</span>, and then,</span>
+<span id="cb12-348"><a href="#cb12-348"></a><span class="ss">2.  </span>add new columns for the bill ratio and bill area.</span>
+<span id="cb12-349"><a href="#cb12-349"></a></span>
+<span id="cb12-350"><a href="#cb12-350"></a><span class="fu"># Article Layout</span></span>
+<span id="cb12-351"><a href="#cb12-351"></a></span>
+<span id="cb12-352"><a href="#cb12-352"></a><span class="fu">## Screen Column</span></span>
+<span id="cb12-353"><a href="#cb12-353"></a></span>
+<span id="cb12-356"><a href="#cb12-356"></a><span class="in">```{r}</span></span>
+<span id="cb12-357"><a href="#cb12-357"></a><span class="co">#| column: screen</span></span>
+<span id="cb12-358"><a href="#cb12-358"></a></span>
+<span id="cb12-359"><a href="#cb12-359"></a><span class="co"># library(leaflet)</span></span>
+<span id="cb12-360"><a href="#cb12-360"></a><span class="co"># leaflet() %&gt;%</span></span>
+<span id="cb12-361"><a href="#cb12-361"></a><span class="co">#   addTiles() %&gt;%  # Add default OpenStreetMap map tiles</span></span>
+<span id="cb12-362"><a href="#cb12-362"></a><span class="co">#   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")</span></span>
+<span id="cb12-363"><a href="#cb12-363"></a><span class="in">```</span></span>
+<span id="cb12-364"><a href="#cb12-364"></a></span>
+<span id="cb12-365"><a href="#cb12-365"></a><span class="fu">## Margin Content</span></span>
+<span id="cb12-366"><a href="#cb12-366"></a></span>
+<span id="cb12-367"><a href="#cb12-367"></a><span class="in">``` markdown</span></span>
+<span id="cb12-368"><a href="#cb12-368"></a>::: {.column-margin}</span>
+<span id="cb12-369"><a href="#cb12-369"></a>We know from *the first fundamental theorem of calculus* that for $x$ in $<span class="co">[</span><span class="ot">a, b</span><span class="co">]</span>$:</span>
+<span id="cb12-370"><a href="#cb12-370"></a></span>
+<span id="cb12-371"><a href="#cb12-371"></a>$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$</span>
+<span id="cb12-372"><a href="#cb12-372"></a>:::</span>
+<span id="cb12-373"><a href="#cb12-373"></a><span class="in">```</span></span>
+<span id="cb12-374"><a href="#cb12-374"></a></span>
+<span id="cb12-375"><a href="#cb12-375"></a>::: column-margin</span>
+<span id="cb12-376"><a href="#cb12-376"></a>We know from *the first fundamental theorem of calculus* that for $x$ in $<span class="co">[</span><span class="ot">a, b</span><span class="co">]</span>$:</span>
+<span id="cb12-377"><a href="#cb12-377"></a></span>
+<span id="cb12-378"><a href="#cb12-378"></a>$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$</span>
+<span id="cb12-379"><a href="#cb12-379"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
