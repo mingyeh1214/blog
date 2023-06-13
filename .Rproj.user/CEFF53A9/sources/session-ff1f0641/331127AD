@@ -3,7 +3,7 @@
     "path": "~/GitHub/blog/about.qmd",
     "project_path": "about.qmd",
     "type": "quarto_markdown",
-    "hash": "2108031285",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1686648018607.0,
@@ -16,7 +16,7 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "30,0",
+        "cursorPosition": "7,20",
         "scrollLine": "2",
         "rmdVisualModeLocation": "47:0"
     },
