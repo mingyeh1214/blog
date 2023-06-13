@@ -5,6 +5,7 @@ project:
 website:
   title: "Bennie's BLOG"
   favicon: images/logo.png
+  repo-url: https://github.com/mingyeh1214/blog
   twitter-card: false
   open-graph: true
   site-url: https://mingyeh.shinyapps.io/PROFOLIO/
@@ -22,12 +23,20 @@ website:
       # - icon: twitter
       #   href: https://twitter.com
 
+  page-footer:
+    right: "This blog is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: |
+      Proudly supported by
+      [![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg){fig-alt="RStudio" width=65px}](https://www.rstudio.com)
+      
 format:
   html:
     theme: 
       light: flatly
       dark: darkly
     css: styles.css
+    code-copy: true
+    code-overflow: wrap
     toc: true
 
 editor: visual
