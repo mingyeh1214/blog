@@ -1,7 +1,7 @@
 {
-  "hash": "8083747f3670e3489e6992de58aec846",
+  "hash": "e4c60e3d195b1f451a7288f0ee0d1531",
   "result": {
-    "markdown": "---\ntitle: \"Hello, Python\"\nsubtitle: \"Python 教學\"\ndate: \"6/13/2023\"\ndate-modified: \"6/13/2023\"\ndate-format: \"YYYY-MM-DD\"\nauthor: \"Bennie Liu\"\nabstract: \"Python基礎\"\nhighlight-style: pygments\n\nformat:\n  html:\n    code-fold: false\n    code-tools: true\n    code-link: true\n    code-line-numbers: true\n    toc: true\n    df-print: paged\n    html-math-method: katex\n  # pdf:\n  #   code-line-numbers: true\n  #   geometry: \n  #     - top=30mm\n  #     - left=30mm\n  # docx: default\nexecute:\n  echo: true\n  warning: false\neditor: visual\n---\n\nPython資料型態\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\n1+1\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n2\n```\n:::\n:::\n\n\n",
+    "markdown": "---\ntitle: \"Hello, Python\"\nsubtitle: \"Python 教學\"\ndate: \"6/13/2023\"\ndate-modified: \"6/13/2023\"\ndate-format: \"YYYY-MM-DD\"\nauthor: \"Bennie Liu\"\nabstract: \"Python基礎\"\nhighlight-style: pygments\n\nformat:\n  html:\n    code-fold: false\n    code-tools: true\n    code-link: true\n    code-line-numbers: true\n    toc: true\n    df-print: paged\n    html-math-method: katex\n  # pdf:\n  #   code-line-numbers: true\n  #   geometry: \n  #     - top=30mm\n  #     - left=30mm\n  # docx: default\nexecute:\n  echo: true\n  warning: false\neditor: visual\n---\n\nPython資料型態\n\n| Type  | Description      |\n|-------|------------------|\n| int   |                  |\n| float |                  |\n| str   |                  |\n| list  | \\[10, 'hello'\\]  |\n| dict  | {'key': 'value'} |\n| tup   | (10, 'hello')    |\n| set   | {10, 'hello'}    |\n| bool  |                  |\n\n",
     "supporting": [
       "index_files"
     ],

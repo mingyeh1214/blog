@@ -158,6 +158,6 @@
     "href": "posts/python/index.html",
     "title": "Hello, Python",
     "section": "",
-    "text": "Python資料型態\n\n1+1\n\n2"
+    "text": "Python資料型態\n\n\n\nType\nDescription\n\n\n\n\nint\n\n\n\nfloat\n\n\n\nstr\n\n\n\nlist\n[10, ‘hello’]\n\n\ndict\n{‘key’: ‘value’}\n\n\ntup\n(10, ‘hello’)\n\n\nset\n{10, ‘hello’}\n\n\nbool"
   }
 ]

@@ -31,6 +31,17 @@ editor: visual
 
 Python資料型態
 
+| Type                     | Description      |
+|--------------------------|------------------|
+| int                      | 1                |
+| float                    | 2.3              |
+| str                      | 'hello'          |
+| list (ordered)           | \[1, 'hello'\]   |
+| dict (unordered)         | {'key': 'value'} |
+| tup (ordered, immutable) | (1, 'hello')     |
+| set (unordered, unique)  | {1, 'hello'}     |
+| bool                     | True or False    |
+
 ```{python}
-1+1
+
 ```
