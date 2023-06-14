@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Bennie's BLOG",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Python\n\n\nPython基礎\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n以官網範例檔案為基礎，介紹如何使用R Quarto\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Python\n\n\nPython基礎\n\n\n\nJun 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nJun 10, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -158,6 +158,34 @@
     "href": "posts/python/index.html",
     "title": "Hello, Python",
     "section": "",
-    "text": "Python資料型態\n\n\n\nType\nDescription\n\n\n\n\nint\n\n\n\nfloat\n\n\n\nstr\n\n\n\nlist\n[10, ‘hello’]\n\n\ndict\n{‘key’: ‘value’}\n\n\ntup\n(10, ‘hello’)\n\n\nset\n{10, ‘hello’}\n\n\nbool"
+    "text": "Type\nDescription\n\n\n\n\nint\n1\n\n\nfloat\n2.3\n\n\nstr\n‘hello’\n\n\nlist (ordered)\n[1, ‘hello’]\n\n\ndict (unordered)\n{‘key’: ‘value’}\n\n\ntup (ordered, immutable)\n(1, ‘hello’)\n\n\nset (unordered, unique)\n{1, ‘hello’}\n\n\nbool\nTrue or False\n\n\n\n\n\n\n5 / 2\n5 % 2\n2 ** 3\n\n8"
+  },
+  {
+    "objectID": "posts/python/index.html#number",
+    "href": "posts/python/index.html#number",
+    "title": "Hello, Python",
+    "section": "",
+    "text": "5 / 2\n5 % 2\n2 ** 3\n\n8"
+  },
+  {
+    "objectID": "posts/python/index.html#list",
+    "href": "posts/python/index.html#list",
+    "title": "Hello, Python",
+    "section": "list",
+    "text": "list\n\n# list可以像str一樣操作\nlist = ['one', 'two']\nlist.append('three')\nlist\n\n['one', 'two', 'three']\n\n\n\nlist.pop()\nlist\n\n['one', 'two']\n\n\n\nlist.pop(0)\nlist\n\n['two']\n\n\n\nlist = ['d', 'a', 'c', 'b']\nlist.sort()\nlist\n\n['a', 'b', 'c', 'd']\n\n\n\nlist.reverse()\nlist\n\n['d', 'c', 'b', 'a']"
+  },
+  {
+    "objectID": "posts/python/index.html#dict",
+    "href": "posts/python/index.html#dict",
+    "title": "Hello, Python",
+    "section": "dict",
+    "text": "dict\n\ndict = {'k1':123, 'k2':[0,1,2], 'k3':{'k31':100}}\ndict['k3']['k31']\n\n100\n\n\n\ndict['k4'] = 'string'\ndict\n\n{'k1': 123, 'k2': [0, 1, 2], 'k3': {'k31': 100}, 'k4': 'string'}\n\n\n\ndict.keys()\n\ndict_keys(['k1', 'k2', 'k3', 'k4'])\n\n\n\ndict.values()\n\ndict_values([123, [0, 1, 2], {'k31': 100}, 'string'])\n\n\n\ndict.items()\n\ndict_items([('k1', 123), ('k2', [0, 1, 2]), ('k3', {'k31': 100}), ('k4', 'string')])"
+  },
+  {
+    "objectID": "posts/python/index.html#tup",
+    "href": "posts/python/index.html#tup",
+    "title": "Hello, Python",
+    "section": "tup",
+    "text": "tup\n\ntup = ('one', 'two')\ntry:\n    tup[0] = 'new'\nexcept Exception as e:\n    print(e)\n\n'tuple' object does not support item assignment"
   }
 ]
