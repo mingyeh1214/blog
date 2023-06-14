@@ -187,5 +187,12 @@
     "title": "Hello, Python",
     "section": "tup",
     "text": "tup\n\ntup = ('one', 'two')\ntry:\n    tup[0] = 'new'\nexcept Exception as e:\n    print(e)\n\n'tuple' object does not support item assignment"
+  },
+  {
+    "objectID": "posts/python/index.html#set",
+    "href": "posts/python/index.html#set",
+    "title": "Hello, Python",
+    "section": "set",
+    "text": "set\n\nlist = [1,1,1,2,2]\nset(list) # 取得唯一\n\n{1, 2}\n\n\n\nset('Parallel') # 將string取出唯一字母\n\n{'P', 'a', 'e', 'l', 'r'}"
   }
 ]

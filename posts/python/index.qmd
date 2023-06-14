@@ -192,6 +192,20 @@ except Exception as e:
     print(e)
 ```
 
+## set
+
+```{python}
+list = [1,1,1,2,2]
+set(list) # 取得唯一
+```
+
+```{python}
+set('Parallel') # 將string取出唯一字母
+```
+
+
+
+
 
 
 
