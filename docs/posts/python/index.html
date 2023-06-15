@@ -208,6 +208,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#io-files" id="toc-io-files" class="nav-link" data-scroll-target="#io-files"><span class="header-section-number">2</span> I/O files</a></li>
   <li><a href="#for-loop" id="toc-for-loop" class="nav-link" data-scroll-target="#for-loop"><span class="header-section-number">3</span> for loop</a></li>
   <li><a href="#args-and-kwargs" id="toc-args-and-kwargs" class="nav-link" data-scroll-target="#args-and-kwargs"><span class="header-section-number">4</span> *args and **kwargs</a></li>
+  <li><a href="#lambda-expression-map-and-filter" id="toc-lambda-expression-map-and-filter" class="nav-link" data-scroll-target="#lambda-expression-map-and-filter"><span class="header-section-number">5</span> lambda expression, map and filter</a></li>
+  <li><a href="#oop" id="toc-oop" class="nav-link" data-scroll-target="#oop"><span class="header-section-number">6</span> OOP</a>
+  <ul class="collapse">
+  <li><a href="#inheritance" id="toc-inheritance" class="nav-link" data-scroll-target="#inheritance"><span class="header-section-number">6.1</span> Inheritance</a></li>
+  <li><a href="#polymorphism" id="toc-polymorphism" class="nav-link" data-scroll-target="#polymorphism"><span class="header-section-number">6.2</span> Polymorphism</a></li>
+  <li><a href="#special-methods" id="toc-special-methods" class="nav-link" data-scroll-target="#special-methods"><span class="header-section-number">6.3</span> Special Methods</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -603,7 +610,6 @@ k2 1</code></pre>
 <pre><code>apple</code></pre>
 </div>
 </div>
-<p>Question: Define a function called myfunc that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -630,10 +636,130 @@ Question
 <span id="cb87-7"><a href="#cb87-7"></a>            new_string <span class="op">+=</span> string[i].lower()</span>
 <span id="cb87-8"><a href="#cb87-8"></a>    <span class="cf">return</span> new_string</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="lambda-expression-map-and-filter" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> lambda expression, map and filter</h1>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">map</span>(<span class="kw">lambda</span> num: num<span class="op">**</span><span class="dv">2</span>, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]):</span>
+<span id="cb88-2"><a href="#cb88-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+4
+9</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">filter</span>(<span class="kw">lambda</span> num: num<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">1</span>, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]):</span>
+<span id="cb90-2"><a href="#cb90-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+3</code></pre>
+</div>
+</div>
+</section>
+<section id="oop" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> OOP</h1>
+<section id="inheritance" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="inheritance"><span class="header-section-number">6.1</span> Inheritance</h2>
+<div class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1"></a><span class="kw">class</span> Circle():</span>
+<span id="cb92-2"><a href="#cb92-2"></a>    pi<span class="op">=</span><span class="fl">3.14</span></span>
+<span id="cb92-3"><a href="#cb92-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, radius<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb92-4"><a href="#cb92-4"></a>        <span class="va">self</span>.radius<span class="op">=</span>radius</span>
+<span id="cb92-5"><a href="#cb92-5"></a>    <span class="kw">def</span> get_circumference(<span class="va">self</span>):</span>
+<span id="cb92-6"><a href="#cb92-6"></a>        <span class="cf">return</span> <span class="dv">2</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span><span class="va">self</span>.radius</span>
+<span id="cb92-7"><a href="#cb92-7"></a>    <span class="kw">def</span> get_circumarea(<span class="va">self</span>):</span>
+<span id="cb92-8"><a href="#cb92-8"></a>        <span class="cf">return</span> <span class="va">self</span>.pi<span class="op">*</span><span class="va">self</span>.radius<span class="op">*</span><span class="va">self</span>.radius</span>
+<span id="cb92-9"><a href="#cb92-9"></a>c <span class="op">=</span> Circle(<span class="dv">3</span>)</span>
+<span id="cb92-10"><a href="#cb92-10"></a>c.get_circumference()</span>
+<span id="cb92-11"><a href="#cb92-11"></a>c.get_circumarea()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
+<pre><code>28.259999999999998</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1"></a><span class="kw">class</span> Ball(Circle):</span>
+<span id="cb94-2"><a href="#cb94-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, radius):</span>
+<span id="cb94-3"><a href="#cb94-3"></a>        Circle.<span class="fu">__init__</span>(<span class="va">self</span>, radius)</span>
+<span id="cb94-4"><a href="#cb94-4"></a>    <span class="kw">def</span> get_ballsurface(<span class="va">self</span>):</span>
+<span id="cb94-5"><a href="#cb94-5"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb94-6"><a href="#cb94-6"></a>    <span class="kw">def</span> get_ballvolumne(<span class="va">self</span>):</span>
+<span id="cb94-7"><a href="#cb94-7"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb94-8"><a href="#cb94-8"></a>b <span class="op">=</span> Ball(<span class="dv">3</span>)</span>
+<span id="cb94-9"><a href="#cb94-9"></a>b.get_ballvolumne()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
+<pre><code>113.03999999999999</code></pre>
+</div>
+</div>
+</section>
+<section id="polymorphism" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="polymorphism"><span class="header-section-number">6.2</span> Polymorphism</h2>
+<div class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1"></a><span class="kw">class</span> Animal:</span>
+<span id="cb96-2"><a href="#cb96-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):<span class="co"># Constructor of the class</span></span>
+<span id="cb96-3"><a href="#cb96-3"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb96-4"><a href="#cb96-4"></a></span>
+<span id="cb96-5"><a href="#cb96-5"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):<span class="co"># Abstract method, defined by convention only</span></span>
+<span id="cb96-6"><a href="#cb96-6"></a>        <span class="cf">raise</span> <span class="pp">NotImplementedError</span>(<span class="st">"Subclass must implement abstract method"</span>)</span>
+<span id="cb96-7"><a href="#cb96-7"></a></span>
+<span id="cb96-8"><a href="#cb96-8"></a></span>
+<span id="cb96-9"><a href="#cb96-9"></a><span class="kw">class</span> Dog(Animal):</span>
+<span id="cb96-10"><a href="#cb96-10"></a>    </span>
+<span id="cb96-11"><a href="#cb96-11"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
+<span id="cb96-12"><a href="#cb96-12"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Woof!'</span></span>
+<span id="cb96-13"><a href="#cb96-13"></a>    </span>
+<span id="cb96-14"><a href="#cb96-14"></a><span class="kw">class</span> Cat(Animal):</span>
+<span id="cb96-15"><a href="#cb96-15"></a></span>
+<span id="cb96-16"><a href="#cb96-16"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
+<span id="cb96-17"><a href="#cb96-17"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Meow!'</span></span>
+<span id="cb96-18"><a href="#cb96-18"></a>    </span>
+<span id="cb96-19"><a href="#cb96-19"></a>fido <span class="op">=</span> Dog(<span class="st">'Fido'</span>)</span>
+<span id="cb96-20"><a href="#cb96-20"></a>isis <span class="op">=</span> Cat(<span class="st">'Isis'</span>)</span>
+<span id="cb96-21"><a href="#cb96-21"></a></span>
+<span id="cb96-22"><a href="#cb96-22"></a><span class="bu">print</span>(fido.speak())</span>
+<span id="cb96-23"><a href="#cb96-23"></a><span class="bu">print</span>(isis.speak())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fido says Woof!
+Isis says Meow!</code></pre>
+</div>
+</div>
+</section>
+<section id="special-methods" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="special-methods"><span class="header-section-number">6.3</span> Special Methods</h2>
+<div class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1"></a><span class="kw">class</span> Book:</span>
+<span id="cb98-2"><a href="#cb98-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, title, author, pages):</span>
+<span id="cb98-3"><a href="#cb98-3"></a>        <span class="bu">print</span>(<span class="st">"A book is created"</span>)</span>
+<span id="cb98-4"><a href="#cb98-4"></a>        <span class="va">self</span>.title <span class="op">=</span> title</span>
+<span id="cb98-5"><a href="#cb98-5"></a>        <span class="va">self</span>.author <span class="op">=</span> author</span>
+<span id="cb98-6"><a href="#cb98-6"></a>        <span class="va">self</span>.pages <span class="op">=</span> pages</span>
+<span id="cb98-7"><a href="#cb98-7"></a></span>
+<span id="cb98-8"><a href="#cb98-8"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb98-9"><a href="#cb98-9"></a>        <span class="cf">return</span> <span class="st">"Title: </span><span class="sc">%s</span><span class="st">, author: </span><span class="sc">%s</span><span class="st">, pages: </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span>(<span class="va">self</span>.title, <span class="va">self</span>.author, <span class="va">self</span>.pages)</span>
+<span id="cb98-10"><a href="#cb98-10"></a></span>
+<span id="cb98-11"><a href="#cb98-11"></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
+<span id="cb98-12"><a href="#cb98-12"></a>        <span class="cf">return</span> <span class="va">self</span>.pages</span>
+<span id="cb98-13"><a href="#cb98-13"></a></span>
+<span id="cb98-14"><a href="#cb98-14"></a>    <span class="kw">def</span> <span class="fu">__del__</span>(<span class="va">self</span>):</span>
+<span id="cb98-15"><a href="#cb98-15"></a>        <span class="bu">print</span>(<span class="st">"A book is destroyed"</span>)</span>
+<span id="cb98-16"><a href="#cb98-16"></a>book <span class="op">=</span> Book(<span class="st">"Python Rocks!"</span>, <span class="st">"Jose Portilla"</span>, <span class="dv">159</span>)</span>
+<span id="cb98-17"><a href="#cb98-17"></a></span>
+<span id="cb98-18"><a href="#cb98-18"></a><span class="co">#Special Methods</span></span>
+<span id="cb98-19"><a href="#cb98-19"></a><span class="bu">print</span>(book)</span>
+<span id="cb98-20"><a href="#cb98-20"></a><span class="bu">print</span>(<span class="bu">len</span>(book))</span>
+<span id="cb98-21"><a href="#cb98-21"></a><span class="kw">del</span> book</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A book is created
+Title: Python Rocks!, author: Jose Portilla, pages: 159
+159
+A book is destroyed</code></pre>
+</div>
+</div>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1036,314 +1162,409 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb88" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb88-1"><a href="#cb88-1"></a><span class="co">---</span></span>
-<span id="cb88-2"><a href="#cb88-2"></a><span class="an">title:</span><span class="co"> "Hello, Python"</span></span>
-<span id="cb88-3"><a href="#cb88-3"></a><span class="an">subtitle:</span><span class="co"> "Python 教學"</span></span>
-<span id="cb88-4"><a href="#cb88-4"></a><span class="an">date:</span><span class="co"> "6/13/2023"</span></span>
-<span id="cb88-5"><a href="#cb88-5"></a><span class="an">date-modified:</span><span class="co"> "6/13/2023"</span></span>
-<span id="cb88-6"><a href="#cb88-6"></a><span class="an">date-format:</span><span class="co"> "YYYY-MM-DD"</span></span>
-<span id="cb88-7"><a href="#cb88-7"></a><span class="an">author:</span><span class="co"> "Bennie Liu"</span></span>
-<span id="cb88-8"><a href="#cb88-8"></a><span class="an">abstract:</span><span class="co"> "Python基礎"</span></span>
-<span id="cb88-9"><a href="#cb88-9"></a><span class="an">highlight-style:</span><span class="co"> pygments</span></span>
-<span id="cb88-10"><a href="#cb88-10"></a><span class="an">code-block-border-left:</span><span class="co"> "#31BAE9"</span></span>
-<span id="cb88-11"><a href="#cb88-11"></a></span>
-<span id="cb88-12"><a href="#cb88-12"></a><span class="an">format:</span></span>
-<span id="cb88-13"><a href="#cb88-13"></a><span class="co">  html:</span></span>
-<span id="cb88-14"><a href="#cb88-14"></a><span class="co">    code-fold: false</span></span>
-<span id="cb88-15"><a href="#cb88-15"></a><span class="co">    code-tools: true</span></span>
-<span id="cb88-16"><a href="#cb88-16"></a><span class="co">    code-link: true</span></span>
-<span id="cb88-17"><a href="#cb88-17"></a><span class="co">    code-line-numbers: true</span></span>
-<span id="cb88-18"><a href="#cb88-18"></a><span class="co">    toc: true</span></span>
-<span id="cb88-19"><a href="#cb88-19"></a><span class="co">    toc-title: 文件內容</span></span>
-<span id="cb88-20"><a href="#cb88-20"></a><span class="co">    number-sections: true    </span></span>
-<span id="cb88-21"><a href="#cb88-21"></a><span class="co">    df-print: paged</span></span>
-<span id="cb88-22"><a href="#cb88-22"></a><span class="co">    html-math-method: katex</span></span>
-<span id="cb88-23"><a href="#cb88-23"></a><span class="an">execute:</span></span>
-<span id="cb88-24"><a href="#cb88-24"></a><span class="co">  echo: true</span></span>
-<span id="cb88-25"><a href="#cb88-25"></a><span class="co">  warning: false</span></span>
-<span id="cb88-26"><a href="#cb88-26"></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb88-27"><a href="#cb88-27"></a><span class="co">---</span></span>
-<span id="cb88-28"><a href="#cb88-28"></a></span>
-<span id="cb88-29"><a href="#cb88-29"></a><span class="co">[</span><span class="ot">Complete-Python-3-Bootcamp</span><span class="co">](https://github.com/Pierian-Data/Complete-Python-3-Bootcamp)</span></span>
-<span id="cb88-30"><a href="#cb88-30"></a></span>
-<span id="cb88-31"><a href="#cb88-31"></a><span class="fu"># Python資料型態</span></span>
-<span id="cb88-32"><a href="#cb88-32"></a></span>
-<span id="cb88-33"><a href="#cb88-33"></a>| Type                     | Description      |</span>
-<span id="cb88-34"><a href="#cb88-34"></a>|--------------------------|------------------|</span>
-<span id="cb88-35"><a href="#cb88-35"></a>| int                      | 1                |</span>
-<span id="cb88-36"><a href="#cb88-36"></a>| float                    | 2.3              |</span>
-<span id="cb88-37"><a href="#cb88-37"></a>| str                      | 'hello'          |</span>
-<span id="cb88-38"><a href="#cb88-38"></a>| list (ordered)           | <span class="sc">\[</span>1, 'hello'<span class="sc">\]</span>   |</span>
-<span id="cb88-39"><a href="#cb88-39"></a>| dict (unordered)         | {'key': 'value'} |</span>
-<span id="cb88-40"><a href="#cb88-40"></a>| tup (ordered, immutable) | (1, 'hello')     |</span>
-<span id="cb88-41"><a href="#cb88-41"></a>| set (unordered, unique)  | {1, 'hello'}     |</span>
-<span id="cb88-42"><a href="#cb88-42"></a>| bool                     | True or False    |</span>
-<span id="cb88-43"><a href="#cb88-43"></a></span>
-<span id="cb88-44"><a href="#cb88-44"></a><span class="fu">## Number</span></span>
-<span id="cb88-45"><a href="#cb88-45"></a></span>
-<span id="cb88-48"><a href="#cb88-48"></a><span class="in">```{python}</span></span>
-<span id="cb88-49"><a href="#cb88-49"></a><span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb88-50"><a href="#cb88-50"></a><span class="dv">5</span> <span class="op">%</span> <span class="dv">2</span></span>
-<span id="cb88-51"><a href="#cb88-51"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span></span>
-<span id="cb88-52"><a href="#cb88-52"></a><span class="in">```</span></span>
-<span id="cb88-53"><a href="#cb88-53"></a></span>
-<span id="cb88-54"><a href="#cb88-54"></a><span class="fu">## 查詢變數資料型態</span></span>
-<span id="cb88-55"><a href="#cb88-55"></a></span>
-<span id="cb88-58"><a href="#cb88-58"></a><span class="in">```{python}</span></span>
-<span id="cb88-59"><a href="#cb88-59"></a><span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb88-60"><a href="#cb88-60"></a><span class="bu">type</span>(<span class="bu">float</span>)</span>
-<span id="cb88-61"><a href="#cb88-61"></a><span class="in">```</span></span>
-<span id="cb88-62"><a href="#cb88-62"></a></span>
-<span id="cb88-63"><a href="#cb88-63"></a><span class="fu">## string</span></span>
-<span id="cb88-64"><a href="#cb88-64"></a></span>
-<span id="cb88-67"><a href="#cb88-67"></a><span class="in">```{python}</span></span>
-<span id="cb88-68"><a href="#cb88-68"></a><span class="bu">str</span> <span class="op">=</span> <span class="st">'hello'</span></span>
-<span id="cb88-69"><a href="#cb88-69"></a><span class="bu">len</span>(<span class="bu">str</span>)</span>
-<span id="cb88-70"><a href="#cb88-70"></a><span class="in">```</span></span>
-<span id="cb88-71"><a href="#cb88-71"></a></span>
-<span id="cb88-74"><a href="#cb88-74"></a><span class="in">```{python}</span></span>
-<span id="cb88-75"><a href="#cb88-75"></a><span class="bu">str</span>[<span class="dv">0</span>]</span>
-<span id="cb88-76"><a href="#cb88-76"></a><span class="in">```</span></span>
-<span id="cb88-77"><a href="#cb88-77"></a></span>
-<span id="cb88-80"><a href="#cb88-80"></a><span class="in">```{python}</span></span>
-<span id="cb88-81"><a href="#cb88-81"></a><span class="bu">str</span>[<span class="dv">1</span>]</span>
-<span id="cb88-82"><a href="#cb88-82"></a><span class="in">```</span></span>
-<span id="cb88-83"><a href="#cb88-83"></a></span>
-<span id="cb88-86"><a href="#cb88-86"></a><span class="in">```{python}</span></span>
-<span id="cb88-87"><a href="#cb88-87"></a><span class="bu">str</span>[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb88-88"><a href="#cb88-88"></a><span class="in">```</span></span>
-<span id="cb88-89"><a href="#cb88-89"></a></span>
-<span id="cb88-92"><a href="#cb88-92"></a><span class="in">```{python}</span></span>
-<span id="cb88-93"><a href="#cb88-93"></a><span class="bu">str</span>[<span class="dv">2</span>:]</span>
-<span id="cb88-94"><a href="#cb88-94"></a><span class="in">```</span></span>
-<span id="cb88-95"><a href="#cb88-95"></a></span>
-<span id="cb88-98"><a href="#cb88-98"></a><span class="in">```{python}</span></span>
-<span id="cb88-99"><a href="#cb88-99"></a><span class="bu">str</span>[:<span class="dv">2</span>]</span>
-<span id="cb88-100"><a href="#cb88-100"></a><span class="in">```</span></span>
-<span id="cb88-101"><a href="#cb88-101"></a></span>
-<span id="cb88-104"><a href="#cb88-104"></a><span class="in">```{python}</span></span>
-<span id="cb88-105"><a href="#cb88-105"></a><span class="bu">str</span>[<span class="dv">2</span>:<span class="dv">4</span>]</span>
-<span id="cb88-106"><a href="#cb88-106"></a><span class="in">```</span></span>
-<span id="cb88-107"><a href="#cb88-107"></a></span>
-<span id="cb88-110"><a href="#cb88-110"></a><span class="in">```{python}</span></span>
-<span id="cb88-111"><a href="#cb88-111"></a><span class="bu">str</span>[::<span class="dv">2</span>]</span>
-<span id="cb88-112"><a href="#cb88-112"></a><span class="in">```</span></span>
-<span id="cb88-113"><a href="#cb88-113"></a></span>
-<span id="cb88-116"><a href="#cb88-116"></a><span class="in">```{python}</span></span>
-<span id="cb88-117"><a href="#cb88-117"></a><span class="bu">str</span>[::<span class="op">-</span><span class="dv">1</span>] <span class="co"># 反轉字串</span></span>
-<span id="cb88-118"><a href="#cb88-118"></a><span class="in">```</span></span>
-<span id="cb88-119"><a href="#cb88-119"></a></span>
-<span id="cb88-122"><a href="#cb88-122"></a><span class="in">```{python}</span></span>
-<span id="cb88-123"><a href="#cb88-123"></a><span class="bu">str</span>.upper()</span>
-<span id="cb88-124"><a href="#cb88-124"></a><span class="in">```</span></span>
-<span id="cb88-125"><a href="#cb88-125"></a></span>
-<span id="cb88-128"><a href="#cb88-128"></a><span class="in">```{python}</span></span>
-<span id="cb88-129"><a href="#cb88-129"></a><span class="bu">str</span>.lower()</span>
-<span id="cb88-130"><a href="#cb88-130"></a><span class="in">```</span></span>
-<span id="cb88-131"><a href="#cb88-131"></a></span>
-<span id="cb88-134"><a href="#cb88-134"></a><span class="in">```{python}</span></span>
-<span id="cb88-135"><a href="#cb88-135"></a><span class="bu">str</span> <span class="op">=</span> <span class="bu">str</span> <span class="op">+</span> <span class="st">',there'</span></span>
-<span id="cb88-136"><a href="#cb88-136"></a><span class="bu">str</span>.split(<span class="st">','</span>)</span>
-<span id="cb88-137"><a href="#cb88-137"></a><span class="in">```</span></span>
-<span id="cb88-138"><a href="#cb88-138"></a></span>
-<span id="cb88-141"><a href="#cb88-141"></a><span class="in">```{python}</span></span>
-<span id="cb88-142"><a href="#cb88-142"></a><span class="co">'1. This is a string </span><span class="ch">\'</span><span class="co">{}</span><span class="ch">\'</span><span class="co">, and length is {}'</span>.<span class="bu">format</span>(<span class="bu">str</span>, <span class="bu">len</span>(<span class="bu">str</span>))</span>
-<span id="cb88-143"><a href="#cb88-143"></a><span class="in">```</span></span>
-<span id="cb88-144"><a href="#cb88-144"></a></span>
-<span id="cb88-147"><a href="#cb88-147"></a><span class="in">```{python}</span></span>
-<span id="cb88-148"><a href="#cb88-148"></a><span class="co">'2. This is a string </span><span class="ch">\'</span><span class="co">{0}</span><span class="ch">\'</span><span class="co">, and length is {1}'</span>.<span class="bu">format</span>(<span class="bu">str</span>, <span class="bu">len</span>(<span class="bu">str</span>))</span>
-<span id="cb88-149"><a href="#cb88-149"></a><span class="in">```</span></span>
-<span id="cb88-150"><a href="#cb88-150"></a></span>
-<span id="cb88-153"><a href="#cb88-153"></a><span class="in">```{python}</span></span>
-<span id="cb88-154"><a href="#cb88-154"></a><span class="co">'3. This is a string </span><span class="ch">\'</span><span class="co">{a}</span><span class="ch">\'</span><span class="co">, and length is {b}'</span>.<span class="bu">format</span>(a <span class="op">=</span> <span class="bu">str</span>, b <span class="op">=</span> <span class="bu">len</span>(<span class="bu">str</span>))</span>
-<span id="cb88-155"><a href="#cb88-155"></a><span class="in">```</span></span>
-<span id="cb88-156"><a href="#cb88-156"></a></span>
-<span id="cb88-159"><a href="#cb88-159"></a><span class="in">```{python}</span></span>
-<span id="cb88-160"><a href="#cb88-160"></a><span class="ss">f'4. This is a string </span><span class="ch">\'</span><span class="sc">{</span><span class="bu">str</span><span class="sc">}</span><span class="ch">\'</span><span class="ss">, and length is </span><span class="sc">{</span><span class="bu">len</span>(<span class="bu">str</span>)<span class="sc">}</span><span class="ss">'</span></span>
-<span id="cb88-161"><a href="#cb88-161"></a><span class="in">```</span></span>
-<span id="cb88-162"><a href="#cb88-162"></a></span>
-<span id="cb88-165"><a href="#cb88-165"></a><span class="in">```{python}</span></span>
-<span id="cb88-166"><a href="#cb88-166"></a><span class="bu">float</span> <span class="op">=</span> <span class="dv">100</span><span class="op">/</span><span class="dv">777</span></span>
-<span id="cb88-167"><a href="#cb88-167"></a><span class="co">'The result was {r:6.3f}'</span>.<span class="bu">format</span>(r<span class="op">=</span><span class="bu">float</span>) <span class="co"># Flaot formatting follows "{value:width.precision f}"</span></span>
-<span id="cb88-168"><a href="#cb88-168"></a><span class="in">```</span></span>
-<span id="cb88-169"><a href="#cb88-169"></a></span>
-<span id="cb88-170"><a href="#cb88-170"></a><span class="fu">## list</span></span>
-<span id="cb88-171"><a href="#cb88-171"></a></span>
-<span id="cb88-174"><a href="#cb88-174"></a><span class="in">```{python}</span></span>
-<span id="cb88-175"><a href="#cb88-175"></a><span class="co"># list可以像str一樣操作</span></span>
-<span id="cb88-176"><a href="#cb88-176"></a><span class="bu">list</span> <span class="op">=</span> [<span class="st">'one'</span>, <span class="st">'two'</span>]</span>
-<span id="cb88-177"><a href="#cb88-177"></a><span class="bu">list</span>.append(<span class="st">'three'</span>)</span>
-<span id="cb88-178"><a href="#cb88-178"></a><span class="bu">list</span></span>
-<span id="cb88-179"><a href="#cb88-179"></a><span class="in">```</span></span>
-<span id="cb88-180"><a href="#cb88-180"></a></span>
-<span id="cb88-183"><a href="#cb88-183"></a><span class="in">```{python}</span></span>
-<span id="cb88-184"><a href="#cb88-184"></a><span class="bu">list</span>.pop()</span>
-<span id="cb88-185"><a href="#cb88-185"></a><span class="bu">list</span></span>
-<span id="cb88-186"><a href="#cb88-186"></a><span class="in">```</span></span>
-<span id="cb88-187"><a href="#cb88-187"></a></span>
-<span id="cb88-190"><a href="#cb88-190"></a><span class="in">```{python}</span></span>
-<span id="cb88-191"><a href="#cb88-191"></a><span class="bu">list</span>.pop(<span class="dv">0</span>)</span>
-<span id="cb88-192"><a href="#cb88-192"></a><span class="bu">list</span></span>
-<span id="cb88-193"><a href="#cb88-193"></a><span class="in">```</span></span>
-<span id="cb88-194"><a href="#cb88-194"></a></span>
-<span id="cb88-197"><a href="#cb88-197"></a><span class="in">```{python}</span></span>
-<span id="cb88-198"><a href="#cb88-198"></a><span class="bu">list</span> <span class="op">=</span> [<span class="st">'d'</span>, <span class="st">'a'</span>, <span class="st">'c'</span>, <span class="st">'b'</span>]</span>
-<span id="cb88-199"><a href="#cb88-199"></a><span class="bu">list</span>.sort()</span>
-<span id="cb88-200"><a href="#cb88-200"></a><span class="bu">list</span></span>
-<span id="cb88-201"><a href="#cb88-201"></a><span class="in">```</span></span>
-<span id="cb88-202"><a href="#cb88-202"></a></span>
-<span id="cb88-205"><a href="#cb88-205"></a><span class="in">```{python}</span></span>
-<span id="cb88-206"><a href="#cb88-206"></a><span class="bu">list</span>.reverse()</span>
-<span id="cb88-207"><a href="#cb88-207"></a><span class="bu">list</span></span>
-<span id="cb88-208"><a href="#cb88-208"></a><span class="in">```</span></span>
-<span id="cb88-209"><a href="#cb88-209"></a></span>
-<span id="cb88-210"><a href="#cb88-210"></a><span class="fu">## dict</span></span>
-<span id="cb88-211"><a href="#cb88-211"></a></span>
-<span id="cb88-214"><a href="#cb88-214"></a><span class="in">```{python}</span></span>
-<span id="cb88-215"><a href="#cb88-215"></a><span class="bu">dict</span> <span class="op">=</span> {<span class="st">'k1'</span>:<span class="dv">123</span>, <span class="st">'k2'</span>:[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>], <span class="st">'k3'</span>:{<span class="st">'k31'</span>:<span class="dv">100</span>}}</span>
-<span id="cb88-216"><a href="#cb88-216"></a><span class="bu">dict</span>[<span class="st">'k3'</span>][<span class="st">'k31'</span>]</span>
-<span id="cb88-217"><a href="#cb88-217"></a><span class="in">```</span></span>
-<span id="cb88-218"><a href="#cb88-218"></a></span>
-<span id="cb88-221"><a href="#cb88-221"></a><span class="in">```{python}</span></span>
-<span id="cb88-222"><a href="#cb88-222"></a><span class="bu">dict</span>[<span class="st">'k4'</span>] <span class="op">=</span> <span class="st">'string'</span></span>
-<span id="cb88-223"><a href="#cb88-223"></a><span class="bu">dict</span></span>
-<span id="cb88-224"><a href="#cb88-224"></a><span class="in">```</span></span>
-<span id="cb88-225"><a href="#cb88-225"></a></span>
-<span id="cb88-228"><a href="#cb88-228"></a><span class="in">```{python}</span></span>
-<span id="cb88-229"><a href="#cb88-229"></a><span class="bu">dict</span>.keys()</span>
-<span id="cb88-230"><a href="#cb88-230"></a><span class="in">```</span></span>
-<span id="cb88-231"><a href="#cb88-231"></a></span>
-<span id="cb88-234"><a href="#cb88-234"></a><span class="in">```{python}</span></span>
-<span id="cb88-235"><a href="#cb88-235"></a><span class="bu">dict</span>.values()</span>
-<span id="cb88-236"><a href="#cb88-236"></a><span class="in">```</span></span>
-<span id="cb88-237"><a href="#cb88-237"></a></span>
-<span id="cb88-240"><a href="#cb88-240"></a><span class="in">```{python}</span></span>
-<span id="cb88-241"><a href="#cb88-241"></a><span class="bu">dict</span>.items()</span>
-<span id="cb88-242"><a href="#cb88-242"></a><span class="in">```</span></span>
-<span id="cb88-243"><a href="#cb88-243"></a></span>
-<span id="cb88-244"><a href="#cb88-244"></a><span class="fu">## tup</span></span>
-<span id="cb88-245"><a href="#cb88-245"></a></span>
-<span id="cb88-248"><a href="#cb88-248"></a><span class="in">```{python}</span></span>
-<span id="cb88-249"><a href="#cb88-249"></a>tup <span class="op">=</span> (<span class="st">'one'</span>, <span class="st">'two'</span>)</span>
-<span id="cb88-250"><a href="#cb88-250"></a><span class="cf">try</span>:</span>
-<span id="cb88-251"><a href="#cb88-251"></a>    tup[<span class="dv">0</span>] <span class="op">=</span> <span class="st">'new'</span></span>
-<span id="cb88-252"><a href="#cb88-252"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb88-253"><a href="#cb88-253"></a>    <span class="bu">print</span>(e)</span>
-<span id="cb88-254"><a href="#cb88-254"></a><span class="in">```</span></span>
-<span id="cb88-255"><a href="#cb88-255"></a></span>
-<span id="cb88-256"><a href="#cb88-256"></a><span class="fu">## set</span></span>
-<span id="cb88-257"><a href="#cb88-257"></a></span>
-<span id="cb88-260"><a href="#cb88-260"></a><span class="in">```{python}</span></span>
-<span id="cb88-261"><a href="#cb88-261"></a><span class="bu">list</span> <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>]</span>
-<span id="cb88-262"><a href="#cb88-262"></a><span class="bu">set</span>(<span class="bu">list</span>) <span class="co"># 取得唯一</span></span>
-<span id="cb88-263"><a href="#cb88-263"></a><span class="in">```</span></span>
-<span id="cb88-264"><a href="#cb88-264"></a></span>
-<span id="cb88-267"><a href="#cb88-267"></a><span class="in">```{python}</span></span>
-<span id="cb88-268"><a href="#cb88-268"></a><span class="bu">set</span>(<span class="st">'Parallel'</span>) <span class="co"># 將string取出唯一字母</span></span>
-<span id="cb88-269"><a href="#cb88-269"></a><span class="in">```</span></span>
-<span id="cb88-270"><a href="#cb88-270"></a></span>
-<span id="cb88-271"><a href="#cb88-271"></a><span class="fu"># I/O files</span></span>
-<span id="cb88-272"><a href="#cb88-272"></a></span>
-<span id="cb88-275"><a href="#cb88-275"></a><span class="in">```{python}</span></span>
-<span id="cb88-276"><a href="#cb88-276"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'w'</span>) <span class="im">as</span> f:</span>
-<span id="cb88-277"><a href="#cb88-277"></a>    f.write(<span class="st">'ONE</span><span class="ch">\n</span><span class="st">TWO</span><span class="ch">\n</span><span class="st">THREE</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb88-278"><a href="#cb88-278"></a>    f.close()</span>
-<span id="cb88-279"><a href="#cb88-279"></a><span class="in">```</span></span>
-<span id="cb88-280"><a href="#cb88-280"></a></span>
-<span id="cb88-283"><a href="#cb88-283"></a><span class="in">```{python}</span></span>
-<span id="cb88-284"><a href="#cb88-284"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'r'</span>) <span class="im">as</span> f:</span>
-<span id="cb88-285"><a href="#cb88-285"></a>    f.read()</span>
-<span id="cb88-286"><a href="#cb88-286"></a><span class="in">```</span></span>
-<span id="cb88-287"><a href="#cb88-287"></a></span>
-<span id="cb88-290"><a href="#cb88-290"></a><span class="in">```{python}</span></span>
-<span id="cb88-291"><a href="#cb88-291"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'a'</span>) <span class="im">as</span> f:</span>
-<span id="cb88-292"><a href="#cb88-292"></a>    f.write(<span class="st">'FOUR</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb88-293"><a href="#cb88-293"></a><span class="in">```</span></span>
-<span id="cb88-294"><a href="#cb88-294"></a></span>
-<span id="cb88-297"><a href="#cb88-297"></a><span class="in">```{python}</span></span>
-<span id="cb88-298"><a href="#cb88-298"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'r'</span>) <span class="im">as</span> f:</span>
-<span id="cb88-299"><a href="#cb88-299"></a>    f.readlines()</span>
-<span id="cb88-300"><a href="#cb88-300"></a><span class="in">```</span></span>
-<span id="cb88-301"><a href="#cb88-301"></a></span>
-<span id="cb88-302"><a href="#cb88-302"></a><span class="fu"># for loop</span></span>
-<span id="cb88-303"><a href="#cb88-303"></a></span>
-<span id="cb88-306"><a href="#cb88-306"></a><span class="in">```{python}</span></span>
-<span id="cb88-307"><a href="#cb88-307"></a><span class="co"># tuple unpacking</span></span>
-<span id="cb88-308"><a href="#cb88-308"></a><span class="bu">list</span> <span class="op">=</span> [(<span class="dv">1</span>,<span class="dv">2</span>),(<span class="dv">3</span>,<span class="dv">4</span>)]</span>
-<span id="cb88-309"><a href="#cb88-309"></a><span class="cf">for</span> (a,b) <span class="kw">in</span> <span class="bu">list</span>:</span>
-<span id="cb88-310"><a href="#cb88-310"></a>    <span class="bu">print</span>(a,b)</span>
-<span id="cb88-311"><a href="#cb88-311"></a><span class="in">```</span></span>
-<span id="cb88-312"><a href="#cb88-312"></a></span>
-<span id="cb88-315"><a href="#cb88-315"></a><span class="in">```{python}</span></span>
-<span id="cb88-316"><a href="#cb88-316"></a><span class="bu">dict</span> <span class="op">=</span> {<span class="st">'k1'</span>:<span class="st">'a'</span>, <span class="st">'k2'</span>:<span class="dv">1</span>}</span>
-<span id="cb88-317"><a href="#cb88-317"></a><span class="cf">for</span> key, value <span class="kw">in</span> <span class="bu">dict</span>.items():</span>
-<span id="cb88-318"><a href="#cb88-318"></a>    <span class="bu">print</span>(key, value)</span>
-<span id="cb88-319"><a href="#cb88-319"></a><span class="in">```</span></span>
-<span id="cb88-320"><a href="#cb88-320"></a></span>
-<span id="cb88-323"><a href="#cb88-323"></a><span class="in">```{python}</span></span>
-<span id="cb88-324"><a href="#cb88-324"></a><span class="cf">for</span> index, letter <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="st">'abc'</span>):</span>
-<span id="cb88-325"><a href="#cb88-325"></a>    <span class="bu">print</span>((index, letter))</span>
-<span id="cb88-326"><a href="#cb88-326"></a><span class="in">```</span></span>
-<span id="cb88-327"><a href="#cb88-327"></a></span>
-<span id="cb88-330"><a href="#cb88-330"></a><span class="in">```{python}</span></span>
-<span id="cb88-331"><a href="#cb88-331"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
-<span id="cb88-332"><a href="#cb88-332"></a>b <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>]</span>
-<span id="cb88-333"><a href="#cb88-333"></a><span class="cf">for</span> item <span class="kw">in</span> <span class="bu">zip</span>(a,b):</span>
-<span id="cb88-334"><a href="#cb88-334"></a>    <span class="bu">print</span>(item)</span>
-<span id="cb88-335"><a href="#cb88-335"></a><span class="in">```</span></span>
-<span id="cb88-336"><a href="#cb88-336"></a></span>
-<span id="cb88-339"><a href="#cb88-339"></a><span class="in">```{python}</span></span>
-<span id="cb88-340"><a href="#cb88-340"></a><span class="bu">list</span> <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="st">'word'</span>]</span>
-<span id="cb88-341"><a href="#cb88-341"></a><span class="bu">list</span></span>
-<span id="cb88-342"><a href="#cb88-342"></a><span class="in">```</span></span>
-<span id="cb88-343"><a href="#cb88-343"></a></span>
-<span id="cb88-346"><a href="#cb88-346"></a><span class="in">```{python}</span></span>
-<span id="cb88-347"><a href="#cb88-347"></a><span class="bu">list</span> <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> num<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>]</span>
-<span id="cb88-348"><a href="#cb88-348"></a><span class="bu">list</span></span>
-<span id="cb88-349"><a href="#cb88-349"></a><span class="in">```</span></span>
-<span id="cb88-350"><a href="#cb88-350"></a></span>
-<span id="cb88-353"><a href="#cb88-353"></a><span class="in">```{python}</span></span>
-<span id="cb88-354"><a href="#cb88-354"></a><span class="bu">list</span> <span class="op">=</span> [x<span class="op">*</span>y <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>] <span class="cf">for</span> y <span class="kw">in</span> [<span class="dv">10</span>,<span class="dv">100</span>]]</span>
-<span id="cb88-355"><a href="#cb88-355"></a><span class="bu">list</span></span>
-<span id="cb88-356"><a href="#cb88-356"></a><span class="in">```</span></span>
-<span id="cb88-357"><a href="#cb88-357"></a></span>
-<span id="cb88-358"><a href="#cb88-358"></a><span class="fu"># \*args and \*\*kwargs</span></span>
-<span id="cb88-359"><a href="#cb88-359"></a></span>
-<span id="cb88-362"><a href="#cb88-362"></a><span class="in">```{python}</span></span>
-<span id="cb88-363"><a href="#cb88-363"></a><span class="co"># return tuple</span></span>
-<span id="cb88-364"><a href="#cb88-364"></a><span class="kw">def</span> fun(<span class="op">*</span>numbers):</span>
-<span id="cb88-365"><a href="#cb88-365"></a>    <span class="cf">return</span> <span class="bu">sum</span>(numbers) <span class="op">*</span> <span class="fl">0.1</span></span>
-<span id="cb88-366"><a href="#cb88-366"></a>fun(<span class="dv">100</span>,<span class="dv">200</span>)</span>
-<span id="cb88-367"><a href="#cb88-367"></a><span class="in">```</span></span>
-<span id="cb88-368"><a href="#cb88-368"></a></span>
-<span id="cb88-371"><a href="#cb88-371"></a><span class="in">```{python}</span></span>
-<span id="cb88-372"><a href="#cb88-372"></a><span class="co"># return dict</span></span>
-<span id="cb88-373"><a href="#cb88-373"></a><span class="kw">def</span> fun(<span class="op">**</span>kwargs):</span>
-<span id="cb88-374"><a href="#cb88-374"></a>    <span class="cf">if</span> <span class="st">'fruit'</span> <span class="kw">in</span> kwargs:</span>
-<span id="cb88-375"><a href="#cb88-375"></a>        <span class="bu">print</span>(kwargs[<span class="st">'fruit'</span>])</span>
-<span id="cb88-376"><a href="#cb88-376"></a>    <span class="cf">else</span>:</span>
-<span id="cb88-377"><a href="#cb88-377"></a>        <span class="bu">print</span>(<span class="st">'no fruit'</span>)</span>
-<span id="cb88-378"><a href="#cb88-378"></a>fun(fruit <span class="op">=</span> <span class="st">'apple'</span>, veggie <span class="op">=</span> <span class="st">'lettuce'</span>)</span>
-<span id="cb88-379"><a href="#cb88-379"></a><span class="in">```</span></span>
-<span id="cb88-380"><a href="#cb88-380"></a></span>
-<span id="cb88-381"><a href="#cb88-381"></a>Question: Define a function called myfunc that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase.</span>
-<span id="cb88-382"><a href="#cb88-382"></a></span>
-<span id="cb88-383"><a href="#cb88-383"></a>::: callout-note</span>
-<span id="cb88-384"><a href="#cb88-384"></a><span class="fu">## Question</span></span>
-<span id="cb88-385"><a href="#cb88-385"></a></span>
-<span id="cb88-386"><a href="#cb88-386"></a>Define a function called myfunc that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase.</span>
-<span id="cb88-387"><a href="#cb88-387"></a>:::</span>
-<span id="cb88-388"><a href="#cb88-388"></a></span>
-<span id="cb88-389"><a href="#cb88-389"></a><span class="in">``` {.python filename="Answer"}</span></span>
-<span id="cb88-390"><a href="#cb88-390"></a><span class="kw">def</span> myfunc(string):</span>
-<span id="cb88-391"><a href="#cb88-391"></a>    new_string <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb88-392"><a href="#cb88-392"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(string)):</span>
-<span id="cb88-393"><a href="#cb88-393"></a>        <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb88-394"><a href="#cb88-394"></a>            new_string <span class="op">+=</span> string[i].upper()</span>
-<span id="cb88-395"><a href="#cb88-395"></a>        <span class="cf">else</span>:</span>
-<span id="cb88-396"><a href="#cb88-396"></a>            new_string <span class="op">+=</span> string[i].lower()</span>
-<span id="cb88-397"><a href="#cb88-397"></a>    <span class="cf">return</span> new_string</span>
-<span id="cb88-398"><a href="#cb88-398"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb100" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb100-1"><a href="#cb100-1"></a><span class="co">---</span></span>
+<span id="cb100-2"><a href="#cb100-2"></a><span class="an">title:</span><span class="co"> "Hello, Python"</span></span>
+<span id="cb100-3"><a href="#cb100-3"></a><span class="an">subtitle:</span><span class="co"> "Python 教學"</span></span>
+<span id="cb100-4"><a href="#cb100-4"></a><span class="an">date:</span><span class="co"> "6/13/2023"</span></span>
+<span id="cb100-5"><a href="#cb100-5"></a><span class="an">date-modified:</span><span class="co"> "6/13/2023"</span></span>
+<span id="cb100-6"><a href="#cb100-6"></a><span class="an">date-format:</span><span class="co"> "YYYY-MM-DD"</span></span>
+<span id="cb100-7"><a href="#cb100-7"></a><span class="an">author:</span><span class="co"> "Bennie Liu"</span></span>
+<span id="cb100-8"><a href="#cb100-8"></a><span class="an">abstract:</span><span class="co"> "Python基礎"</span></span>
+<span id="cb100-9"><a href="#cb100-9"></a><span class="an">highlight-style:</span><span class="co"> pygments</span></span>
+<span id="cb100-10"><a href="#cb100-10"></a><span class="an">code-block-border-left:</span><span class="co"> "#31BAE9"</span></span>
+<span id="cb100-11"><a href="#cb100-11"></a></span>
+<span id="cb100-12"><a href="#cb100-12"></a><span class="an">format:</span></span>
+<span id="cb100-13"><a href="#cb100-13"></a><span class="co">  html:</span></span>
+<span id="cb100-14"><a href="#cb100-14"></a><span class="co">    code-fold: false</span></span>
+<span id="cb100-15"><a href="#cb100-15"></a><span class="co">    code-tools: true</span></span>
+<span id="cb100-16"><a href="#cb100-16"></a><span class="co">    code-link: true</span></span>
+<span id="cb100-17"><a href="#cb100-17"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb100-18"><a href="#cb100-18"></a><span class="co">    toc: true</span></span>
+<span id="cb100-19"><a href="#cb100-19"></a><span class="co">    toc-title: 文件內容</span></span>
+<span id="cb100-20"><a href="#cb100-20"></a><span class="co">    number-sections: true    </span></span>
+<span id="cb100-21"><a href="#cb100-21"></a><span class="co">    df-print: paged</span></span>
+<span id="cb100-22"><a href="#cb100-22"></a><span class="co">    html-math-method: katex</span></span>
+<span id="cb100-23"><a href="#cb100-23"></a><span class="an">execute:</span></span>
+<span id="cb100-24"><a href="#cb100-24"></a><span class="co">  echo: true</span></span>
+<span id="cb100-25"><a href="#cb100-25"></a><span class="co">  warning: false</span></span>
+<span id="cb100-26"><a href="#cb100-26"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb100-27"><a href="#cb100-27"></a><span class="co">---</span></span>
+<span id="cb100-28"><a href="#cb100-28"></a></span>
+<span id="cb100-29"><a href="#cb100-29"></a><span class="co">[</span><span class="ot">Complete-Python-3-Bootcamp</span><span class="co">](https://github.com/Pierian-Data/Complete-Python-3-Bootcamp)</span></span>
+<span id="cb100-30"><a href="#cb100-30"></a></span>
+<span id="cb100-31"><a href="#cb100-31"></a><span class="fu"># Python資料型態</span></span>
+<span id="cb100-32"><a href="#cb100-32"></a></span>
+<span id="cb100-33"><a href="#cb100-33"></a>| Type                     | Description      |</span>
+<span id="cb100-34"><a href="#cb100-34"></a>|--------------------------|------------------|</span>
+<span id="cb100-35"><a href="#cb100-35"></a>| int                      | 1                |</span>
+<span id="cb100-36"><a href="#cb100-36"></a>| float                    | 2.3              |</span>
+<span id="cb100-37"><a href="#cb100-37"></a>| str                      | 'hello'          |</span>
+<span id="cb100-38"><a href="#cb100-38"></a>| list (ordered)           | <span class="sc">\[</span>1, 'hello'<span class="sc">\]</span>   |</span>
+<span id="cb100-39"><a href="#cb100-39"></a>| dict (unordered)         | {'key': 'value'} |</span>
+<span id="cb100-40"><a href="#cb100-40"></a>| tup (ordered, immutable) | (1, 'hello')     |</span>
+<span id="cb100-41"><a href="#cb100-41"></a>| set (unordered, unique)  | {1, 'hello'}     |</span>
+<span id="cb100-42"><a href="#cb100-42"></a>| bool                     | True or False    |</span>
+<span id="cb100-43"><a href="#cb100-43"></a></span>
+<span id="cb100-44"><a href="#cb100-44"></a><span class="fu">## Number</span></span>
+<span id="cb100-45"><a href="#cb100-45"></a></span>
+<span id="cb100-48"><a href="#cb100-48"></a><span class="in">```{python}</span></span>
+<span id="cb100-49"><a href="#cb100-49"></a><span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb100-50"><a href="#cb100-50"></a><span class="dv">5</span> <span class="op">%</span> <span class="dv">2</span></span>
+<span id="cb100-51"><a href="#cb100-51"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span></span>
+<span id="cb100-52"><a href="#cb100-52"></a><span class="in">```</span></span>
+<span id="cb100-53"><a href="#cb100-53"></a></span>
+<span id="cb100-54"><a href="#cb100-54"></a><span class="fu">## 查詢變數資料型態</span></span>
+<span id="cb100-55"><a href="#cb100-55"></a></span>
+<span id="cb100-58"><a href="#cb100-58"></a><span class="in">```{python}</span></span>
+<span id="cb100-59"><a href="#cb100-59"></a><span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb100-60"><a href="#cb100-60"></a><span class="bu">type</span>(<span class="bu">float</span>)</span>
+<span id="cb100-61"><a href="#cb100-61"></a><span class="in">```</span></span>
+<span id="cb100-62"><a href="#cb100-62"></a></span>
+<span id="cb100-63"><a href="#cb100-63"></a><span class="fu">## string</span></span>
+<span id="cb100-64"><a href="#cb100-64"></a></span>
+<span id="cb100-67"><a href="#cb100-67"></a><span class="in">```{python}</span></span>
+<span id="cb100-68"><a href="#cb100-68"></a><span class="bu">str</span> <span class="op">=</span> <span class="st">'hello'</span></span>
+<span id="cb100-69"><a href="#cb100-69"></a><span class="bu">len</span>(<span class="bu">str</span>)</span>
+<span id="cb100-70"><a href="#cb100-70"></a><span class="in">```</span></span>
+<span id="cb100-71"><a href="#cb100-71"></a></span>
+<span id="cb100-74"><a href="#cb100-74"></a><span class="in">```{python}</span></span>
+<span id="cb100-75"><a href="#cb100-75"></a><span class="bu">str</span>[<span class="dv">0</span>]</span>
+<span id="cb100-76"><a href="#cb100-76"></a><span class="in">```</span></span>
+<span id="cb100-77"><a href="#cb100-77"></a></span>
+<span id="cb100-80"><a href="#cb100-80"></a><span class="in">```{python}</span></span>
+<span id="cb100-81"><a href="#cb100-81"></a><span class="bu">str</span>[<span class="dv">1</span>]</span>
+<span id="cb100-82"><a href="#cb100-82"></a><span class="in">```</span></span>
+<span id="cb100-83"><a href="#cb100-83"></a></span>
+<span id="cb100-86"><a href="#cb100-86"></a><span class="in">```{python}</span></span>
+<span id="cb100-87"><a href="#cb100-87"></a><span class="bu">str</span>[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb100-88"><a href="#cb100-88"></a><span class="in">```</span></span>
+<span id="cb100-89"><a href="#cb100-89"></a></span>
+<span id="cb100-92"><a href="#cb100-92"></a><span class="in">```{python}</span></span>
+<span id="cb100-93"><a href="#cb100-93"></a><span class="bu">str</span>[<span class="dv">2</span>:]</span>
+<span id="cb100-94"><a href="#cb100-94"></a><span class="in">```</span></span>
+<span id="cb100-95"><a href="#cb100-95"></a></span>
+<span id="cb100-98"><a href="#cb100-98"></a><span class="in">```{python}</span></span>
+<span id="cb100-99"><a href="#cb100-99"></a><span class="bu">str</span>[:<span class="dv">2</span>]</span>
+<span id="cb100-100"><a href="#cb100-100"></a><span class="in">```</span></span>
+<span id="cb100-101"><a href="#cb100-101"></a></span>
+<span id="cb100-104"><a href="#cb100-104"></a><span class="in">```{python}</span></span>
+<span id="cb100-105"><a href="#cb100-105"></a><span class="bu">str</span>[<span class="dv">2</span>:<span class="dv">4</span>]</span>
+<span id="cb100-106"><a href="#cb100-106"></a><span class="in">```</span></span>
+<span id="cb100-107"><a href="#cb100-107"></a></span>
+<span id="cb100-110"><a href="#cb100-110"></a><span class="in">```{python}</span></span>
+<span id="cb100-111"><a href="#cb100-111"></a><span class="bu">str</span>[::<span class="dv">2</span>]</span>
+<span id="cb100-112"><a href="#cb100-112"></a><span class="in">```</span></span>
+<span id="cb100-113"><a href="#cb100-113"></a></span>
+<span id="cb100-116"><a href="#cb100-116"></a><span class="in">```{python}</span></span>
+<span id="cb100-117"><a href="#cb100-117"></a><span class="bu">str</span>[::<span class="op">-</span><span class="dv">1</span>] <span class="co"># 反轉字串</span></span>
+<span id="cb100-118"><a href="#cb100-118"></a><span class="in">```</span></span>
+<span id="cb100-119"><a href="#cb100-119"></a></span>
+<span id="cb100-122"><a href="#cb100-122"></a><span class="in">```{python}</span></span>
+<span id="cb100-123"><a href="#cb100-123"></a><span class="bu">str</span>.upper()</span>
+<span id="cb100-124"><a href="#cb100-124"></a><span class="in">```</span></span>
+<span id="cb100-125"><a href="#cb100-125"></a></span>
+<span id="cb100-128"><a href="#cb100-128"></a><span class="in">```{python}</span></span>
+<span id="cb100-129"><a href="#cb100-129"></a><span class="bu">str</span>.lower()</span>
+<span id="cb100-130"><a href="#cb100-130"></a><span class="in">```</span></span>
+<span id="cb100-131"><a href="#cb100-131"></a></span>
+<span id="cb100-134"><a href="#cb100-134"></a><span class="in">```{python}</span></span>
+<span id="cb100-135"><a href="#cb100-135"></a><span class="bu">str</span> <span class="op">=</span> <span class="bu">str</span> <span class="op">+</span> <span class="st">',there'</span></span>
+<span id="cb100-136"><a href="#cb100-136"></a><span class="bu">str</span>.split(<span class="st">','</span>)</span>
+<span id="cb100-137"><a href="#cb100-137"></a><span class="in">```</span></span>
+<span id="cb100-138"><a href="#cb100-138"></a></span>
+<span id="cb100-141"><a href="#cb100-141"></a><span class="in">```{python}</span></span>
+<span id="cb100-142"><a href="#cb100-142"></a><span class="co">'1. This is a string </span><span class="ch">\'</span><span class="co">{}</span><span class="ch">\'</span><span class="co">, and length is {}'</span>.<span class="bu">format</span>(<span class="bu">str</span>, <span class="bu">len</span>(<span class="bu">str</span>))</span>
+<span id="cb100-143"><a href="#cb100-143"></a><span class="in">```</span></span>
+<span id="cb100-144"><a href="#cb100-144"></a></span>
+<span id="cb100-147"><a href="#cb100-147"></a><span class="in">```{python}</span></span>
+<span id="cb100-148"><a href="#cb100-148"></a><span class="co">'2. This is a string </span><span class="ch">\'</span><span class="co">{0}</span><span class="ch">\'</span><span class="co">, and length is {1}'</span>.<span class="bu">format</span>(<span class="bu">str</span>, <span class="bu">len</span>(<span class="bu">str</span>))</span>
+<span id="cb100-149"><a href="#cb100-149"></a><span class="in">```</span></span>
+<span id="cb100-150"><a href="#cb100-150"></a></span>
+<span id="cb100-153"><a href="#cb100-153"></a><span class="in">```{python}</span></span>
+<span id="cb100-154"><a href="#cb100-154"></a><span class="co">'3. This is a string </span><span class="ch">\'</span><span class="co">{a}</span><span class="ch">\'</span><span class="co">, and length is {b}'</span>.<span class="bu">format</span>(a <span class="op">=</span> <span class="bu">str</span>, b <span class="op">=</span> <span class="bu">len</span>(<span class="bu">str</span>))</span>
+<span id="cb100-155"><a href="#cb100-155"></a><span class="in">```</span></span>
+<span id="cb100-156"><a href="#cb100-156"></a></span>
+<span id="cb100-159"><a href="#cb100-159"></a><span class="in">```{python}</span></span>
+<span id="cb100-160"><a href="#cb100-160"></a><span class="ss">f'4. This is a string </span><span class="ch">\'</span><span class="sc">{</span><span class="bu">str</span><span class="sc">}</span><span class="ch">\'</span><span class="ss">, and length is </span><span class="sc">{</span><span class="bu">len</span>(<span class="bu">str</span>)<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb100-161"><a href="#cb100-161"></a><span class="in">```</span></span>
+<span id="cb100-162"><a href="#cb100-162"></a></span>
+<span id="cb100-165"><a href="#cb100-165"></a><span class="in">```{python}</span></span>
+<span id="cb100-166"><a href="#cb100-166"></a><span class="bu">float</span> <span class="op">=</span> <span class="dv">100</span><span class="op">/</span><span class="dv">777</span></span>
+<span id="cb100-167"><a href="#cb100-167"></a><span class="co">'The result was {r:6.3f}'</span>.<span class="bu">format</span>(r<span class="op">=</span><span class="bu">float</span>) <span class="co"># Flaot formatting follows "{value:width.precision f}"</span></span>
+<span id="cb100-168"><a href="#cb100-168"></a><span class="in">```</span></span>
+<span id="cb100-169"><a href="#cb100-169"></a></span>
+<span id="cb100-170"><a href="#cb100-170"></a><span class="fu">## list</span></span>
+<span id="cb100-171"><a href="#cb100-171"></a></span>
+<span id="cb100-174"><a href="#cb100-174"></a><span class="in">```{python}</span></span>
+<span id="cb100-175"><a href="#cb100-175"></a><span class="co"># list可以像str一樣操作</span></span>
+<span id="cb100-176"><a href="#cb100-176"></a><span class="bu">list</span> <span class="op">=</span> [<span class="st">'one'</span>, <span class="st">'two'</span>]</span>
+<span id="cb100-177"><a href="#cb100-177"></a><span class="bu">list</span>.append(<span class="st">'three'</span>)</span>
+<span id="cb100-178"><a href="#cb100-178"></a><span class="bu">list</span></span>
+<span id="cb100-179"><a href="#cb100-179"></a><span class="in">```</span></span>
+<span id="cb100-180"><a href="#cb100-180"></a></span>
+<span id="cb100-183"><a href="#cb100-183"></a><span class="in">```{python}</span></span>
+<span id="cb100-184"><a href="#cb100-184"></a><span class="bu">list</span>.pop()</span>
+<span id="cb100-185"><a href="#cb100-185"></a><span class="bu">list</span></span>
+<span id="cb100-186"><a href="#cb100-186"></a><span class="in">```</span></span>
+<span id="cb100-187"><a href="#cb100-187"></a></span>
+<span id="cb100-190"><a href="#cb100-190"></a><span class="in">```{python}</span></span>
+<span id="cb100-191"><a href="#cb100-191"></a><span class="bu">list</span>.pop(<span class="dv">0</span>)</span>
+<span id="cb100-192"><a href="#cb100-192"></a><span class="bu">list</span></span>
+<span id="cb100-193"><a href="#cb100-193"></a><span class="in">```</span></span>
+<span id="cb100-194"><a href="#cb100-194"></a></span>
+<span id="cb100-197"><a href="#cb100-197"></a><span class="in">```{python}</span></span>
+<span id="cb100-198"><a href="#cb100-198"></a><span class="bu">list</span> <span class="op">=</span> [<span class="st">'d'</span>, <span class="st">'a'</span>, <span class="st">'c'</span>, <span class="st">'b'</span>]</span>
+<span id="cb100-199"><a href="#cb100-199"></a><span class="bu">list</span>.sort()</span>
+<span id="cb100-200"><a href="#cb100-200"></a><span class="bu">list</span></span>
+<span id="cb100-201"><a href="#cb100-201"></a><span class="in">```</span></span>
+<span id="cb100-202"><a href="#cb100-202"></a></span>
+<span id="cb100-205"><a href="#cb100-205"></a><span class="in">```{python}</span></span>
+<span id="cb100-206"><a href="#cb100-206"></a><span class="bu">list</span>.reverse()</span>
+<span id="cb100-207"><a href="#cb100-207"></a><span class="bu">list</span></span>
+<span id="cb100-208"><a href="#cb100-208"></a><span class="in">```</span></span>
+<span id="cb100-209"><a href="#cb100-209"></a></span>
+<span id="cb100-210"><a href="#cb100-210"></a><span class="fu">## dict</span></span>
+<span id="cb100-211"><a href="#cb100-211"></a></span>
+<span id="cb100-214"><a href="#cb100-214"></a><span class="in">```{python}</span></span>
+<span id="cb100-215"><a href="#cb100-215"></a><span class="bu">dict</span> <span class="op">=</span> {<span class="st">'k1'</span>:<span class="dv">123</span>, <span class="st">'k2'</span>:[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>], <span class="st">'k3'</span>:{<span class="st">'k31'</span>:<span class="dv">100</span>}}</span>
+<span id="cb100-216"><a href="#cb100-216"></a><span class="bu">dict</span>[<span class="st">'k3'</span>][<span class="st">'k31'</span>]</span>
+<span id="cb100-217"><a href="#cb100-217"></a><span class="in">```</span></span>
+<span id="cb100-218"><a href="#cb100-218"></a></span>
+<span id="cb100-221"><a href="#cb100-221"></a><span class="in">```{python}</span></span>
+<span id="cb100-222"><a href="#cb100-222"></a><span class="bu">dict</span>[<span class="st">'k4'</span>] <span class="op">=</span> <span class="st">'string'</span></span>
+<span id="cb100-223"><a href="#cb100-223"></a><span class="bu">dict</span></span>
+<span id="cb100-224"><a href="#cb100-224"></a><span class="in">```</span></span>
+<span id="cb100-225"><a href="#cb100-225"></a></span>
+<span id="cb100-228"><a href="#cb100-228"></a><span class="in">```{python}</span></span>
+<span id="cb100-229"><a href="#cb100-229"></a><span class="bu">dict</span>.keys()</span>
+<span id="cb100-230"><a href="#cb100-230"></a><span class="in">```</span></span>
+<span id="cb100-231"><a href="#cb100-231"></a></span>
+<span id="cb100-234"><a href="#cb100-234"></a><span class="in">```{python}</span></span>
+<span id="cb100-235"><a href="#cb100-235"></a><span class="bu">dict</span>.values()</span>
+<span id="cb100-236"><a href="#cb100-236"></a><span class="in">```</span></span>
+<span id="cb100-237"><a href="#cb100-237"></a></span>
+<span id="cb100-240"><a href="#cb100-240"></a><span class="in">```{python}</span></span>
+<span id="cb100-241"><a href="#cb100-241"></a><span class="bu">dict</span>.items()</span>
+<span id="cb100-242"><a href="#cb100-242"></a><span class="in">```</span></span>
+<span id="cb100-243"><a href="#cb100-243"></a></span>
+<span id="cb100-244"><a href="#cb100-244"></a><span class="fu">## tup</span></span>
+<span id="cb100-245"><a href="#cb100-245"></a></span>
+<span id="cb100-248"><a href="#cb100-248"></a><span class="in">```{python}</span></span>
+<span id="cb100-249"><a href="#cb100-249"></a>tup <span class="op">=</span> (<span class="st">'one'</span>, <span class="st">'two'</span>)</span>
+<span id="cb100-250"><a href="#cb100-250"></a><span class="cf">try</span>:</span>
+<span id="cb100-251"><a href="#cb100-251"></a>    tup[<span class="dv">0</span>] <span class="op">=</span> <span class="st">'new'</span></span>
+<span id="cb100-252"><a href="#cb100-252"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb100-253"><a href="#cb100-253"></a>    <span class="bu">print</span>(e)</span>
+<span id="cb100-254"><a href="#cb100-254"></a><span class="in">```</span></span>
+<span id="cb100-255"><a href="#cb100-255"></a></span>
+<span id="cb100-256"><a href="#cb100-256"></a><span class="fu">## set</span></span>
+<span id="cb100-257"><a href="#cb100-257"></a></span>
+<span id="cb100-260"><a href="#cb100-260"></a><span class="in">```{python}</span></span>
+<span id="cb100-261"><a href="#cb100-261"></a><span class="bu">list</span> <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>]</span>
+<span id="cb100-262"><a href="#cb100-262"></a><span class="bu">set</span>(<span class="bu">list</span>) <span class="co"># 取得唯一</span></span>
+<span id="cb100-263"><a href="#cb100-263"></a><span class="in">```</span></span>
+<span id="cb100-264"><a href="#cb100-264"></a></span>
+<span id="cb100-267"><a href="#cb100-267"></a><span class="in">```{python}</span></span>
+<span id="cb100-268"><a href="#cb100-268"></a><span class="bu">set</span>(<span class="st">'Parallel'</span>) <span class="co"># 將string取出唯一字母</span></span>
+<span id="cb100-269"><a href="#cb100-269"></a><span class="in">```</span></span>
+<span id="cb100-270"><a href="#cb100-270"></a></span>
+<span id="cb100-271"><a href="#cb100-271"></a><span class="fu"># I/O files</span></span>
+<span id="cb100-272"><a href="#cb100-272"></a></span>
+<span id="cb100-275"><a href="#cb100-275"></a><span class="in">```{python}</span></span>
+<span id="cb100-276"><a href="#cb100-276"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'w'</span>) <span class="im">as</span> f:</span>
+<span id="cb100-277"><a href="#cb100-277"></a>    f.write(<span class="st">'ONE</span><span class="ch">\n</span><span class="st">TWO</span><span class="ch">\n</span><span class="st">THREE</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb100-278"><a href="#cb100-278"></a>    f.close()</span>
+<span id="cb100-279"><a href="#cb100-279"></a><span class="in">```</span></span>
+<span id="cb100-280"><a href="#cb100-280"></a></span>
+<span id="cb100-283"><a href="#cb100-283"></a><span class="in">```{python}</span></span>
+<span id="cb100-284"><a href="#cb100-284"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'r'</span>) <span class="im">as</span> f:</span>
+<span id="cb100-285"><a href="#cb100-285"></a>    f.read()</span>
+<span id="cb100-286"><a href="#cb100-286"></a><span class="in">```</span></span>
+<span id="cb100-287"><a href="#cb100-287"></a></span>
+<span id="cb100-290"><a href="#cb100-290"></a><span class="in">```{python}</span></span>
+<span id="cb100-291"><a href="#cb100-291"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'a'</span>) <span class="im">as</span> f:</span>
+<span id="cb100-292"><a href="#cb100-292"></a>    f.write(<span class="st">'FOUR</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb100-293"><a href="#cb100-293"></a><span class="in">```</span></span>
+<span id="cb100-294"><a href="#cb100-294"></a></span>
+<span id="cb100-297"><a href="#cb100-297"></a><span class="in">```{python}</span></span>
+<span id="cb100-298"><a href="#cb100-298"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'file.txt'</span>, mode <span class="op">=</span> <span class="st">'r'</span>) <span class="im">as</span> f:</span>
+<span id="cb100-299"><a href="#cb100-299"></a>    f.readlines()</span>
+<span id="cb100-300"><a href="#cb100-300"></a><span class="in">```</span></span>
+<span id="cb100-301"><a href="#cb100-301"></a></span>
+<span id="cb100-302"><a href="#cb100-302"></a><span class="fu"># for loop</span></span>
+<span id="cb100-303"><a href="#cb100-303"></a></span>
+<span id="cb100-306"><a href="#cb100-306"></a><span class="in">```{python}</span></span>
+<span id="cb100-307"><a href="#cb100-307"></a><span class="co"># tuple unpacking</span></span>
+<span id="cb100-308"><a href="#cb100-308"></a><span class="bu">list</span> <span class="op">=</span> [(<span class="dv">1</span>,<span class="dv">2</span>),(<span class="dv">3</span>,<span class="dv">4</span>)]</span>
+<span id="cb100-309"><a href="#cb100-309"></a><span class="cf">for</span> (a,b) <span class="kw">in</span> <span class="bu">list</span>:</span>
+<span id="cb100-310"><a href="#cb100-310"></a>    <span class="bu">print</span>(a,b)</span>
+<span id="cb100-311"><a href="#cb100-311"></a><span class="in">```</span></span>
+<span id="cb100-312"><a href="#cb100-312"></a></span>
+<span id="cb100-315"><a href="#cb100-315"></a><span class="in">```{python}</span></span>
+<span id="cb100-316"><a href="#cb100-316"></a><span class="bu">dict</span> <span class="op">=</span> {<span class="st">'k1'</span>:<span class="st">'a'</span>, <span class="st">'k2'</span>:<span class="dv">1</span>}</span>
+<span id="cb100-317"><a href="#cb100-317"></a><span class="cf">for</span> key, value <span class="kw">in</span> <span class="bu">dict</span>.items():</span>
+<span id="cb100-318"><a href="#cb100-318"></a>    <span class="bu">print</span>(key, value)</span>
+<span id="cb100-319"><a href="#cb100-319"></a><span class="in">```</span></span>
+<span id="cb100-320"><a href="#cb100-320"></a></span>
+<span id="cb100-323"><a href="#cb100-323"></a><span class="in">```{python}</span></span>
+<span id="cb100-324"><a href="#cb100-324"></a><span class="cf">for</span> index, letter <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="st">'abc'</span>):</span>
+<span id="cb100-325"><a href="#cb100-325"></a>    <span class="bu">print</span>((index, letter))</span>
+<span id="cb100-326"><a href="#cb100-326"></a><span class="in">```</span></span>
+<span id="cb100-327"><a href="#cb100-327"></a></span>
+<span id="cb100-330"><a href="#cb100-330"></a><span class="in">```{python}</span></span>
+<span id="cb100-331"><a href="#cb100-331"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb100-332"><a href="#cb100-332"></a>b <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>]</span>
+<span id="cb100-333"><a href="#cb100-333"></a><span class="cf">for</span> item <span class="kw">in</span> <span class="bu">zip</span>(a,b):</span>
+<span id="cb100-334"><a href="#cb100-334"></a>    <span class="bu">print</span>(item)</span>
+<span id="cb100-335"><a href="#cb100-335"></a><span class="in">```</span></span>
+<span id="cb100-336"><a href="#cb100-336"></a></span>
+<span id="cb100-339"><a href="#cb100-339"></a><span class="in">```{python}</span></span>
+<span id="cb100-340"><a href="#cb100-340"></a><span class="bu">list</span> <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="st">'word'</span>]</span>
+<span id="cb100-341"><a href="#cb100-341"></a><span class="bu">list</span></span>
+<span id="cb100-342"><a href="#cb100-342"></a><span class="in">```</span></span>
+<span id="cb100-343"><a href="#cb100-343"></a></span>
+<span id="cb100-346"><a href="#cb100-346"></a><span class="in">```{python}</span></span>
+<span id="cb100-347"><a href="#cb100-347"></a><span class="bu">list</span> <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> num<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>]</span>
+<span id="cb100-348"><a href="#cb100-348"></a><span class="bu">list</span></span>
+<span id="cb100-349"><a href="#cb100-349"></a><span class="in">```</span></span>
+<span id="cb100-350"><a href="#cb100-350"></a></span>
+<span id="cb100-353"><a href="#cb100-353"></a><span class="in">```{python}</span></span>
+<span id="cb100-354"><a href="#cb100-354"></a><span class="bu">list</span> <span class="op">=</span> [x<span class="op">*</span>y <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>] <span class="cf">for</span> y <span class="kw">in</span> [<span class="dv">10</span>,<span class="dv">100</span>]]</span>
+<span id="cb100-355"><a href="#cb100-355"></a><span class="bu">list</span></span>
+<span id="cb100-356"><a href="#cb100-356"></a><span class="in">```</span></span>
+<span id="cb100-357"><a href="#cb100-357"></a></span>
+<span id="cb100-358"><a href="#cb100-358"></a><span class="fu"># \*args and \*\*kwargs</span></span>
+<span id="cb100-359"><a href="#cb100-359"></a></span>
+<span id="cb100-362"><a href="#cb100-362"></a><span class="in">```{python}</span></span>
+<span id="cb100-363"><a href="#cb100-363"></a><span class="co"># return tuple</span></span>
+<span id="cb100-364"><a href="#cb100-364"></a><span class="kw">def</span> fun(<span class="op">*</span>numbers):</span>
+<span id="cb100-365"><a href="#cb100-365"></a>    <span class="cf">return</span> <span class="bu">sum</span>(numbers) <span class="op">*</span> <span class="fl">0.1</span></span>
+<span id="cb100-366"><a href="#cb100-366"></a>fun(<span class="dv">100</span>,<span class="dv">200</span>)</span>
+<span id="cb100-367"><a href="#cb100-367"></a><span class="in">```</span></span>
+<span id="cb100-368"><a href="#cb100-368"></a></span>
+<span id="cb100-371"><a href="#cb100-371"></a><span class="in">```{python}</span></span>
+<span id="cb100-372"><a href="#cb100-372"></a><span class="co"># return dict</span></span>
+<span id="cb100-373"><a href="#cb100-373"></a><span class="kw">def</span> fun(<span class="op">**</span>kwargs):</span>
+<span id="cb100-374"><a href="#cb100-374"></a>    <span class="cf">if</span> <span class="st">'fruit'</span> <span class="kw">in</span> kwargs:</span>
+<span id="cb100-375"><a href="#cb100-375"></a>        <span class="bu">print</span>(kwargs[<span class="st">'fruit'</span>])</span>
+<span id="cb100-376"><a href="#cb100-376"></a>    <span class="cf">else</span>:</span>
+<span id="cb100-377"><a href="#cb100-377"></a>        <span class="bu">print</span>(<span class="st">'no fruit'</span>)</span>
+<span id="cb100-378"><a href="#cb100-378"></a>fun(fruit <span class="op">=</span> <span class="st">'apple'</span>, veggie <span class="op">=</span> <span class="st">'lettuce'</span>)</span>
+<span id="cb100-379"><a href="#cb100-379"></a><span class="in">```</span></span>
+<span id="cb100-380"><a href="#cb100-380"></a></span>
+<span id="cb100-381"><a href="#cb100-381"></a>::: callout-note</span>
+<span id="cb100-382"><a href="#cb100-382"></a><span class="fu">## Question</span></span>
+<span id="cb100-383"><a href="#cb100-383"></a></span>
+<span id="cb100-384"><a href="#cb100-384"></a>Define a function called myfunc that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase.</span>
+<span id="cb100-385"><a href="#cb100-385"></a>:::</span>
+<span id="cb100-386"><a href="#cb100-386"></a></span>
+<span id="cb100-387"><a href="#cb100-387"></a><span class="in">``` {.python filename="Answer"}</span></span>
+<span id="cb100-388"><a href="#cb100-388"></a><span class="kw">def</span> myfunc(string):</span>
+<span id="cb100-389"><a href="#cb100-389"></a>    new_string <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb100-390"><a href="#cb100-390"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(string)):</span>
+<span id="cb100-391"><a href="#cb100-391"></a>        <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb100-392"><a href="#cb100-392"></a>            new_string <span class="op">+=</span> string[i].upper()</span>
+<span id="cb100-393"><a href="#cb100-393"></a>        <span class="cf">else</span>:</span>
+<span id="cb100-394"><a href="#cb100-394"></a>            new_string <span class="op">+=</span> string[i].lower()</span>
+<span id="cb100-395"><a href="#cb100-395"></a>    <span class="cf">return</span> new_string</span>
+<span id="cb100-396"><a href="#cb100-396"></a><span class="in">```</span></span>
+<span id="cb100-397"><a href="#cb100-397"></a></span>
+<span id="cb100-398"><a href="#cb100-398"></a><span class="fu"># lambda expression, map and filter</span></span>
+<span id="cb100-399"><a href="#cb100-399"></a></span>
+<span id="cb100-402"><a href="#cb100-402"></a><span class="in">```{python}</span></span>
+<span id="cb100-403"><a href="#cb100-403"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">map</span>(<span class="kw">lambda</span> num: num<span class="op">**</span><span class="dv">2</span>, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]):</span>
+<span id="cb100-404"><a href="#cb100-404"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb100-405"><a href="#cb100-405"></a><span class="in">```</span></span>
+<span id="cb100-406"><a href="#cb100-406"></a></span>
+<span id="cb100-409"><a href="#cb100-409"></a><span class="in">```{python}</span></span>
+<span id="cb100-410"><a href="#cb100-410"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">filter</span>(<span class="kw">lambda</span> num: num<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">1</span>, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]):</span>
+<span id="cb100-411"><a href="#cb100-411"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb100-412"><a href="#cb100-412"></a><span class="in">```</span></span>
+<span id="cb100-413"><a href="#cb100-413"></a></span>
+<span id="cb100-414"><a href="#cb100-414"></a><span class="fu"># OOP</span></span>
+<span id="cb100-415"><a href="#cb100-415"></a></span>
+<span id="cb100-416"><a href="#cb100-416"></a><span class="fu">## Inheritance</span></span>
+<span id="cb100-417"><a href="#cb100-417"></a></span>
+<span id="cb100-420"><a href="#cb100-420"></a><span class="in">```{python}</span></span>
+<span id="cb100-421"><a href="#cb100-421"></a><span class="kw">class</span> Circle():</span>
+<span id="cb100-422"><a href="#cb100-422"></a>    pi<span class="op">=</span><span class="fl">3.14</span></span>
+<span id="cb100-423"><a href="#cb100-423"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, radius<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb100-424"><a href="#cb100-424"></a>        <span class="va">self</span>.radius<span class="op">=</span>radius</span>
+<span id="cb100-425"><a href="#cb100-425"></a>    <span class="kw">def</span> get_circumference(<span class="va">self</span>):</span>
+<span id="cb100-426"><a href="#cb100-426"></a>        <span class="cf">return</span> <span class="dv">2</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span><span class="va">self</span>.radius</span>
+<span id="cb100-427"><a href="#cb100-427"></a>    <span class="kw">def</span> get_circumarea(<span class="va">self</span>):</span>
+<span id="cb100-428"><a href="#cb100-428"></a>        <span class="cf">return</span> <span class="va">self</span>.pi<span class="op">*</span><span class="va">self</span>.radius<span class="op">*</span><span class="va">self</span>.radius</span>
+<span id="cb100-429"><a href="#cb100-429"></a>c <span class="op">=</span> Circle(<span class="dv">3</span>)</span>
+<span id="cb100-430"><a href="#cb100-430"></a>c.get_circumference()</span>
+<span id="cb100-431"><a href="#cb100-431"></a>c.get_circumarea()</span>
+<span id="cb100-432"><a href="#cb100-432"></a><span class="in">```</span></span>
+<span id="cb100-433"><a href="#cb100-433"></a></span>
+<span id="cb100-434"><a href="#cb100-434"></a></span>
+<span id="cb100-437"><a href="#cb100-437"></a><span class="in">```{python}</span></span>
+<span id="cb100-438"><a href="#cb100-438"></a><span class="kw">class</span> Ball(Circle):</span>
+<span id="cb100-439"><a href="#cb100-439"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, radius):</span>
+<span id="cb100-440"><a href="#cb100-440"></a>        Circle.<span class="fu">__init__</span>(<span class="va">self</span>, radius)</span>
+<span id="cb100-441"><a href="#cb100-441"></a>    <span class="kw">def</span> get_ballsurface(<span class="va">self</span>):</span>
+<span id="cb100-442"><a href="#cb100-442"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb100-443"><a href="#cb100-443"></a>    <span class="kw">def</span> get_ballvolumne(<span class="va">self</span>):</span>
+<span id="cb100-444"><a href="#cb100-444"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb100-445"><a href="#cb100-445"></a>b <span class="op">=</span> Ball(<span class="dv">3</span>)</span>
+<span id="cb100-446"><a href="#cb100-446"></a>b.get_ballvolumne()</span>
+<span id="cb100-447"><a href="#cb100-447"></a><span class="in">```</span></span>
+<span id="cb100-448"><a href="#cb100-448"></a></span>
+<span id="cb100-449"><a href="#cb100-449"></a><span class="fu">## Polymorphism</span></span>
+<span id="cb100-450"><a href="#cb100-450"></a></span>
+<span id="cb100-453"><a href="#cb100-453"></a><span class="in">```{python}</span></span>
+<span id="cb100-454"><a href="#cb100-454"></a><span class="kw">class</span> Animal:</span>
+<span id="cb100-455"><a href="#cb100-455"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):<span class="co"># Constructor of the class</span></span>
+<span id="cb100-456"><a href="#cb100-456"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb100-457"><a href="#cb100-457"></a></span>
+<span id="cb100-458"><a href="#cb100-458"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):<span class="co"># Abstract method, defined by convention only</span></span>
+<span id="cb100-459"><a href="#cb100-459"></a>        <span class="cf">raise</span> <span class="pp">NotImplementedError</span>(<span class="st">"Subclass must implement abstract method"</span>)</span>
+<span id="cb100-460"><a href="#cb100-460"></a></span>
+<span id="cb100-461"><a href="#cb100-461"></a></span>
+<span id="cb100-462"><a href="#cb100-462"></a><span class="kw">class</span> Dog(Animal):</span>
+<span id="cb100-463"><a href="#cb100-463"></a>    </span>
+<span id="cb100-464"><a href="#cb100-464"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
+<span id="cb100-465"><a href="#cb100-465"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Woof!'</span></span>
+<span id="cb100-466"><a href="#cb100-466"></a>    </span>
+<span id="cb100-467"><a href="#cb100-467"></a><span class="kw">class</span> Cat(Animal):</span>
+<span id="cb100-468"><a href="#cb100-468"></a></span>
+<span id="cb100-469"><a href="#cb100-469"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
+<span id="cb100-470"><a href="#cb100-470"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Meow!'</span></span>
+<span id="cb100-471"><a href="#cb100-471"></a>    </span>
+<span id="cb100-472"><a href="#cb100-472"></a>fido <span class="op">=</span> Dog(<span class="st">'Fido'</span>)</span>
+<span id="cb100-473"><a href="#cb100-473"></a>isis <span class="op">=</span> Cat(<span class="st">'Isis'</span>)</span>
+<span id="cb100-474"><a href="#cb100-474"></a></span>
+<span id="cb100-475"><a href="#cb100-475"></a><span class="bu">print</span>(fido.speak())</span>
+<span id="cb100-476"><a href="#cb100-476"></a><span class="bu">print</span>(isis.speak())</span>
+<span id="cb100-477"><a href="#cb100-477"></a><span class="in">```</span></span>
+<span id="cb100-478"><a href="#cb100-478"></a></span>
+<span id="cb100-479"><a href="#cb100-479"></a><span class="fu">## Special Methods</span></span>
+<span id="cb100-480"><a href="#cb100-480"></a></span>
+<span id="cb100-483"><a href="#cb100-483"></a><span class="in">```{python}</span></span>
+<span id="cb100-484"><a href="#cb100-484"></a><span class="kw">class</span> Book:</span>
+<span id="cb100-485"><a href="#cb100-485"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, title, author, pages):</span>
+<span id="cb100-486"><a href="#cb100-486"></a>        <span class="bu">print</span>(<span class="st">"A book is created"</span>)</span>
+<span id="cb100-487"><a href="#cb100-487"></a>        <span class="va">self</span>.title <span class="op">=</span> title</span>
+<span id="cb100-488"><a href="#cb100-488"></a>        <span class="va">self</span>.author <span class="op">=</span> author</span>
+<span id="cb100-489"><a href="#cb100-489"></a>        <span class="va">self</span>.pages <span class="op">=</span> pages</span>
+<span id="cb100-490"><a href="#cb100-490"></a></span>
+<span id="cb100-491"><a href="#cb100-491"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb100-492"><a href="#cb100-492"></a>        <span class="cf">return</span> <span class="st">"Title: </span><span class="sc">%s</span><span class="st">, author: </span><span class="sc">%s</span><span class="st">, pages: </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span>(<span class="va">self</span>.title, <span class="va">self</span>.author, <span class="va">self</span>.pages)</span>
+<span id="cb100-493"><a href="#cb100-493"></a></span>
+<span id="cb100-494"><a href="#cb100-494"></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
+<span id="cb100-495"><a href="#cb100-495"></a>        <span class="cf">return</span> <span class="va">self</span>.pages</span>
+<span id="cb100-496"><a href="#cb100-496"></a></span>
+<span id="cb100-497"><a href="#cb100-497"></a>    <span class="kw">def</span> <span class="fu">__del__</span>(<span class="va">self</span>):</span>
+<span id="cb100-498"><a href="#cb100-498"></a>        <span class="bu">print</span>(<span class="st">"A book is destroyed"</span>)</span>
+<span id="cb100-499"><a href="#cb100-499"></a>book <span class="op">=</span> Book(<span class="st">"Python Rocks!"</span>, <span class="st">"Jose Portilla"</span>, <span class="dv">159</span>)</span>
+<span id="cb100-500"><a href="#cb100-500"></a></span>
+<span id="cb100-501"><a href="#cb100-501"></a><span class="co">#Special Methods</span></span>
+<span id="cb100-502"><a href="#cb100-502"></a><span class="bu">print</span>(book)</span>
+<span id="cb100-503"><a href="#cb100-503"></a><span class="bu">print</span>(<span class="bu">len</span>(book))</span>
+<span id="cb100-504"><a href="#cb100-504"></a><span class="kw">del</span> book</span>
+<span id="cb100-505"><a href="#cb100-505"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -319,13 +319,94 @@ for i in filter(lambda num: num%2==1, [1,2,3]):
 
 # OOP
 
+## Inheritance
+
+```{python}
+class Circle():
+    pi=3.14
+    def __init__(self, radius=1):
+        self.radius=radius
+    def get_circumference(self):
+        return 2*self.pi*self.radius
+    def get_circumarea(self):
+        return self.pi*self.radius*self.radius
+c = Circle(3)
+c.get_circumference()
+c.get_circumarea()
+```
+
+
+```{python}
+class Ball(Circle):
+    def __init__(self, radius):
+        Circle.__init__(self, radius)
+    def get_ballsurface(self):
+        return 4*self.pi*(self.radius**2)
+    def get_ballvolumne(self):
+        return 4/3*self.pi*(self.radius**3)
+b = Ball(3)
+b.get_ballvolumne()
+```
+
+## Polymorphism
+
+```{python}
+class Animal:
+    def __init__(self, name):# Constructor of the class
+        self.name = name
+
+    def speak(self):# Abstract method, defined by convention only
+        raise NotImplementedError("Subclass must implement abstract method")
+
+
+class Dog(Animal):
+    
+    def speak(self):
+        return self.name+' says Woof!'
+    
+class Cat(Animal):
+
+    def speak(self):
+        return self.name+' says Meow!'
+    
+fido = Dog('Fido')
+isis = Cat('Isis')
+
+print(fido.speak())
+print(isis.speak())
+```
+
+## Special Methods
+
+```{python}
+class Book:
+    def __init__(self, title, author, pages):
+        print("A book is created")
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def __str__(self):
+        return "Title: %s, author: %s, pages: %s" %(self.title, self.author, self.pages)
+
+    def __len__(self):
+        return self.pages
+
+    def __del__(self):
+        print("A book is destroyed")
+book = Book("Python Rocks!", "Jose Portilla", 159)
+
+#Special Methods
+print(book)
+print(len(book))
+del book
+```
+
+# Modules and Packages
+
 ```{python}
 
 ```
 
-
-
-
-
-
+# __name__ and "__main__"
 
