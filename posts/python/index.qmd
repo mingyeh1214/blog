@@ -335,7 +335,6 @@ c.get_circumference()
 c.get_circumarea()
 ```
 
-
 ```{python}
 class Ball(Circle):
     def __init__(self, radius):
@@ -408,5 +407,4 @@ del book
 
 ```
 
-# __name__ and "__main__"
-
+# __name__ and __main__
