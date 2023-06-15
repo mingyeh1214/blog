@@ -158,41 +158,55 @@
     "href": "posts/python/index.html",
     "title": "Hello, Python",
     "section": "",
-    "text": "Type\nDescription\n\n\n\n\nint\n1\n\n\nfloat\n2.3\n\n\nstr\n‘hello’\n\n\nlist (ordered)\n[1, ‘hello’]\n\n\ndict (unordered)\n{‘key’: ‘value’}\n\n\ntup (ordered, immutable)\n(1, ‘hello’)\n\n\nset (unordered, unique)\n{1, ‘hello’}\n\n\nbool\nTrue or False\n\n\n\n\n\n\n5 / 2\n5 % 2\n2 ** 3\n\n8"
+    "text": "Complete-Python-3-Bootcamp"
   },
   {
     "objectID": "posts/python/index.html#number",
     "href": "posts/python/index.html#number",
     "title": "Hello, Python",
-    "section": "",
-    "text": "5 / 2\n5 % 2\n2 ** 3\n\n8"
+    "section": "1.1 Number",
+    "text": "1.1 Number\n\n5 / 2\n5 % 2\n2 ** 3\n\n8"
   },
   {
     "objectID": "posts/python/index.html#list",
     "href": "posts/python/index.html#list",
     "title": "Hello, Python",
-    "section": "list",
-    "text": "list\n\n# list可以像str一樣操作\nlist = ['one', 'two']\nlist.append('three')\nlist\n\n['one', 'two', 'three']\n\n\n\nlist.pop()\nlist\n\n['one', 'two']\n\n\n\nlist.pop(0)\nlist\n\n['two']\n\n\n\nlist = ['d', 'a', 'c', 'b']\nlist.sort()\nlist\n\n['a', 'b', 'c', 'd']\n\n\n\nlist.reverse()\nlist\n\n['d', 'c', 'b', 'a']"
+    "section": "1.4 list",
+    "text": "1.4 list\n\n# list可以像str一樣操作\nlist = ['one', 'two']\nlist.append('three')\nlist\n\n['one', 'two', 'three']\n\n\n\nlist.pop()\nlist\n\n['one', 'two']\n\n\n\nlist.pop(0)\nlist\n\n['two']\n\n\n\nlist = ['d', 'a', 'c', 'b']\nlist.sort()\nlist\n\n['a', 'b', 'c', 'd']\n\n\n\nlist.reverse()\nlist\n\n['d', 'c', 'b', 'a']"
   },
   {
     "objectID": "posts/python/index.html#dict",
     "href": "posts/python/index.html#dict",
     "title": "Hello, Python",
-    "section": "dict",
-    "text": "dict\n\ndict = {'k1':123, 'k2':[0,1,2], 'k3':{'k31':100}}\ndict['k3']['k31']\n\n100\n\n\n\ndict['k4'] = 'string'\ndict\n\n{'k1': 123, 'k2': [0, 1, 2], 'k3': {'k31': 100}, 'k4': 'string'}\n\n\n\ndict.keys()\n\ndict_keys(['k1', 'k2', 'k3', 'k4'])\n\n\n\ndict.values()\n\ndict_values([123, [0, 1, 2], {'k31': 100}, 'string'])\n\n\n\ndict.items()\n\ndict_items([('k1', 123), ('k2', [0, 1, 2]), ('k3', {'k31': 100}), ('k4', 'string')])"
+    "section": "1.5 dict",
+    "text": "1.5 dict\n\ndict = {'k1':123, 'k2':[0,1,2], 'k3':{'k31':100}}\ndict['k3']['k31']\n\n100\n\n\n\ndict['k4'] = 'string'\ndict\n\n{'k1': 123, 'k2': [0, 1, 2], 'k3': {'k31': 100}, 'k4': 'string'}\n\n\n\ndict.keys()\n\ndict_keys(['k1', 'k2', 'k3', 'k4'])\n\n\n\ndict.values()\n\ndict_values([123, [0, 1, 2], {'k31': 100}, 'string'])\n\n\n\ndict.items()\n\ndict_items([('k1', 123), ('k2', [0, 1, 2]), ('k3', {'k31': 100}), ('k4', 'string')])"
   },
   {
     "objectID": "posts/python/index.html#tup",
     "href": "posts/python/index.html#tup",
     "title": "Hello, Python",
-    "section": "tup",
-    "text": "tup\n\ntup = ('one', 'two')\ntry:\n    tup[0] = 'new'\nexcept Exception as e:\n    print(e)\n\n'tuple' object does not support item assignment"
+    "section": "1.6 tup",
+    "text": "1.6 tup\n\ntup = ('one', 'two')\ntry:\n    tup[0] = 'new'\nexcept Exception as e:\n    print(e)\n\n'tuple' object does not support item assignment"
   },
   {
     "objectID": "posts/python/index.html#set",
     "href": "posts/python/index.html#set",
     "title": "Hello, Python",
-    "section": "set",
-    "text": "set\n\nlist = [1,1,1,2,2]\nset(list) # 取得唯一\n\n{1, 2}\n\n\n\nset('Parallel') # 將string取出唯一字母\n\n{'P', 'a', 'e', 'l', 'r'}"
+    "section": "1.7 set",
+    "text": "1.7 set\n\nlist = [1,1,1,2,2]\nset(list) # 取得唯一\n\n{1, 2}\n\n\n\nset('Parallel') # 將string取出唯一字母\n\n{'P', 'a', 'e', 'l', 'r'}"
+  },
+  {
+    "objectID": "posts/python/index.html#查詢變數資料型態",
+    "href": "posts/python/index.html#查詢變數資料型態",
+    "title": "Hello, Python",
+    "section": "1.2 查詢變數資料型態",
+    "text": "1.2 查詢變數資料型態\n\nfloat = 1.0\ntype(float)\n\nfloat"
+  },
+  {
+    "objectID": "posts/python/index.html#string",
+    "href": "posts/python/index.html#string",
+    "title": "Hello, Python",
+    "section": "1.3 string",
+    "text": "1.3 string\n\nstr = 'hello'\nlen(str)\n\n5\n\n\n\nstr[0]\n\n'h'\n\n\n\nstr[1]\n\n'e'\n\n\n\nstr[-1]\n\n'o'\n\n\n\nstr[2:]\n\n'llo'\n\n\n\nstr[:2]\n\n'he'\n\n\n\nstr[2:4]\n\n'll'\n\n\n\nstr[::2]\n\n'hlo'\n\n\n\nstr[::-1] # 反轉字串\n\n'olleh'\n\n\n\nstr.upper()\n\n'HELLO'\n\n\n\nstr.lower()\n\n'hello'\n\n\n\nstr = str + ',there'\nstr.split(',')\n\n['hello', 'there']\n\n\n\n'1. This is a string \\'{}\\', and length is {}'.format(str, len(str))\n\n\"1. This is a string 'hello,there', and length is 11\"\n\n\n\n'2. This is a string \\'{0}\\', and length is {1}'.format(str, len(str))\n\n\"2. This is a string 'hello,there', and length is 11\"\n\n\n\n'3. This is a string \\'{a}\\', and length is {b}'.format(a = str, b = len(str))\n\n\"3. This is a string 'hello,there', and length is 11\"\n\n\n\nf'4. This is a string \\'{str}\\', and length is {len(str)}'\n\n\"4. This is a string 'hello,there', and length is 11\"\n\n\n\nfloat = 100/777\n'The result was {r:6.3f}'.format(r=float) # Flaot formatting follows \"{value:width.precision f}\"\n\n'The result was  0.129'"
   }
 ]

@@ -7,6 +7,7 @@ date-format: "YYYY-MM-DD"
 author: "Bennie Liu"
 abstract: "Python基礎"
 highlight-style: pygments
+code-block-border-left: "#31BAE9"
 
 format:
   html:
@@ -15,19 +16,17 @@ format:
     code-link: true
     code-line-numbers: true
     toc: true
+    toc-title: 文件內容
+    number-sections: true    
     df-print: paged
     html-math-method: katex
-  # pdf:
-  #   code-line-numbers: true
-  #   geometry: 
-  #     - top=30mm
-  #     - left=30mm
-  # docx: default
 execute:
   echo: true
   warning: false
 editor: visual
 ---
+
+[Complete-Python-3-Bootcamp](https://github.com/Pierian-Data/Complete-Python-3-Bootcamp)
 
 # Python資料型態
 
@@ -50,14 +49,14 @@ editor: visual
 2 ** 3
 ```
 
-# 查詢變數資料型態
+## 查詢變數資料型態
 
 ```{python}
 float = 1.0
 type(float)
 ```
 
-# string
+## string
 
 ```{python}
 str = 'hello'
@@ -166,10 +165,12 @@ list
 dict = {'k1':123, 'k2':[0,1,2], 'k3':{'k31':100}}
 dict['k3']['k31']
 ```
+
 ```{python}
 dict['k4'] = 'string'
 dict
 ```
+
 ```{python}
 dict.keys()
 ```
@@ -203,7 +204,118 @@ set(list) # 取得唯一
 set('Parallel') # 將string取出唯一字母
 ```
 
+# I/O files
 
+```{python}
+with open('file.txt', mode = 'w') as f:
+    f.write('ONE\nTWO\nTHREE\n')
+    f.close()
+```
+
+```{python}
+with open('file.txt', mode = 'r') as f:
+    f.read()
+```
+
+```{python}
+with open('file.txt', mode = 'a') as f:
+    f.write('FOUR\n')
+```
+
+```{python}
+with open('file.txt', mode = 'r') as f:
+    f.readlines()
+```
+
+# for loop
+
+```{python}
+# tuple unpacking
+list = [(1,2),(3,4)]
+for (a,b) in list:
+    print(a,b)
+```
+
+```{python}
+dict = {'k1':'a', 'k2':1}
+for key, value in dict.items():
+    print(key, value)
+```
+
+```{python}
+for index, letter in enumerate('abc'):
+    print((index, letter))
+```
+
+```{python}
+a = [1,2,3]
+b = ['a','b','c']
+for item in zip(a,b):
+    print(item)
+```
+
+```{python}
+list = [x for x in 'word']
+list
+```
+
+```{python}
+list = [num**2 for num in range(10) if num%2==0]
+list
+```
+
+```{python}
+list = [x*y for x in [1,2] for y in [10,100]]
+list
+```
+
+# \*args and \*\*kwargs
+
+```{python}
+# return tuple
+def fun(*numbers):
+    return sum(numbers) * 0.1
+fun(100,200)
+```
+
+```{python}
+# return dict
+def fun(**kwargs):
+    if 'fruit' in kwargs:
+        print(kwargs['fruit'])
+    else:
+        print('no fruit')
+fun(fruit = 'apple', veggie = 'lettuce')
+```
+
+::: callout-note
+## Question
+
+Define a function called myfunc that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase.
+:::
+
+``` {.python filename="Answer"}
+def myfunc(string):
+    new_string = ""
+    for i in range(len(string)):
+        if i % 2 == 0:
+            new_string += string[i].upper()
+        else:
+            new_string += string[i].lower()
+    return new_string
+```
+
+# lambda expression, map and filter
+
+```{python}
+for i in map(lambda num: num**2, [1,2,3]):
+    print(i)
+```
+
+```{python}
+for i in filter(lambda num: num%2==1, [1,2,3]):
+    print(i)
+```
 
 
 
