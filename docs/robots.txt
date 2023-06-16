@@ -1,1 +1,1 @@
-Sitemap: https://mingyeh.shinyapps.io/PROFOLIO/sitemap.xml
+Sitemap: https://mingyeh.shinyapps.io/profolio/sitemap.xml

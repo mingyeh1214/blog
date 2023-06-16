@@ -1499,72 +1499,78 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb100-431"><a href="#cb100-431"></a>c.get_circumarea()</span>
 <span id="cb100-432"><a href="#cb100-432"></a><span class="in">```</span></span>
 <span id="cb100-433"><a href="#cb100-433"></a></span>
-<span id="cb100-434"><a href="#cb100-434"></a></span>
-<span id="cb100-437"><a href="#cb100-437"></a><span class="in">```{python}</span></span>
-<span id="cb100-438"><a href="#cb100-438"></a><span class="kw">class</span> Ball(Circle):</span>
-<span id="cb100-439"><a href="#cb100-439"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, radius):</span>
-<span id="cb100-440"><a href="#cb100-440"></a>        Circle.<span class="fu">__init__</span>(<span class="va">self</span>, radius)</span>
-<span id="cb100-441"><a href="#cb100-441"></a>    <span class="kw">def</span> get_ballsurface(<span class="va">self</span>):</span>
-<span id="cb100-442"><a href="#cb100-442"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb100-443"><a href="#cb100-443"></a>    <span class="kw">def</span> get_ballvolumne(<span class="va">self</span>):</span>
-<span id="cb100-444"><a href="#cb100-444"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">3</span>)</span>
-<span id="cb100-445"><a href="#cb100-445"></a>b <span class="op">=</span> Ball(<span class="dv">3</span>)</span>
-<span id="cb100-446"><a href="#cb100-446"></a>b.get_ballvolumne()</span>
-<span id="cb100-447"><a href="#cb100-447"></a><span class="in">```</span></span>
-<span id="cb100-448"><a href="#cb100-448"></a></span>
-<span id="cb100-449"><a href="#cb100-449"></a><span class="fu">## Polymorphism</span></span>
-<span id="cb100-450"><a href="#cb100-450"></a></span>
-<span id="cb100-453"><a href="#cb100-453"></a><span class="in">```{python}</span></span>
-<span id="cb100-454"><a href="#cb100-454"></a><span class="kw">class</span> Animal:</span>
-<span id="cb100-455"><a href="#cb100-455"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):<span class="co"># Constructor of the class</span></span>
-<span id="cb100-456"><a href="#cb100-456"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb100-457"><a href="#cb100-457"></a></span>
-<span id="cb100-458"><a href="#cb100-458"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):<span class="co"># Abstract method, defined by convention only</span></span>
-<span id="cb100-459"><a href="#cb100-459"></a>        <span class="cf">raise</span> <span class="pp">NotImplementedError</span>(<span class="st">"Subclass must implement abstract method"</span>)</span>
+<span id="cb100-436"><a href="#cb100-436"></a><span class="in">```{python}</span></span>
+<span id="cb100-437"><a href="#cb100-437"></a><span class="kw">class</span> Ball(Circle):</span>
+<span id="cb100-438"><a href="#cb100-438"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, radius):</span>
+<span id="cb100-439"><a href="#cb100-439"></a>        Circle.<span class="fu">__init__</span>(<span class="va">self</span>, radius)</span>
+<span id="cb100-440"><a href="#cb100-440"></a>    <span class="kw">def</span> get_ballsurface(<span class="va">self</span>):</span>
+<span id="cb100-441"><a href="#cb100-441"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb100-442"><a href="#cb100-442"></a>    <span class="kw">def</span> get_ballvolumne(<span class="va">self</span>):</span>
+<span id="cb100-443"><a href="#cb100-443"></a>        <span class="cf">return</span> <span class="dv">4</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span><span class="va">self</span>.pi<span class="op">*</span>(<span class="va">self</span>.radius<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb100-444"><a href="#cb100-444"></a>b <span class="op">=</span> Ball(<span class="dv">3</span>)</span>
+<span id="cb100-445"><a href="#cb100-445"></a>b.get_ballvolumne()</span>
+<span id="cb100-446"><a href="#cb100-446"></a><span class="in">```</span></span>
+<span id="cb100-447"><a href="#cb100-447"></a></span>
+<span id="cb100-448"><a href="#cb100-448"></a><span class="fu">## Polymorphism</span></span>
+<span id="cb100-449"><a href="#cb100-449"></a></span>
+<span id="cb100-452"><a href="#cb100-452"></a><span class="in">```{python}</span></span>
+<span id="cb100-453"><a href="#cb100-453"></a><span class="kw">class</span> Animal:</span>
+<span id="cb100-454"><a href="#cb100-454"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):<span class="co"># Constructor of the class</span></span>
+<span id="cb100-455"><a href="#cb100-455"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb100-456"><a href="#cb100-456"></a></span>
+<span id="cb100-457"><a href="#cb100-457"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):<span class="co"># Abstract method, defined by convention only</span></span>
+<span id="cb100-458"><a href="#cb100-458"></a>        <span class="cf">raise</span> <span class="pp">NotImplementedError</span>(<span class="st">"Subclass must implement abstract method"</span>)</span>
+<span id="cb100-459"><a href="#cb100-459"></a></span>
 <span id="cb100-460"><a href="#cb100-460"></a></span>
-<span id="cb100-461"><a href="#cb100-461"></a></span>
-<span id="cb100-462"><a href="#cb100-462"></a><span class="kw">class</span> Dog(Animal):</span>
-<span id="cb100-463"><a href="#cb100-463"></a>    </span>
-<span id="cb100-464"><a href="#cb100-464"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
-<span id="cb100-465"><a href="#cb100-465"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Woof!'</span></span>
-<span id="cb100-466"><a href="#cb100-466"></a>    </span>
-<span id="cb100-467"><a href="#cb100-467"></a><span class="kw">class</span> Cat(Animal):</span>
-<span id="cb100-468"><a href="#cb100-468"></a></span>
-<span id="cb100-469"><a href="#cb100-469"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
-<span id="cb100-470"><a href="#cb100-470"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Meow!'</span></span>
-<span id="cb100-471"><a href="#cb100-471"></a>    </span>
-<span id="cb100-472"><a href="#cb100-472"></a>fido <span class="op">=</span> Dog(<span class="st">'Fido'</span>)</span>
-<span id="cb100-473"><a href="#cb100-473"></a>isis <span class="op">=</span> Cat(<span class="st">'Isis'</span>)</span>
-<span id="cb100-474"><a href="#cb100-474"></a></span>
-<span id="cb100-475"><a href="#cb100-475"></a><span class="bu">print</span>(fido.speak())</span>
-<span id="cb100-476"><a href="#cb100-476"></a><span class="bu">print</span>(isis.speak())</span>
-<span id="cb100-477"><a href="#cb100-477"></a><span class="in">```</span></span>
-<span id="cb100-478"><a href="#cb100-478"></a></span>
-<span id="cb100-479"><a href="#cb100-479"></a><span class="fu">## Special Methods</span></span>
-<span id="cb100-480"><a href="#cb100-480"></a></span>
-<span id="cb100-483"><a href="#cb100-483"></a><span class="in">```{python}</span></span>
-<span id="cb100-484"><a href="#cb100-484"></a><span class="kw">class</span> Book:</span>
-<span id="cb100-485"><a href="#cb100-485"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, title, author, pages):</span>
-<span id="cb100-486"><a href="#cb100-486"></a>        <span class="bu">print</span>(<span class="st">"A book is created"</span>)</span>
-<span id="cb100-487"><a href="#cb100-487"></a>        <span class="va">self</span>.title <span class="op">=</span> title</span>
-<span id="cb100-488"><a href="#cb100-488"></a>        <span class="va">self</span>.author <span class="op">=</span> author</span>
-<span id="cb100-489"><a href="#cb100-489"></a>        <span class="va">self</span>.pages <span class="op">=</span> pages</span>
-<span id="cb100-490"><a href="#cb100-490"></a></span>
-<span id="cb100-491"><a href="#cb100-491"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
-<span id="cb100-492"><a href="#cb100-492"></a>        <span class="cf">return</span> <span class="st">"Title: </span><span class="sc">%s</span><span class="st">, author: </span><span class="sc">%s</span><span class="st">, pages: </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span>(<span class="va">self</span>.title, <span class="va">self</span>.author, <span class="va">self</span>.pages)</span>
-<span id="cb100-493"><a href="#cb100-493"></a></span>
-<span id="cb100-494"><a href="#cb100-494"></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
-<span id="cb100-495"><a href="#cb100-495"></a>        <span class="cf">return</span> <span class="va">self</span>.pages</span>
-<span id="cb100-496"><a href="#cb100-496"></a></span>
-<span id="cb100-497"><a href="#cb100-497"></a>    <span class="kw">def</span> <span class="fu">__del__</span>(<span class="va">self</span>):</span>
-<span id="cb100-498"><a href="#cb100-498"></a>        <span class="bu">print</span>(<span class="st">"A book is destroyed"</span>)</span>
-<span id="cb100-499"><a href="#cb100-499"></a>book <span class="op">=</span> Book(<span class="st">"Python Rocks!"</span>, <span class="st">"Jose Portilla"</span>, <span class="dv">159</span>)</span>
-<span id="cb100-500"><a href="#cb100-500"></a></span>
-<span id="cb100-501"><a href="#cb100-501"></a><span class="co">#Special Methods</span></span>
-<span id="cb100-502"><a href="#cb100-502"></a><span class="bu">print</span>(book)</span>
-<span id="cb100-503"><a href="#cb100-503"></a><span class="bu">print</span>(<span class="bu">len</span>(book))</span>
-<span id="cb100-504"><a href="#cb100-504"></a><span class="kw">del</span> book</span>
-<span id="cb100-505"><a href="#cb100-505"></a><span class="in">```</span></span>
+<span id="cb100-461"><a href="#cb100-461"></a><span class="kw">class</span> Dog(Animal):</span>
+<span id="cb100-462"><a href="#cb100-462"></a>    </span>
+<span id="cb100-463"><a href="#cb100-463"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
+<span id="cb100-464"><a href="#cb100-464"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Woof!'</span></span>
+<span id="cb100-465"><a href="#cb100-465"></a>    </span>
+<span id="cb100-466"><a href="#cb100-466"></a><span class="kw">class</span> Cat(Animal):</span>
+<span id="cb100-467"><a href="#cb100-467"></a></span>
+<span id="cb100-468"><a href="#cb100-468"></a>    <span class="kw">def</span> speak(<span class="va">self</span>):</span>
+<span id="cb100-469"><a href="#cb100-469"></a>        <span class="cf">return</span> <span class="va">self</span>.name<span class="op">+</span><span class="st">' says Meow!'</span></span>
+<span id="cb100-470"><a href="#cb100-470"></a>    </span>
+<span id="cb100-471"><a href="#cb100-471"></a>fido <span class="op">=</span> Dog(<span class="st">'Fido'</span>)</span>
+<span id="cb100-472"><a href="#cb100-472"></a>isis <span class="op">=</span> Cat(<span class="st">'Isis'</span>)</span>
+<span id="cb100-473"><a href="#cb100-473"></a></span>
+<span id="cb100-474"><a href="#cb100-474"></a><span class="bu">print</span>(fido.speak())</span>
+<span id="cb100-475"><a href="#cb100-475"></a><span class="bu">print</span>(isis.speak())</span>
+<span id="cb100-476"><a href="#cb100-476"></a><span class="in">```</span></span>
+<span id="cb100-477"><a href="#cb100-477"></a></span>
+<span id="cb100-478"><a href="#cb100-478"></a><span class="fu">## Special Methods</span></span>
+<span id="cb100-479"><a href="#cb100-479"></a></span>
+<span id="cb100-482"><a href="#cb100-482"></a><span class="in">```{python}</span></span>
+<span id="cb100-483"><a href="#cb100-483"></a><span class="kw">class</span> Book:</span>
+<span id="cb100-484"><a href="#cb100-484"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, title, author, pages):</span>
+<span id="cb100-485"><a href="#cb100-485"></a>        <span class="bu">print</span>(<span class="st">"A book is created"</span>)</span>
+<span id="cb100-486"><a href="#cb100-486"></a>        <span class="va">self</span>.title <span class="op">=</span> title</span>
+<span id="cb100-487"><a href="#cb100-487"></a>        <span class="va">self</span>.author <span class="op">=</span> author</span>
+<span id="cb100-488"><a href="#cb100-488"></a>        <span class="va">self</span>.pages <span class="op">=</span> pages</span>
+<span id="cb100-489"><a href="#cb100-489"></a></span>
+<span id="cb100-490"><a href="#cb100-490"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb100-491"><a href="#cb100-491"></a>        <span class="cf">return</span> <span class="st">"Title: </span><span class="sc">%s</span><span class="st">, author: </span><span class="sc">%s</span><span class="st">, pages: </span><span class="sc">%s</span><span class="st">"</span> <span class="op">%</span>(<span class="va">self</span>.title, <span class="va">self</span>.author, <span class="va">self</span>.pages)</span>
+<span id="cb100-492"><a href="#cb100-492"></a></span>
+<span id="cb100-493"><a href="#cb100-493"></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
+<span id="cb100-494"><a href="#cb100-494"></a>        <span class="cf">return</span> <span class="va">self</span>.pages</span>
+<span id="cb100-495"><a href="#cb100-495"></a></span>
+<span id="cb100-496"><a href="#cb100-496"></a>    <span class="kw">def</span> <span class="fu">__del__</span>(<span class="va">self</span>):</span>
+<span id="cb100-497"><a href="#cb100-497"></a>        <span class="bu">print</span>(<span class="st">"A book is destroyed"</span>)</span>
+<span id="cb100-498"><a href="#cb100-498"></a>book <span class="op">=</span> Book(<span class="st">"Python Rocks!"</span>, <span class="st">"Jose Portilla"</span>, <span class="dv">159</span>)</span>
+<span id="cb100-499"><a href="#cb100-499"></a></span>
+<span id="cb100-500"><a href="#cb100-500"></a><span class="co">#Special Methods</span></span>
+<span id="cb100-501"><a href="#cb100-501"></a><span class="bu">print</span>(book)</span>
+<span id="cb100-502"><a href="#cb100-502"></a><span class="bu">print</span>(<span class="bu">len</span>(book))</span>
+<span id="cb100-503"><a href="#cb100-503"></a><span class="kw">del</span> book</span>
+<span id="cb100-504"><a href="#cb100-504"></a><span class="in">```</span></span>
+<span id="cb100-505"><a href="#cb100-505"></a></span>
+<span id="cb100-506"><a href="#cb100-506"></a><span class="fu"># Modules and Packages</span></span>
+<span id="cb100-507"><a href="#cb100-507"></a></span>
+<span id="cb100-510"><a href="#cb100-510"></a><span class="in">```{python}</span></span>
+<span id="cb100-511"><a href="#cb100-511"></a><span class="in">```</span></span>
+<span id="cb100-512"><a href="#cb100-512"></a></span>
+<span id="cb100-513"><a href="#cb100-513"></a><span class="fu"># \__name__ and \__main__</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

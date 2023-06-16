@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.353">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Bennie Liu">
 <meta name="dcterms.date" content="2023-06-13">
-
 <title>Bennie’s BLOG - Hello, Quarto</title>
 <style>
 code{white-space: pre-wrap;}
@@ -58,7 +55,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -77,8 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -96,16 +91,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-
+}</script><script src="../../site_libs/quarto-diagram/mermaid.min.js"></script><script src="../../site_libs/quarto-diagram/mermaid-init.js"></script><link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
+<script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script><script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
  for (var i = 0; i < mathElements.length; i++) {
@@ -118,22 +106,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     fleqn: false
    });
 }}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
-
+  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bennie’s BLOG - Hello, Quarto">
 <meta property="og:description" content="以官網範例檔案為基礎，介紹如何使用R Quarto">
 <meta property="og:image" content="https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png">
 <meta property="og:site-name" content="Bennie's BLOG">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bennie’s BLOG</span>
@@ -145,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">ABOUT</span></a>
   </li>  
@@ -154,23 +137,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">PROFOLIO</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <div class="quarto-title-block"><div><h1 class="title">Hello, Quarto</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
             <p class="subtitle lead">Quarto 教學</p>
@@ -214,62 +193,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#載入套件" id="toc-載入套件" class="nav-link active" data-scroll-target="#載入套件">載入套件</a></li>
-  <li><a href="#hello-quarto" id="toc-hello-quarto" class="nav-link" data-scroll-target="#hello-quarto">Hello, Quarto</a>
+<li><a href="#%E8%BC%89%E5%85%A5%E5%A5%97%E4%BB%B6" id="toc-載入套件" class="nav-link active" data-scroll-target="#%E8%BC%89%E5%85%A5%E5%A5%97%E4%BB%B6">載入套件</a></li>
+  <li>
+<a href="#hello-quarto" id="toc-hello-quarto" class="nav-link" data-scroll-target="#hello-quarto">Hello, Quarto</a>
   <ul class="collapse">
-  <li><a href="#meet-quarto" id="toc-meet-quarto" class="nav-link" data-scroll-target="#meet-quarto">Meet Quarto</a></li>
+<li><a href="#meet-quarto" id="toc-meet-quarto" class="nav-link" data-scroll-target="#meet-quarto">Meet Quarto</a></li>
   <li><a href="#meet-the-penguins" id="toc-meet-the-penguins" class="nav-link" data-scroll-target="#meet-the-penguins">Meet the penguins</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#quarto-computations" id="toc-quarto-computations" class="nav-link" data-scroll-target="#quarto-computations">Quarto Computations</a></li>
-  <li><a href="#housing-prices" id="toc-housing-prices" class="nav-link" data-scroll-target="#housing-prices">Housing Prices</a>
+  <li>
+<a href="#housing-prices" id="toc-housing-prices" class="nav-link" data-scroll-target="#housing-prices">Housing Prices</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#sec-eda" id="toc-sec-eda" class="nav-link" data-scroll-target="#sec-eda">Exploratory data analysis</a>
+<li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li>
+<a href="#sec-eda" id="toc-sec-eda" class="nav-link" data-scroll-target="#sec-eda">Exploratory data analysis</a>
   <ul class="collapse">
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data visualization</a></li>
+<li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data visualization</a></li>
   <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics">Summary statistics</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#sec-model" id="toc-sec-model" class="nav-link" data-scroll-target="#sec-model">Modeling</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
-  <li><a href="#equations" id="toc-equations" class="nav-link" data-scroll-target="#equations">Equations</a>
+  </ul>
+</li>
+  <li>
+<a href="#equations" id="toc-equations" class="nav-link" data-scroll-target="#equations">Equations</a>
   <ul class="collapse">
-  <li><a href="#行內方程式" id="toc-行內方程式" class="nav-link" data-scroll-target="#行內方程式">行內方程式</a></li>
-  <li><a href="#單行方程式" id="toc-單行方程式" class="nav-link" data-scroll-target="#單行方程式">單行方程式</a></li>
-  </ul></li>
-  <li><a href="#callout樣式" id="toc-callout樣式" class="nav-link" data-scroll-target="#callout樣式">Callout樣式</a></li>
-  <li><a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams">Diagrams</a>
+<li><a href="#%E8%A1%8C%E5%85%A7%E6%96%B9%E7%A8%8B%E5%BC%8F" id="toc-行內方程式" class="nav-link" data-scroll-target="#%E8%A1%8C%E5%85%A7%E6%96%B9%E7%A8%8B%E5%BC%8F">行內方程式</a></li>
+  <li><a href="#%E5%96%AE%E8%A1%8C%E6%96%B9%E7%A8%8B%E5%BC%8F" id="toc-單行方程式" class="nav-link" data-scroll-target="#%E5%96%AE%E8%A1%8C%E6%96%B9%E7%A8%8B%E5%BC%8F">單行方程式</a></li>
+  </ul>
+</li>
+  <li><a href="#callout%E6%A8%A3%E5%BC%8F" id="toc-callout樣式" class="nav-link" data-scroll-target="#callout%E6%A8%A3%E5%BC%8F">Callout樣式</a></li>
+  <li>
+<a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams">Diagrams</a>
   <ul class="collapse">
-  <li><a href="#mermaid" id="toc-mermaid" class="nav-link" data-scroll-target="#mermaid">Mermaid</a></li>
+<li><a href="#mermaid" id="toc-mermaid" class="nav-link" data-scroll-target="#mermaid">Mermaid</a></li>
   <li><a href="#graphviz" id="toc-graphviz" class="nav-link" data-scroll-target="#graphviz">Graphviz</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
   <li><a href="#code-annotation" id="toc-code-annotation" class="nav-link" data-scroll-target="#code-annotation">Code Annotation</a></li>
-  <li><a href="#article-layout" id="toc-article-layout" class="nav-link" data-scroll-target="#article-layout">Article Layout</a>
+  <li>
+<a href="#article-layout" id="toc-article-layout" class="nav-link" data-scroll-target="#article-layout">Article Layout</a>
   <ul class="collapse">
-  <li><a href="#screen-column" id="toc-screen-column" class="nav-link" data-scroll-target="#screen-column">Screen Column</a></li>
+<li><a href="#screen-column" id="toc-screen-column" class="nav-link" data-scroll-target="#screen-column">Screen Column</a></li>
   <li><a href="#margin-content" id="toc-margin-content" class="nav-link" data-scroll-target="#margin-content">Margin Content</a></li>
-  </ul></li>
-  <li><a href="#sql-code" id="toc-sql-code" class="nav-link" data-scroll-target="#sql-code">SQL CODE</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#sql-code" id="toc-sql-code" class="nav-link" data-scroll-target="#sql-code">SQL CODE</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
-
-
-
-
-<section id="載入套件" class="level1">
-<h1>載入套件</h1>
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><section id="載入套件" class="level1"><h1>載入套件</h1>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="in">```{r}</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="in">```{r}</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">#| label: load-packages</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(tidyverse)      <span class="co"># for data wrangling and visualization</span></span>
@@ -282,15 +263,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="hello-quarto" class="level1">
-<h1>Hello, Quarto</h1>
-<section id="meet-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="meet-quarto">Meet Quarto</h2>
+</section><section id="hello-quarto" class="level1"><h1>Hello, Quarto</h1>
+<section id="meet-quarto" class="level2"><h2 class="anchored" data-anchor-id="meet-quarto">Meet Quarto</h2>
 <p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-</section>
-<section id="meet-the-penguins" class="level2">
-<h2 class="anchored" data-anchor-id="meet-the-penguins">Meet the penguins</h2>
+</section><section id="meet-the-penguins" class="level2"><h2 class="anchored" data-anchor-id="meet-the-penguins">Meet the penguins</h2>
 <p><code>penguins</code> 資料集</p>
 <div data-pagedtable="false">
 
@@ -306,26 +282,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/plot-penguins-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="quarto-computations" class="level1 page-columns page-full">
-<h1>Quarto Computations</h1>
+</section></section><section id="quarto-computations" class="level1 page-columns page-full"><h1>Quarto Computations</h1>
 <p>This dataset contains a subset of the fuel economy data from the EPA. Specifically, we use the <code>mpg</code> dataset from the <strong>ggplot2</strong> package.</p>
 <p><a href="#fig-scatterplot">Figure&nbsp;1</a> shows a positive, strong, and linear relationship between the city and highway mileage of these cars.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div id="fig-scatterplot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-scatterplot-1.png" class="img-fluid figure-img" alt="Scatterplot of city vs. highway mileage for cars, where points are colored by the number of cylinders. The plot displays a positive, linear, and strong relationship between city and highway mileage, and mileage increases as the number of cylinders decreases." width="576"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: City and highway mileage for 38 popular models of cars.</figcaption>
-</figure>
+<figure class="figure"><p><img src="index_files/figure-html/fig-scatterplot-1.png" class="img-fluid figure-img" alt="Scatterplot of city vs. highway mileage for cars, where points are colored by the number of cylinders. The plot displays a positive, linear, and strong relationship between city and highway mileage, and mileage increases as the number of cylinders decreases." width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: City and highway mileage for 38 popular models of cars.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -333,9 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The average city mileage of the cars in our data is 16.86 and the average highway mileage is 23.44.</p>
 <p>The plots in <a href="#fig-mpg">Figure&nbsp;2</a> show the relationship between city and highway mileage for 38 popular models of cars. In <a href="#fig-mpg-1">Figure&nbsp;2 (a)</a> the points are colored by the number of cylinders while in <a href="#fig-mpg-2">Figure&nbsp;2 (b)</a> the points are colored by engine displacement.</p>
 <div class="page-columns page-full">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">theme_minimal</span>()</span>
@@ -344,24 +310,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-7"><a href="#cb3-7"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb3-8"><a href="#cb3-8"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"E"</span>) <span class="sc">+</span></span>
 <span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div id="fig-mpg" class="cell column-page quarto-layout-panel" data-hash="index_cache/html/fig-mpg_4794fd3ec48472de28e41aff45390544">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
+</details><div id="fig-mpg" class="cell column-page quarto-layout-panel" data-hash="index_cache/html/fig-mpg_4794fd3ec48472de28e41aff45390544">
+<figure class="figure"><div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-mpg-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-mpg-1.png" class="img-fluid figure-img" data-ref-parent="fig-mpg" width="672"></p>
-<figcaption class="figure-caption">(a) Color by number of cylinders</figcaption>
-</figure>
+<figure class="figure"><p><img src="index_files/figure-html/fig-mpg-1.png" class="img-fluid figure-img" data-ref-parent="fig-mpg" width="672"></p>
+<figcaption class="figure-caption">(a) Color by number of cylinders</figcaption></figure>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-mpg-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-mpg-2.png" class="img-fluid figure-img" data-ref-parent="fig-mpg" width="672"></p>
-<figcaption class="figure-caption">(b) Color by engine displacement, in liters</figcaption>
-</figure>
+<figure class="figure"><p><img src="index_files/figure-html/fig-mpg-2.png" class="img-fluid figure-img" data-ref-parent="fig-mpg" width="672"></p>
+<figcaption class="figure-caption">(b) Color by engine displacement, in liters</figcaption></figure>
 </div>
 </div>
 </div>
@@ -369,49 +329,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
-</section>
-<section id="housing-prices" class="level1 page-columns page-full">
-<h1>Housing Prices</h1>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+</section><section id="housing-prices" class="level1 page-columns page-full"><h1>Housing Prices</h1>
+<section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In this analysis, we build a model predicting sale prices of houses based on data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020. Let’s start by loading the packages we’ll use for the analysis.</p>
 <p>We present the results of exploratory data analysis in <a href="#sec-eda">Section&nbsp;4.2</a> and the regression model in <a href="#sec-model">Section&nbsp;4.3</a>.</p>
 <p>We’re going to do this analysis using literate programming <span class="citation" data-cites="knuth1984">[@knuth1984]</span>.</p>
-</section>
-<section id="sec-eda" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-eda">Exploratory data analysis</h2>
+</section><section id="sec-eda" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="sec-eda">Exploratory data analysis</h2>
 <p>The data contains 98 houses. As part of the exploratory analysis let’s visualize and summarize the relationship between areas and prices of these houses.</p>
-<section id="data-visualization" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="data-visualization">Data visualization</h3>
+<section id="data-visualization" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="data-visualization">Data visualization</h3>
 <p><a href="#fig-histogram">Figure&nbsp;3</a> shows two histograms displaying the distributions of <code>price</code> and <code>area</code> individually.</p>
 <div class="page-columns page-full">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">50000</span>) <span class="sc">+</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of prices"</span>)</span>
 <span id="cb4-4"><a href="#cb4-4"></a></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area)) <span class="sc">+</span></span>
 <span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">250</span>) <span class="sc">+</span></span>
 <span id="cb4-7"><a href="#cb4-7"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of areas"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div id="fig-histogram" class="cell column-page-right quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
+</details><div id="fig-histogram" class="cell column-page-right quarto-layout-panel">
+<figure class="figure"><div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-histogram-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-histogram-1.png" class="img-fluid figure-img" data-ref-parent="fig-histogram" width="672"></p>
-<figcaption class="figure-caption">(a) Histogram of <code>price</code>s</figcaption>
-</figure>
+<figure class="figure"><p><img src="index_files/figure-html/fig-histogram-1.png" class="img-fluid figure-img" data-ref-parent="fig-histogram" width="672"></p>
+<figcaption class="figure-caption">(a) Histogram of <code>price</code>s</figcaption></figure>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-histogram-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-histogram-2.png" class="img-fluid figure-img" data-ref-parent="fig-histogram" width="672"></p>
-<figcaption class="figure-caption">(b) Histogram of <code>area</code>s</figcaption>
-</figure>
+<figure class="figure"><p><img src="index_files/figure-html/fig-histogram-2.png" class="img-fluid figure-img" data-ref-parent="fig-histogram" width="672"></p>
+<figcaption class="figure-caption">(b) Histogram of <code>area</code>s</figcaption></figure>
 </div>
 </div>
 </div>
@@ -421,29 +367,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><a href="#fig-scatterplot-HP">Figure&nbsp;4</a> displays the relationship between these two variables in a scatterplot.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Price and area of houses in Duke Forest"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div id="fig-scatterplot-HP" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-scatterplot-HP-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Scatterplot of price vs.&nbsp;area of houses in Duke Forest</figcaption>
-</figure>
+<figure class="figure"><p><img src="index_files/figure-html/fig-scatterplot-HP-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Scatterplot of price vs.&nbsp;area of houses in Duke Forest</figcaption></figure>
 </div>
 </div>
 </div>
-</section>
-<section id="summary-statistics" class="level3">
-<h3 class="anchored" data-anchor-id="summary-statistics">Summary statistics</h3>
+</section><section id="summary-statistics" class="level3"><h3 class="anchored" data-anchor-id="summary-statistics">Summary statistics</h3>
 <p><a href="#tbl-stats">Table&nbsp;1</a> displays basic summary statistics for these two variables.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>duke_forest <span class="sc">%&gt;%</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>duke_forest <span class="sc">%&gt;%</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">summarise</span>(</span>
 <span id="cb6-3"><a href="#cb6-3"></a>    <span class="st">`</span><span class="at">Median price</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">median</span>(price),</span>
 <span id="cb6-4"><a href="#cb6-4"></a>    <span class="st">`</span><span class="at">IQR price</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">IQR</span>(price),</span>
@@ -452,64 +389,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-7"><a href="#cb6-7"></a>    <span class="st">`</span><span class="at">Correlation, r</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">cor</span>(price, area)</span>
 <span id="cb6-8"><a href="#cb6-8"></a>    ) <span class="sc">%&gt;%</span></span>
 <span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div id="tbl-stats" class="anchored">
 <table class="table table-sm table-striped small">
 <caption>Table&nbsp;1: Summary statistics for price and area of houses in Duke Forest</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: right;">Median price</th>
 <th style="text-align: right;">IQR price</th>
 <th style="text-align: right;">Median area</th>
 <th style="text-align: right;">IQR area</th>
 <th style="text-align: right;">Correlation, r</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
+</tr></thead>
+<tbody><tr class="odd">
 <td style="text-align: right;">540000</td>
 <td style="text-align: right;">193125</td>
 <td style="text-align: right;">2623</td>
 <td style="text-align: right;">1121</td>
 <td style="text-align: right;">0.67</td>
-</tr>
-</tbody>
+</tr></tbody>
 </table>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="sec-model" class="level2">
-<h2 class="anchored" data-anchor-id="sec-model">Modeling</h2>
+</section></section><section id="sec-model" class="level2"><h2 class="anchored" data-anchor-id="sec-model">Modeling</h2>
 <p>We can fit a simple linear regression model of the form shown in <a href="#eq-slr">Equation&nbsp;1</a>.</p>
 <p><span id="eq-slr"><span class="math display">
 price = \hat{\beta}_0 + \hat{\beta}_1 \times area + \epsilon
 \tag{1}</span></span></p>
 <p><a href="#tbl-lm">Table&nbsp;2</a> shows the regression output for this model.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>price_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> area, <span class="at">data =</span> duke_forest)</span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>price_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> area, <span class="at">data =</span> duke_forest)</span>
 <span id="cb7-2"><a href="#cb7-2"></a>  </span>
 <span id="cb7-3"><a href="#cb7-3"></a>price_fit <span class="sc">%&gt;%</span></span>
 <span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb7-5"><a href="#cb7-5"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div id="tbl-lm" class="anchored">
 <table class="table table-sm table-striped small">
 <caption>Table&nbsp;2: Linear regression model for predicting price from area</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">term</th>
 <th style="text-align: right;">estimate</th>
 <th style="text-align: right;">std.error</th>
 <th style="text-align: right;">statistic</th>
 <th style="text-align: right;">p.value</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
@@ -543,26 +467,15 @@ Note
 <p>This is a pretty incomplete analysis, but hopefully the document provides a good overview of some of the authoring features of Quarto!</p>
 </div>
 </div>
-</section>
-<section id="references" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
-</section>
-</section>
-<section id="equations" class="level1">
-<h1>Equations</h1>
-<section id="行內方程式" class="level2">
-<h2 class="anchored" data-anchor-id="行內方程式">行內方程式</h2>
+</section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+</section></section><section id="equations" class="level1"><h1>Equations</h1>
+<section id="行內方程式" class="level2"><h2 class="anchored" data-anchor-id="行內方程式">行內方程式</h2>
 <p>常態分佈機率密度函數：<span class="math inline">f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e\^{-\frac{(x-\mu)^2}{2\sigma^2}}</span></p>
-</section>
-<section id="單行方程式" class="level2">
-<h2 class="anchored" data-anchor-id="單行方程式">單行方程式</h2>
+</section><section id="單行方程式" class="level2"><h2 class="anchored" data-anchor-id="單行方程式">單行方程式</h2>
 <p><span id="eq-normaldistribution"><span class="math display">
 f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 \tag{2}</span></span></p>
-</section>
-</section>
-<section id="callout樣式" class="level1">
-<h1>Callout樣式</h1>
+</section></section><section id="callout樣式" class="level1"><h1>Callout樣式</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -654,24 +567,17 @@ Expand To Learn About Collapse
 </div>
 </div>
 </div>
-</section>
-<section id="diagrams" class="level1">
-<h1>Diagrams</h1>
-<section id="mermaid" class="level2">
-<h2 class="anchored" data-anchor-id="mermaid">Mermaid</h2>
+</section><section id="diagrams" class="level1"><h1>Diagrams</h1>
+<section id="mermaid" class="level2"><h2 class="anchored" data-anchor-id="mermaid">Mermaid</h2>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1"></a>flowchart LR</span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1"></a>flowchart LR</span>
 <span id="cb8-2"><a href="#cb8-2"></a>  A[Hard edge] --&gt; B(Round edge)</span>
 <span id="cb8-3"><a href="#cb8-3"></a>  B --&gt; C{Decision}</span>
 <span id="cb8-4"><a href="#cb8-4"></a>  C --&gt; D[Result one]</span>
 <span id="cb8-5"><a href="#cb8-5"></a>  C --&gt; E[Result two]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div id="fig-Mermaid-simple" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<div>
+<figure class="figure"><div>
 <pre class="mermaid mermaid-js" data-label="fig-Mermaid-simple">flowchart LR
   A[Hard edge] --&gt; B(Round edge)
   B --&gt; C{Decision}
@@ -679,18 +585,13 @@ Expand To Learn About Collapse
   C --&gt; E[Result two]
 </pre>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;5: a flowchart created using Mermaid</figcaption>
-</figure>
+<figcaption class="figure-caption">Figure&nbsp;5: a flowchart created using Mermaid</figcaption></figure>
 </div>
 </div>
 </div>
-</section>
-<section id="graphviz" class="level2">
-<h2 class="anchored" data-anchor-id="graphviz">Graphviz</h2>
+</section><section id="graphviz" class="level2"><h2 class="anchored" data-anchor-id="graphviz">Graphviz</h2>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource dot number-lines code-with-copy"><code class="sourceCode dot"><span id="cb9-1"><a href="#cb9-1"></a><span class="va">graph</span> <span class="va">G</span> <span class="ot">{</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource dot number-lines code-with-copy"><code class="sourceCode dot"><span id="cb9-1"><a href="#cb9-1"></a><span class="va">graph</span> <span class="va">G</span> <span class="ot">{</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="co">  </span><span class="va">layout</span><span class="ot">=</span><span class="va">neato</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="co">  </span><span class="va">run</span><span class="co"> -- </span><span class="va">intr</span><span class="ot">;</span></span>
 <span id="cb9-4"><a href="#cb9-4"></a><span class="co">  </span><span class="va">intr</span><span class="co"> -- </span><span class="va">runbl</span><span class="ot">;</span></span>
@@ -706,124 +607,90 @@ Expand To Learn About Collapse
 <span id="cb9-14"><a href="#cb9-14"></a><span class="co">  </span><span class="va">new</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
 <span id="cb9-15"><a href="#cb9-15"></a><span class="co">  </span><span class="va">sleep</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
 <span id="cb9-16"><a href="#cb9-16"></a><span class="ot">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div id="fig-Graphviz-simple" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<div>
-<svg width="672" height="480" viewbox="0.00 0.00 370.99 246.71" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 242.71)">
-<title>
+<figure class="figure"><div>
+<svg width="672" height="480" viewbox="0.00 0.00 370.99 246.71" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 242.71)"><title>
 G
 </title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-242.71 366.99,-242.71 366.99,4 -4,4"></polygon> <!-- run --> <g id="node1" class="node">
-<title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-242.71 366.99,-242.71 366.99,4 -4,4"></polygon><!-- run --><g id="node1" class="node"><title>
 run
 </title>
-<ellipse fill="none" stroke="black" cx="105.22" cy="-110.03" rx="27" ry="18"></ellipse> <text text-anchor="middle" x="105.22" y="-105.83" font-family="Times,serif" font-size="14.00">run</text> </g> <!-- intr --> <g id="node2" class="node">
-<title>
+<ellipse fill="none" stroke="black" cx="105.22" cy="-110.03" rx="27" ry="18"></ellipse><text text-anchor="middle" x="105.22" y="-105.83" font-family="Times,serif" font-size="14.00">run</text></g><!-- intr --><g id="node2" class="node"><title>
 intr
 </title>
-<ellipse fill="none" stroke="black" cx="48.11" cy="-59.71" rx="27" ry="18"></ellipse> <text text-anchor="middle" x="48.11" y="-55.51" font-family="Times,serif" font-size="14.00">intr</text> </g> <!-- run&#45;&#45;intr --> <g id="edge1" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="48.11" cy="-59.71" rx="27" ry="18"></ellipse><text text-anchor="middle" x="48.11" y="-55.51" font-family="Times,serif" font-size="14.00">intr</text></g><!-- run&#45;&#45;intr --><g id="edge1" class="edge"><title>
 run–intr
 </title>
-<path fill="none" stroke="black" d="M88.7,-95.48C81.19,-88.86 72.32,-81.04 64.79,-74.4"></path> </g> <!-- kernel --> <g id="node4" class="node">
-<title>
+<path fill="none" stroke="black" d="M88.7,-95.48C81.19,-88.86 72.32,-81.04 64.79,-74.4"></path></g><!-- kernel --><g id="node4" class="node"><title>
 kernel
 </title>
-<ellipse fill="none" stroke="black" cx="180.95" cy="-137.54" rx="35.33" ry="18"></ellipse> <text text-anchor="middle" x="180.95" y="-133.34" font-family="Times,serif" font-size="14.00">kernel</text> </g> <!-- run&#45;&#45;kernel --> <g id="edge4" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="180.95" cy="-137.54" rx="35.33" ry="18"></ellipse><text text-anchor="middle" x="180.95" y="-133.34" font-family="Times,serif" font-size="14.00">kernel</text></g><!-- run&#45;&#45;kernel --><g id="edge4" class="edge"><title>
 run–kernel
 </title>
-<path fill="none" stroke="black" d="M129.18,-118.73C136.46,-121.38 144.54,-124.31 152.1,-127.06"></path> </g> <!-- runbl --> <g id="node3" class="node">
-<title>
+<path fill="none" stroke="black" d="M129.18,-118.73C136.46,-121.38 144.54,-124.31 152.1,-127.06"></path></g><!-- runbl --><g id="node3" class="node"><title>
 runbl
 </title>
-<ellipse fill="none" stroke="black" cx="31.42" cy="-126.16" rx="31.34" ry="18"></ellipse> <text text-anchor="middle" x="31.42" y="-121.96" font-family="Times,serif" font-size="14.00">runbl</text> </g> <!-- intr&#45;&#45;runbl --> <g id="edge2" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="31.42" cy="-126.16" rx="31.34" ry="18"></ellipse><text text-anchor="middle" x="31.42" y="-121.96" font-family="Times,serif" font-size="14.00">runbl</text></g><!-- intr&#45;&#45;runbl --><g id="edge2" class="edge"><title>
 intr–runbl
 </title>
-<path fill="none" stroke="black" d="M43.64,-77.51C41.25,-87.05 38.3,-98.76 35.91,-108.3"></path> </g> <!-- runbl&#45;&#45;run --> <g id="edge3" class="edge">
-<title>
+<path fill="none" stroke="black" d="M43.64,-77.51C41.25,-87.05 38.3,-98.76 35.91,-108.3"></path></g><!-- runbl&#45;&#45;run --><g id="edge3" class="edge"><title>
 runbl–run
 </title>
-<path fill="none" stroke="black" d="M61.01,-119.7C67.11,-118.36 73.48,-116.97 79.43,-115.67"></path> </g> <!-- zombie --> <g id="node5" class="node">
-<title>
+<path fill="none" stroke="black" d="M61.01,-119.7C67.11,-118.36 73.48,-116.97 79.43,-115.67"></path></g><!-- zombie --><g id="node5" class="node"><title>
 zombie
 </title>
-<ellipse fill="none" stroke="black" cx="168.31" cy="-220.71" rx="39.42" ry="18"></ellipse> <text text-anchor="middle" x="168.31" y="-216.51" font-family="Times,serif" font-size="14.00">zombie</text> </g> <!-- kernel&#45;&#45;zombie --> <g id="edge5" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="168.31" cy="-220.71" rx="39.42" ry="18"></ellipse><text text-anchor="middle" x="168.31" y="-216.51" font-family="Times,serif" font-size="14.00">zombie</text></g><!-- kernel&#45;&#45;zombie --><g id="edge5" class="edge"><title>
 kernel–zombie
 </title>
-<path fill="none" stroke="black" d="M178.21,-155.58C176.09,-169.54 173.17,-188.76 171.05,-202.7"></path> </g> <!-- sleep --> <g id="node6" class="node">
-<title>
+<path fill="none" stroke="black" d="M178.21,-155.58C176.09,-169.54 173.17,-188.76 171.05,-202.7"></path></g><!-- sleep --><g id="node6" class="node"><title>
 sleep
 </title>
-<ellipse fill="none" stroke="black" cx="253.25" cy="-154.97" rx="30.76" ry="18"></ellipse> <text text-anchor="middle" x="253.25" y="-150.77" font-family="Times,serif" font-size="14.00">sleep</text> </g> <!-- kernel&#45;&#45;sleep --> <g id="edge6" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="253.25" cy="-154.97" rx="30.76" ry="18"></ellipse><text text-anchor="middle" x="253.25" y="-150.77" font-family="Times,serif" font-size="14.00">sleep</text></g><!-- kernel&#45;&#45;sleep --><g id="edge6" class="edge"><title>
 kernel–sleep
 </title>
-<path fill="none" stroke="black" d="M212.87,-145.23C216.81,-146.18 220.81,-147.15 224.69,-148.08"></path> </g> <!-- runmem --> <g id="node7" class="node">
-<title>
+<path fill="none" stroke="black" d="M212.87,-145.23C216.81,-146.18 220.81,-147.15 224.69,-148.08"></path></g><!-- runmem --><g id="node7" class="node"><title>
 runmem
 </title>
-<ellipse fill="none" stroke="black" cx="240.17" cy="-83.36" rx="43.44" ry="18"></ellipse> <text text-anchor="middle" x="240.17" y="-79.16" font-family="Times,serif" font-size="14.00">runmem</text> </g> <!-- kernel&#45;&#45;runmem --> <g id="edge7" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="240.17" cy="-83.36" rx="43.44" ry="18"></ellipse><text text-anchor="middle" x="240.17" y="-79.16" font-family="Times,serif" font-size="14.00">runmem</text></g><!-- kernel&#45;&#45;runmem --><g id="edge7" class="edge"><title>
 kernel–runmem
 </title>
-<path fill="none" stroke="black" d="M198.4,-121.57C205.9,-114.71 214.67,-106.69 222.23,-99.77"></path> </g> <!-- sleep&#45;&#45;runmem --> <g id="edge13" class="edge">
-<title>
+<path fill="none" stroke="black" d="M198.4,-121.57C205.9,-114.71 214.67,-106.69 222.23,-99.77"></path></g><!-- sleep&#45;&#45;runmem --><g id="edge13" class="edge"><title>
 sleep–runmem
 </title>
-<path fill="none" stroke="black" d="M249.95,-136.9C247.98,-126.13 245.49,-112.49 243.51,-101.67"></path> </g> <!-- swap --> <g id="node8" class="node">
-<title>
+<path fill="none" stroke="black" d="M249.95,-136.9C247.98,-126.13 245.49,-112.49 243.51,-101.67"></path></g><!-- swap --><g id="node8" class="node"><title>
 swap
 </title>
-<ellipse fill="none" stroke="black" cx="330.95" cy="-148.25" rx="30.77" ry="18"></ellipse> <text text-anchor="middle" x="330.95" y="-144.05" font-family="Times,serif" font-size="14.00">swap</text> </g> <!-- sleep&#45;&#45;swap --> <g id="edge8" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="330.95" cy="-148.25" rx="30.77" ry="18"></ellipse><text text-anchor="middle" x="330.95" y="-144.05" font-family="Times,serif" font-size="14.00">swap</text></g><!-- sleep&#45;&#45;swap --><g id="edge8" class="edge"><title>
 sleep–swap
 </title>
-<path fill="none" stroke="black" d="M283.96,-152.31C289.3,-151.85 294.86,-151.37 300.21,-150.91"></path> </g> <!-- runswap --> <g id="node9" class="node">
-<title>
+<path fill="none" stroke="black" d="M283.96,-152.31C289.3,-151.85 294.86,-151.37 300.21,-150.91"></path></g><!-- runswap --><g id="node9" class="node"><title>
 runswap
 </title>
-<ellipse fill="none" stroke="black" cx="319.23" cy="-73.46" rx="43.51" ry="18"></ellipse> <text text-anchor="middle" x="319.23" y="-69.26" font-family="Times,serif" font-size="14.00">runswap</text> </g> <!-- swap&#45;&#45;runswap --> <g id="edge9" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="319.23" cy="-73.46" rx="43.51" ry="18"></ellipse><text text-anchor="middle" x="319.23" y="-69.26" font-family="Times,serif" font-size="14.00">runswap</text></g><!-- swap&#45;&#45;runswap --><g id="edge9" class="edge"><title>
 swap–runswap
 </title>
-<path fill="none" stroke="black" d="M328.11,-130.15C326.28,-118.47 323.91,-103.35 322.08,-91.66"></path> </g> <!-- runswap&#45;&#45;runmem --> <g id="edge11" class="edge">
-<title>
+<path fill="none" stroke="black" d="M328.11,-130.15C326.28,-118.47 323.91,-103.35 322.08,-91.66"></path></g><!-- runswap&#45;&#45;runmem --><g id="edge11" class="edge"><title>
 runswap–runmem
 </title>
-<path fill="none" stroke="black" d="M276.92,-78.76C276.78,-78.77 276.63,-78.79 276.48,-78.81"></path> </g> <!-- new --> <g id="node10" class="node">
-<title>
+<path fill="none" stroke="black" d="M276.92,-78.76C276.78,-78.77 276.63,-78.79 276.48,-78.81"></path></g><!-- new --><g id="node10" class="node"><title>
 new
 </title>
-<ellipse fill="none" stroke="black" cx="278.31" cy="-18" rx="27.25" ry="18"></ellipse> <text text-anchor="middle" x="278.31" y="-13.8" font-family="Times,serif" font-size="14.00">new</text> </g> <!-- runswap&#45;&#45;new --> <g id="edge10" class="edge">
-<title>
+<ellipse fill="none" stroke="black" cx="278.31" cy="-18" rx="27.25" ry="18"></ellipse><text text-anchor="middle" x="278.31" y="-13.8" font-family="Times,serif" font-size="14.00">new</text></g><!-- runswap&#45;&#45;new --><g id="edge10" class="edge"><title>
 runswap–new
 </title>
-<path fill="none" stroke="black" d="M306.51,-56.21C301.35,-49.22 295.42,-41.18 290.33,-34.29"></path> </g> <!-- new&#45;&#45;runmem --> <g id="edge12" class="edge">
-<title>
+<path fill="none" stroke="black" d="M306.51,-56.21C301.35,-49.22 295.42,-41.18 290.33,-34.29"></path></g><!-- new&#45;&#45;runmem --><g id="edge12" class="edge"><title>
 new–runmem
 </title>
-<path fill="none" stroke="black" d="M268.49,-34.83C263.01,-44.21 256.2,-55.89 250.62,-65.44"></path> </g> </g>
-</svg>
+<path fill="none" stroke="black" d="M268.49,-34.83C263.01,-44.21 256.2,-55.89 250.62,-65.44"></path></g></g></svg>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;6: This is a simple graphviz graph.</figcaption>
-</figure>
+<figcaption class="figure-caption">Figure&nbsp;6: This is a simple graphviz graph.</figcaption></figure>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="video" class="level1">
-<h1>Video</h1>
+</section></section><section id="video" class="level1"><h1>Video</h1>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wo9vZccmqwc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="code-annotation" class="level1">
-<h1>Code Annotation</h1>
+</section><section id="code-annotation" class="level1"><h1>Code Annotation</h1>
 <div class="sourceCode" id="annotated-cell-10"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-10-1"><a href="#annotated-cell-10-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="annotated-cell-10-2"><a href="#annotated-cell-10-2"></a><span class="fu">library</span>(palmerpenguins)</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-10-3" class="code-annotation-target"><a href="#annotated-cell-10-3"></a>penguins <span class="sc">|&gt;</span></span>
@@ -834,30 +701,22 @@ new–runmem
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-10" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-cell="annotated-cell-10" data-code-lines="3">Take <code>penguins</code>, and then,</span>
+<span data-code-lines="3" data-code-annotation="1" data-code-cell="annotated-cell-10">Take <code>penguins</code>, and then,</span>
 </dd>
 <dt data-target-cell="annotated-cell-10" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-cell="annotated-cell-10" data-code-lines="4,5,6,7">add new columns for the bill ratio and bill area.</span>
+<span data-code-lines="4,5,6,7" data-code-annotation="2" data-code-cell="annotated-cell-10">add new columns for the bill ratio and bill area.</span>
 </dd>
-</dl>
-</section>
-<section id="article-layout" class="level1 page-columns page-full">
-<h1>Article Layout</h1>
-<section id="screen-column" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="screen-column">Screen Column</h2>
+</dl></section><section id="article-layout" class="level1 page-columns page-full"><h1>Article Layout</h1>
+<section id="screen-column" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="screen-column">Screen Column</h2>
 <div class="cell column-screen">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># library(leaflet)</span></span>
+<details><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># library(leaflet)</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="co"># leaflet() %&gt;%</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="co">#   addTiles() %&gt;%  # Add default OpenStreetMap map tiles</span></span>
 <span id="cb10-4"><a href="#cb10-4"></a><span class="co">#   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="margin-content" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="margin-content">Margin Content</h2>
+</section><section id="margin-content" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="margin-content">Margin Content</h2>
 <div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1"></a>::: {.column-margin}</span>
 <span id="cb11-2"><a href="#cb11-2"></a>We know from *the first fundamental theorem of calculus* that for $x$ in $<span class="co">[</span><span class="ot">a, b</span><span class="co">]</span>$:</span>
 <span id="cb11-3"><a href="#cb11-3"></a></span>
@@ -867,19 +726,13 @@ new–runmem
 <div class="no-row-height column-margin column-container"><div class="">
 <p>We know from <em>the first fundamental theorem of calculus</em> that for <span class="math inline">x</span> in <span class="math inline">[a, b]</span>:</p>
 <p><span class="math display">\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).</span></p>
-</div></div></section>
-</section>
-<section id="sql-code" class="level1">
-<h1>SQL CODE</h1>
+</div></div></section></section><section id="sql-code" class="level1"><h1>SQL CODE</h1>
 <div class="sourceCode" id="cb12"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> DUAL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 <!-- -->
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1644,8 +1497,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Proudly supported by <a href="https://www.rstudio.com"><img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" class="img-fluid" alt="RStudio" width="65"></a></div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -1653,7 +1505,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">This blog is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
-
 
 
 </body></html>

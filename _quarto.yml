@@ -8,7 +8,7 @@ website:
   repo-url: https://github.com/mingyeh1214/blog
   twitter-card: false
   open-graph: true
-  site-url: https://mingyeh.shinyapps.io/PROFOLIO/
+  site-url: https://mingyeh.shinyapps.io/profolio/
   navbar:
     search: true
     # logo: images/shiny_logo.png
