@@ -407,4 +407,50 @@ del book
 
 ```
 
-# \__name__ and \__main__
+# \__name__ and "\__main__"
+
+
+
+# Errors and Exception Handling
+
+```{python}
+try:
+    result = 1 + 'a'
+except TypeError:
+    print('TypeError')
+except OSError:
+    print('OSError')
+except:
+    print('all other exceptions!')
+else:
+    print(result)
+finally:
+    print('I always run')
+```
+
+# Pylint
+
+```{python}
+
+```
+
+# Unittest Library
+
+```bash
+.
+├── dir1
+│   ├── file11.ext
+│   └── file12.ext
+├── dir2
+│   ├── file21.ext
+│   ├── file22.ext
+│   └── file23.ext
+├── dir3
+├── file_in_root.ext
+└── README.md
+```
+
+```{python}
+
+```
+
