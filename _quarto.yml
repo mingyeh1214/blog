@@ -15,7 +15,7 @@ website:
     background: primary
     left:
       - about.qmd
-      - href: https://mingyeh.shinyapps.io/PROFOLIO/
+      - href: https://mingyeh.shinyapps.io/profolio/
         text: PROFOLIO
     right:
       - icon: github
