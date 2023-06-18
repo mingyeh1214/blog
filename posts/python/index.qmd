@@ -407,9 +407,7 @@ del book
 
 ```
 
-# \__name__ and "\__main__"
-
-
+# \_\_name\_\_ and "\_\_main\_\_"
 
 # Errors and Exception Handling
 
@@ -436,7 +434,7 @@ finally:
 
 # Unittest Library
 
-```bash
+``` bash
 .
 ├── dir1
 │   ├── file11.ext
@@ -453,4 +451,3 @@ finally:
 ```{python}
 
 ```
-
