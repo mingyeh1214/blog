@@ -448,6 +448,43 @@ finally:
 └── README.md
 ```
 
+# Decorators
+
 ```{python}
 
 ```
+
+# Generators
+
+```{python}
+def gen_fibon(n):
+    a=1
+    b=1
+    for i in range(n):
+        yield a
+        a,b=b,a+b
+
+list(gen_fibon(10))
+g=gen_fibon(10)
+next(g)
+
+s = 'hello'
+g=iter(s)
+next(g)
+```
+
+
+```{python}
+import os
+os.getcwd()
+os.listdir()
+import shutil
+# shutil.move()
+os.
+```
+
+
+
+
+
+
